@@ -15,11 +15,11 @@ function classNames(...classes) {
 
 export default function Navigation() {
   return (
-    <Disclosure as="nav" className="bg-gray-800 bg-opacity-50 bg-blur-sm border-b-1 border-gray-500">
+    <Disclosure as="nav" className="bg-gray-800 h-7v py-1v bg-opacity-50 bg-blur-sm border-b-1 border-gray-500">
       {({ open }) => (
         <>
           <div className="mx-auto px-2 sm:px-6 lg:px-8">
-            <div className="relative flex max-h-24 h-5v items-center justify-between">
+            <div className="relative flex max-h-6v items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center pr-2">
 
               </div>
@@ -37,12 +37,12 @@ export default function Navigation() {
               <div className="flex flex-1 items-center justify-center">
                 <div className="flex flex-shrink-0 items-center hover:cursor-pointer">
                   <img
-                    className="block h-14 w-auto lg:hidden"
+                    className="block h-5v w-auto lg:hidden"
                     src="/logo.png"
                     alt="Your Company"
                   />
                   <img
-                    className="hidden h-14 w-auto lg:block"
+                    className="hidden h-5v w-auto lg:block"
                     src="/logo.png"
                     alt="Your Company"
                   />
@@ -54,7 +54,7 @@ export default function Navigation() {
                   className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-7 w-7" aria-hidden="true" />
+                  <BellIcon className="h-4v w-4v" aria-hidden="true" />
                 </button>
 
                 {/* Profile dropdown */}
@@ -63,7 +63,7 @@ export default function Navigation() {
                     <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open user menu</span>
                       <img
-                        className="h-12 w-12 rounded-full"
+                        className="h-5v w-5vh max-w-36 max-h-36 rounded-full"
                         src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                         alt=""
                       />
