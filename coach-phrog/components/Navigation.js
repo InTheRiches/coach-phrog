@@ -37,12 +37,12 @@ export default function Navigation() {
               <div className="flex flex-1 items-center justify-center">
                 <div className="flex flex-shrink-0 items-center hover:cursor-pointer">
                   <img
-                    className="block h-5v w-auto lg:hidden"
+                    className="block h-5v max-h-16 max-w-16 w-auto lg:hidden"
                     src="/logo.png"
                     alt="Your Company"
                   />
                   <img
-                    className="hidden h-5v w-auto lg:block"
+                    className="hidden h-5v max-h-16 max-w-16 w-auto lg:block"
                     src="/logo.png"
                     alt="Your Company"
                   />
@@ -54,7 +54,7 @@ export default function Navigation() {
                   className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-4v w-4v" aria-hidden="true" />
+                  <BellIcon className="h-4v w-4v max-h-10 max-w-10" aria-hidden="true" />
                 </button>
 
                 {/* Profile dropdown */}
@@ -63,7 +63,7 @@ export default function Navigation() {
                     <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open user menu</span>
                       <img
-                        className="h-5v w-5vh max-w-36 max-h-36 rounded-full"
+                        className="h-5v w-5vh max-w-16 max-h-16 rounded-full"
                         src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                         alt=""
                       />

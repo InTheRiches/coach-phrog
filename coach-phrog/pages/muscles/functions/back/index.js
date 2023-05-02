@@ -3,26 +3,26 @@ import Content from '@/components/Content'
 import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
 
-export default function MuscleBasics({}) {
+export default function MuscleFunctions({}) {
     return (
         <div className="flex flex-col min-h-screen bg-gray-800 text-slate-50">
             <Navigation></Navigation>
 
             <div className="flex-1 flex-row w-full px-10v mx-auto my-8 flex">
-                <Sidebar currentTopic={"Muscles-Basics"}></Sidebar>
+                <Sidebar currentTopic={"Muscles-Functions-Back"}></Sidebar>
                 <div className="flex-1 flex-col">
                     {/* Page Header */}
                     <div className="flex flex-col mb-12">
-                        <span className="ml-6 mb-10 text-6xl font-bold">Muscle Basics</span>
+                        <span className="ml-6 mb-10 text-6xl font-bold">Muscle Functions - Back</span>
                         <div className={"border-gray-600 border-l-8 flex flex-col"}>
-                            <span className={"ml-6 text-lg mb-2"}>Muscles are a type of tissue in our bodies that allow us to <b>move</b> and <b>carry</b> out physical activities. Think of muscles like rubber bands or ropes that are attached to our bones and can <b>contract</b>, or shorten, to pull the bones closer together, allowing us to move our bodies.</span>
-                            <span className={"ml-6 text-lg"}>For example, when you bend your arm, your bicep muscle contracts, pulling your forearm towards your shoulder. When you straighten your arm, your tricep muscle contracts, pulling your forearm away from your shoulder.</span>
+                            <span className={"ml-6 text-lg mb-2"}>The back muscles are a group of muscles that are located in the <b>posterior</b> part of the body and are responsible for a wide range of functions, including posture, movement, and stabilization of the spine. These muscles can be divided into two main groups: the superficial and the deep back muscles.</span>
+                            <span className={"ml-6 text-lg"}>Together, the back muscles work to support the spine, maintain proper alignment, and facilitate movements such as bending, twisting, and lifting. Strengthening the back muscles can help improve posture, reduce the risk of back pain and injury, and enhance overall upper body strength and mobility.</span>
                         </div>
                     </div>
                     {/* First Topic */}
                     <Content
-                        title="Muscle Activation"
-                        content="Muscles are activated by signals from our nervous system, which is like the body's electrical wiring. When we want to move, our brain sends a signal through our nervous system to the muscle that needs to **contract**. When you want to move a muscle, your brain sends a signal to the muscle fibers. The muscle fibers are made up of tiny units called sarcomeres. These sarcomeres contain two types of filaments called actin and myosin.-.-When the muscle fibers receive the signal to contract, the myosin filaments grab onto the actin filaments and pull them towards the center of the sarcomere, which causes the sarcomere to shorten. This shortening of the sarcomere causes the whole muscle fiber to contract.-.-This process requires energy in the form of ATP, and it continues as long as the muscle is receiving the signal to contract. So, when you move a muscle, the tiny filaments inside the muscle fibers are grabbing and pulling on each other to make the whole muscle get shorter and create movement."
+                        title="Teres Major/Minor"
+                        content="The Teres Major and Teres Minor are two muscles in your back that help you move your arms and shoulders. They are located in the upper back and are part of a group of muscles known as the rotator cuff.-.-The Teres Major muscle helps to move your arm and shoulder in a variety of ways. It can help you move your arm forward, backward, and to the side. It can also help you rotate your arm inward and outward. So, if you want to reach for something in front of you or lift something up over your head, the Teres Major muscle helps to make that movement possible.-.-The Teres Minor muscle, on the other hand, is primarily responsible for helping to rotate your arm outward. So, if you want to throw a ball or reach behind your back, the Teres Minor muscle helps you do that.-.-Overall, the Teres Major and Teres Minor muscles are important for many of the movements we make with our arms and shoulders. Whether you're reaching for something on a high shelf or throwing a ball, these muscles help to make those movements possible."
                     ></Content>
                     <Content
                         title={"Muscle Growth"}
@@ -36,7 +36,8 @@ export default function MuscleBasics({}) {
                             <div>
                                 <h4 className="font-bold">Make sure you drink enough and eat nutrient full foods, otherwise these health issues can follow:</h4>
                                 <div className="mt-1">
-                                    <ul className="list-inside list-disc lg:grid lg:grid-cols-2 gap-x-12">
+                                    <ul className="list-inside list-disc">
+                                        <li>Dehydration and thirst</li>
                                         <li>Reduced performance and endurance</li>
                                         <li>Muscle cramps and spasms</li>
                                         <li>Increased risk of heat exhaustion and heatstroke</li>

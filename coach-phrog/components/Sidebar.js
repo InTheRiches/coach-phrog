@@ -6,8 +6,17 @@ const topics = [
         title: 'Muscles',
         subtopics: [
             { id: 1, title: 'Basics', href: '/muscles/basics' },
-            { id: 2, title: 'Functions', href: '/muscles/functions' },
-            { id: 3, title: 'Exercises', href: '/muscles/exercises' },
+            { id: 2, title: 'Exercises', href: '/muscles/exercises' },
+            {
+                id: 3,
+                title: 'Functions',
+                subtopics: [
+                    { id: 1, title: 'Back', href: '/muscles/functions/back' },
+                    { id: 2, title: 'Chest', href: '/muscles/functions/chest' },
+                    { id: 3, title: 'Core', href: '/muscles/functions/core' },
+                    { id: 4, title: 'Legs', href: '/muscles/functions/legs' },
+                ]
+            },
             {
                 id: 4,
                 title: 'Training',
@@ -24,30 +33,30 @@ const topics = [
         id: 2,
         title: 'Recovery',
         subtopics: [
-            { id: 1, title: 'Rest Set Periods' },
-            { id: 2, title: 'Rest Days' },
-            { id: 3, title: 'Active Recovery' },
-            { id: 4, title: 'Sleep'}
+            { id: 1, title: 'Rest Set Periods', href: '/recovery/rest-set-periods' },
+            { id: 2, title: 'Rest Days', href: '/recovery/rest-days' },
+            { id: 3, title: 'Active Recovery', href: '/recovery/active-recovery' },
+            { id: 4, title: 'Sleep', href: '/recovery/sleep' },
         ],
     },
     {
         id: 3,
         title: 'Diet',
         subtopics: [
-            { id: 1, title: 'Basics' },
-            { id: 2, title: 'Cutting' },
-            { id: 3, title: 'Bulking' },
+            { id: 1, title: 'Basics', href: '/diet/basics' },
+            { id: 2, title: 'Cutting', href: '/diet/cutting' },
+            { id: 3, title: 'Bulking', href: '/diet/bulking' },
         ],
     },
     {
         id: 4,
         title: 'Supplements',
         subtopics: [
-            { id: 1, title: 'Basics' },
-            { id: 2, title: 'Weight Loss' },
-            { id: 3, title: 'Muscle Gain' },
-            { id: 4, title: 'Performance' },
-            { id: 5, title: 'Recovery' },
+            { id: 1, title: 'Basics', href: '/supplements/basics' },
+            { id: 2, title: 'Weight Loss', href: '/supplements/weight-loss' },
+            { id: 3, title: 'Muscle Gain', href: '/supplements/muscle-gain' },
+            { id: 4, title: 'Performance', href: '/supplements/performance' },
+            { id: 5, title: 'Recovery', href: '/supplements/recovery' },
         ],
     }
 
@@ -55,6 +64,7 @@ const topics = [
 
 function Sidebar({ currentTopic }) {
     const [collapsed, setCollapsed] = useState({});
+
     const toggleCollapse = (topic) => {
         setCollapsed({ ...collapsed, [topic.title + "-" + topic.id]: !collapsed[topic.title + "-" + topic.id] });
     };
@@ -77,11 +87,20 @@ function Sidebar({ currentTopic }) {
                                 <div
                                     key={subtopic.id}
                                     className={`flex flex-col`}
-                                    onClick={() => toggleCollapse(subtopic)}
                                 >
                                     <div className={`${
                                         currentTopic === topic.title + "-" + subtopic.title ? 'text-red-400 text-xl' : 'text-slate-300 text-xl'
-                                    } flex items-center transition-all duration-200 hover:cursor-pointer hover:text-slate-50 flex-row`}>
+                                    } flex items-center transition-all duration-200 hover:cursor-pointer hover:text-slate-50 flex-row`}
+                                         onClick={() => {
+                                            if (subtopic.subtopics) {
+                                                toggleCollapse(subtopic)
+                                                //
+                                            }
+                                            else {
+                                                window.location.href = subtopic.href;
+                                            }
+                                        }
+                                    }>
                                         <span className="w-4" />
                                         {subtopic.subtopics ? (
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={"w-5 h-5 transition-all duration-100 " + (collapsed[subtopic.title + "-" + subtopic.id] ? "-scale-y-100" : "scale-y-100")}>
@@ -101,8 +120,11 @@ function Sidebar({ currentTopic }) {
                                                     <div
                                                         key={subsubtopic.id}
                                                         className={`${
-                                                            currentTopic.split("-")[0] === topic.title && currentTopic.split("-")[1] === subtopic.title && currentTopic.split("-")[2] === subsubtopic.title ? 'text-slate-50 text-xl scale-105' : 'text-slate-300 text-xl'
+                                                            currentTopic.split("-")[0] === topic.title && currentTopic.split("-")[1] === subtopic.title && currentTopic.split("-")[2] === subsubtopic.title ? 'text-red-400 text-xl scale-110 ml-2.2' : 'text-slate-300 text-xl'
                                                         } flex items-center transition-all duration-200 hover:cursor-pointer hover:text-slate-50 border-l-1 border-slate-50`}
+                                                        onClick={() => {
+                                                            window.location.href = subsubtopic.href;
+                                                        }}
                                                     >
                                                         <span className="w-4" />
                                                         <svg width="10" height="10">
