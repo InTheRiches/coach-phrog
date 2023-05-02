@@ -5,17 +5,17 @@ const topics = [
         id: 1,
         title: 'Muscles',
         subtopics: [
-            { id: 1, title: 'Basics' },
-            { id: 2, title: 'Functions' },
-            { id: 3, title: 'Exercises' },
+            { id: 1, title: 'Basics', href: '/muscles/basics' },
+            { id: 2, title: 'Functions', href: '/muscles/functions' },
+            { id: 3, title: 'Exercises', href: '/muscles/exercises' },
             {
                 id: 4,
                 title: 'Training',
                 subtopics: [
-                    { id: 1, title: 'Strength' }, // muscle strength growth
-                    { id: 2, title: 'Hypertrophy' }, // muscle growth
-                    { id: 3, title: 'Endurance' }, // isometric training
-                    { id: 4, title: 'Power'} // rapid explosive bursts of force, plyometric training
+                    { id: 1, title: 'Strength', href: '/muscles/training/strength'}, // muscle strength growth
+                    { id: 2, title: 'Hypertrophy', href: '/muscles/training/hypertrophy'}, // muscle growth
+                    { id: 3, title: 'Endurance', href: '/muscles/training/endurance' }, // isometric training
+                    { id: 4, title: 'Power', href: '/muscles/training/power'} // rapid explosive bursts of force, plyometric training
                 ]
             }
         ],
@@ -80,11 +80,11 @@ function Sidebar({ currentTopic }) {
                                     onClick={() => toggleCollapse(subtopic)}
                                 >
                                     <div className={`${
-                                        currentTopic.split("-")[0] === topic.title && currentTopic.split("-")[1] === subtopic.title ? 'text-slate-50 text-xl scale-105' : 'text-slate-300 text-xl'
+                                        currentTopic === topic.title + "-" + subtopic.title ? 'text-red-400 text-xl' : 'text-slate-300 text-xl'
                                     } flex items-center transition-all duration-200 hover:cursor-pointer hover:text-slate-50 flex-row`}>
                                         <span className="w-4" />
                                         {subtopic.subtopics ? (
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={"w-5 h-5 transition-all duration-100 " + (collapsed[topic.title + "-" + topic.id] ? "-scale-y-100" : "scale-y-100")}>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={"w-5 h-5 transition-all duration-100 " + (collapsed[subtopic.title + "-" + subtopic.id] ? "-scale-y-100" : "scale-y-100")}>
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
                                             </svg>
                                         ) : (
@@ -92,7 +92,7 @@ function Sidebar({ currentTopic }) {
                                                 <circle cx="5" cy="5" r="2" fill="#F8FAFC" />
                                             </svg>
                                         )}
-                                        <span className={"ml-2"}>{subtopic.title}</span>
+                                        <span className={`${currentTopic === topic.title + "-" + subtopic.title ? "scale-110 ml-2.5" : "ml-2"} `}>{subtopic.title}</span>
                                     </div>
                                     <div>
                                         {subtopic.subtopics && collapsed[subtopic.title + "-" + subtopic.id] && (
