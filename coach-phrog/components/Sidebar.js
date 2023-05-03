@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 
 const topics = [
     {
@@ -61,15 +61,32 @@ const topics = [
     }
 
 ];
-
 function Sidebar({ currentTopic }) {
-    const [collapsed, setCollapsed] = useState({});
+    const [collapsed, setCollapsed] = useState(() => {
+        const initialState = {};
+        topics.forEach((topic) => {
+            topic.subtopics.forEach((subtopic) => {
+                if (currentTopic === topic.title + "-" + subtopic.title)
+                    initialState[topic.title + "-" + subtopic.id] = true;
+                else if (subtopic.subtopics) {
+                    subtopic.subtopics.forEach((subsubtopic) => {
+                        if (currentTopic === topic.title + "-" + subtopic.title + "-" + subsubtopic.title) {
+                            initialState[subtopic.title + "-" + subtopic.id] = true;
+                            initialState[topic.title + "-" + topic.id] = true;
+                        }
+                    });
+                }
+            });
+        });
+        return initialState;
+    });
 
     const toggleCollapse = (topic) => {
         setCollapsed({ ...collapsed, [topic.title + "-" + topic.id]: !collapsed[topic.title + "-" + topic.id] });
     };
+
     return (
-        <div className="bg-gray-800 text-slate-50 h-full w-64 p-4 mt-26">
+        <div className="bg-gray-800 text-slate-50 h-full w-1/6 p-4 mt-26">
             {topics.map((topic) => (
                 <div className="mb-2" key={topic.id}>
                     <div
@@ -79,7 +96,7 @@ function Sidebar({ currentTopic }) {
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={"w-5 h-5 transition-all duration-100 " + (collapsed[topic.title + "-" + topic.id] ? "-scale-y-100" : "scale-y-100")}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
                         </svg>
-                        <h2 className="ml-2 font-bold text-xl">{topic.title}</h2>
+                        <h2 className="ml-2 font-bold text-3xl">{topic.title}</h2>
                     </div>
                     {collapsed[topic.title + "-" + topic.id] && (
                         <div className="ml-2.5 border-l-1 border-slate-50">
@@ -89,18 +106,17 @@ function Sidebar({ currentTopic }) {
                                     className={`flex flex-col`}
                                 >
                                     <div className={`${
-                                        currentTopic === topic.title + "-" + subtopic.title ? 'text-red-400 text-xl' : 'text-slate-300 text-xl'
+                                        currentTopic === topic.title + "-" + subtopic.title ? 'text-red-400 text-2xl' : 'text-slate-300 text-2xl'
                                     } flex items-center transition-all duration-200 hover:cursor-pointer hover:text-slate-50 flex-row`}
                                          onClick={() => {
-                                            if (subtopic.subtopics) {
-                                                toggleCollapse(subtopic)
-                                                //
-                                            }
-                                            else {
-                                                window.location.href = subtopic.href;
-                                            }
-                                        }
-                                    }>
+                                             if (subtopic.subtopics) {
+                                                 toggleCollapse(subtopic);
+                                             }
+                                             else {
+                                                 window.location.href = subtopic.href;
+                                             }
+                                         }
+                                         }>
                                         <span className="w-4" />
                                         {subtopic.subtopics ? (
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={"w-5 h-5 transition-all duration-100 " + (collapsed[subtopic.title + "-" + subtopic.id] ? "-scale-y-100" : "scale-y-100")}>
@@ -111,7 +127,7 @@ function Sidebar({ currentTopic }) {
                                                 <circle cx="5" cy="5" r="2" fill="#F8FAFC" />
                                             </svg>
                                         )}
-                                        <span className={`${currentTopic === topic.title + "-" + subtopic.title ? "scale-110 ml-2.5" : "ml-2"} `}>{subtopic.title}</span>
+                                        <span className={`${currentTopic === topic.title + "-" + subtopic.title ? "text-2.25xl" : "text-2xl"} ml-2`}>{subtopic.title}</span>
                                     </div>
                                     <div>
                                         {subtopic.subtopics && collapsed[subtopic.title + "-" + subtopic.id] && (
@@ -120,7 +136,7 @@ function Sidebar({ currentTopic }) {
                                                     <div
                                                         key={subsubtopic.id}
                                                         className={`${
-                                                            currentTopic.split("-")[0] === topic.title && currentTopic.split("-")[1] === subtopic.title && currentTopic.split("-")[2] === subsubtopic.title ? 'text-red-400 text-xl scale-110 ml-2.2' : 'text-slate-300 text-xl'
+                                                            currentTopic.split("-")[0] === topic.title && currentTopic.split("-")[1] === subtopic.title && currentTopic.split("-")[2] === subsubtopic.title ? 'text-red-400 text-2.25xl' : 'text-slate-300 text-2xl'
                                                         } flex items-center transition-all duration-200 hover:cursor-pointer hover:text-slate-50 border-l-1 border-slate-50`}
                                                         onClick={() => {
                                                             window.location.href = subsubtopic.href;

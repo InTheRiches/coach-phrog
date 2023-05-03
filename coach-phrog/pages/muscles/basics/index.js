@@ -8,15 +8,14 @@ export default function MuscleBasics({}) {
         <div className="flex flex-col min-h-screen bg-gray-800 text-slate-50">
             <Navigation></Navigation>
 
-            <div className="flex-1 flex-row w-full px-10v mx-auto my-8 flex">
+            <div className="flex-1 flex-row w-3/4 mx-auto my-8 flex"> {/*px-10v*/}
                 <Sidebar currentTopic={"Muscles-Basics"}></Sidebar>
                 <div className="flex-1 flex-col">
                     {/* Page Header */}
                     <div className="flex flex-col mb-12">
                         <span className="ml-6 mb-10 text-6xl font-bold">Muscle Basics</span>
                         <div className={"border-gray-600 border-l-8 flex flex-col"}>
-                            <span className={"ml-6 text-lg mb-2"}>Muscles are a type of tissue in our bodies that allow us to <b>move</b> and <b>carry</b> out physical activities. Think of muscles like rubber bands or ropes that are attached to our bones and can <b>contract</b>, or shorten, to pull the bones closer together, allowing us to move our bodies.</span>
-                            <span className={"ml-6 text-lg"}>For example, when you bend your arm, your bicep muscle contracts, pulling your forearm towards your shoulder. When you straighten your arm, your tricep muscle contracts, pulling your forearm away from your shoulder.</span>
+                            <span className={"ml-6 text-lg mb-2"}>Muscles are a type of tissue in our bodies that allow us to <b>move</b> and <b>carry</b> out physical activities. Think of muscles like rubber bands or ropes that are attached to our bones and can <b>contract</b>, or shorten, to pull the bones closer together, allowing us to move our bodies. For example, when you bend your arm, your bicep muscle contracts, <b>pulling</b> your forearm towards your shoulder. When you straighten your arm, your tricep muscle contracts, <b>pushing</b> your forearm away from your shoulder.</span>
                         </div>
                     </div>
                     {/* First Topic */}
@@ -29,14 +28,14 @@ export default function MuscleBasics({}) {
                         content={"When you use your muscles to perform physical activities, such as lifting weights, your muscles can get bigger and stronger. This happens because your muscles are made up of tiny fibers, and when you challenge these fibers by lifting heavy weights, it causes them to **tear** and break down.-.-This might sound bad, but it's actually a good thing! When these tiny fibers are damaged, it triggers a response from your body to **repair** and rebuild them **stronger** and thicker than before. This process is called muscle **hypertrophy** (hy·per·tro·phy), and it's how muscles grow.-.-To support muscle growth, you need to give your body the right fuel and rest. Eating a balanced diet that includes plenty of protein is important because protein helps to repair and build new muscle fibers. Getting enough sleep and rest is also crucial because it allows your body to recover and rebuild the muscles that were damaged during exercise."}
                     ></Content>
                     <div className="ml-6">
-                        <div className="flex rounded-md bg-yellow-50 p-4 text-lg text-yellow-500">
+                        <div className="flex rounded-md border-1 border-yellow-200 bg-black bg-opacity-20 p-4 text-lg text-yellow-200">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="mr-3 mt-1.5 h-5 w-5 flex-shrink-0">
-                                <path fillRule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+                                <path fillRule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
                             </svg>
                             <div>
                                 <h4 className="font-bold">Make sure you drink enough and eat nutrient full foods, otherwise these health issues can follow:</h4>
                                 <div className="mt-1">
-                                    <ul className="list-inside list-disc lg:grid lg:grid-cols-2 gap-x-12">
+                                    <ul className="list-inside list-disc lg:grid lg:grid-cols-2 gap-x-5vw w-full">
                                         <li>Reduced performance and endurance</li>
                                         <li>Muscle cramps and spasms</li>
                                         <li>Increased risk of heat exhaustion and heatstroke</li>
@@ -51,6 +50,33 @@ export default function MuscleBasics({}) {
                                     <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
                                 </svg>
                             </button> */}
+                        </div>
+                    </div>
+                    <Content title={"Muscle Heads"}
+                             content={'Some muscles are made up of multiple "heads". They are the parts of the muscle that attach to different bones in your body and work together to create movement. They work together to move the body in directions otherwise unreachable. For example, the biceps muscle in your upper arm has two heads - the "long head" and the "short head". These heads attach to different parts of your shoulder blade and forearm bone, respectively.'}
+                             >
+                    </Content>
+                    <div className="ml-6">
+                        <div className="flex rounded-md border-1 border-slate-50 bg-black bg-opacity-20 p-4 text-lg text-slate-50">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                 className="mr-3 mt-1.5 h-5 w-5 flex-shrink-0">
+                                <path fillRule="evenodd"
+                                      d="M19 10.5a8.5 8.5 0 11-17 0 8.5 8.5 0 0117 0zM8.25 9.75A.75.75 0 019 9h.253a1.75 1.75 0 011.709 2.13l-.46 2.066a.25.25 0 00.245.304H11a.75.75 0 010 1.5h-.253a1.75 1.75 0 01-1.709-2.13l.46-2.066a.25.25 0 00-.245-.304H9a.75.75 0 01-.75-.75zM10 7a1 1 0 100-2 1 1 0 000 2z"
+                                      clipRule="evenodd"/>
+                            </svg>
+                            <div className={"flex flex-col"}>
+                                <h4 className="font-bold">Muscles with multiple "heads" can provide some unique benefits to the body because the different heads can work together or independently to produce different movements and functions. Here are a few examples:</h4>
+                                <div className="mt-1">
+                                    <ul className="list-inside list-disc lg:grid lg:grid-cols-2 gap-x-5vw w-full">
+                                        <li>Reduced performance and endurance</li>
+                                        <li>Muscle cramps and spasms</li>
+                                        <li>Increased risk of heat exhaustion and heatstroke</li>
+                                        <li>Impaired cognitive function and concentration</li>
+                                        <li>Reduced metabolic rate and digestion</li>
+                                        <li>Kidney problems</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
