@@ -18,7 +18,7 @@ export default function Content({title, content}) {
             <span className="ml-6 text-3xl font-bold">{title}</span>
             <div className="flex flex-col mt-8"> {/* border-gray-600 border-l-8 */}
                 {text.map((substring, index) => (
-                    <span className="ml-6 text-lg mb-2" key={index}>{substring}</span>
+                    <span className="ml-6 text-lg mb-6" key={index}>{substring}</span>
                 ))}
             </div>
         </div>

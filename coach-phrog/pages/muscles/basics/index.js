@@ -14,8 +14,8 @@ export default function MuscleBasics({}) {
                     {/* Page Header */}
                     <div className="flex flex-col mb-12">
                         <span className="ml-6 mb-10 text-6xl font-bold">Muscle Basics</span>
-                        <div className={"border-gray-600 border-l-8 flex flex-col"}>
-                            <span className={"ml-6 text-lg mb-2"}>Muscles are a type of tissue in our bodies that allow us to <b>move</b> and <b>carry</b> out physical activities. Think of muscles like rubber bands or ropes that are attached to our bones and can <b>contract</b>, or shorten, to pull the bones closer together, allowing us to move our bodies. For example, when you bend your arm, your bicep muscle contracts, <b>pulling</b> your forearm towards your shoulder. When you straighten your arm, your tricep muscle contracts, <b>pushing</b> your forearm away from your shoulder.</span>
+                        <div className={"ml-6 border-slate-50 border-1 flex flex-col p-4 bg-black bg-opacity-20 rounded-md"}>
+                            <span className={"text-lg mb-2"}>Muscles are a type of tissue in our bodies that allow us to <b>move</b> and <b>carry</b> out physical activities. Think of muscles like rubber bands or ropes that are attached to our bones and can <b>contract</b>, or shorten, to pull the bones closer together, allowing us to move our bodies. For example, when you bend your arm, your bicep muscle contracts, <b>pulling</b> your forearm towards your shoulder. When you straighten your arm, your tricep muscle contracts, <b>pushing</b> your forearm away from your shoulder.</span>
                         </div>
                     </div>
                     {/* First Topic */}
@@ -32,10 +32,10 @@ export default function MuscleBasics({}) {
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="mr-3 mt-1.5 h-5 w-5 flex-shrink-0">
                                 <path fillRule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
                             </svg>
-                            <div>
+                            <div className={"w-full"}>
                                 <h4 className="font-bold">Make sure you drink enough and eat nutrient full foods, otherwise these health issues can follow:</h4>
                                 <div className="mt-1">
-                                    <ul className="list-inside list-disc lg:grid lg:grid-cols-2 gap-x-5vw w-full">
+                                    <ul className="list-inside list-disc lg:grid w-full"> {/*lg:grid-cols-2*/}
                                         <li>Reduced performance and endurance</li>
                                         <li>Muscle cramps and spasms</li>
                                         <li>Increased risk of heat exhaustion and heatstroke</li>
@@ -53,7 +53,7 @@ export default function MuscleBasics({}) {
                         </div>
                     </div>
                     <Content title={"Muscle Heads"}
-                             content={'Some muscles are made up of multiple "heads". They are the parts of the muscle that attach to different bones in your body and work together to create movement. They work together to move the body in directions otherwise unreachable. For example, the biceps muscle in your upper arm has two heads - the "long head" and the "short head". These heads attach to different parts of your shoulder blade and forearm bone, respectively.'}
+                             content={'Some muscles are made up of multiple "heads". They are the parts of the muscle that attach to different bones in your body and work together to create movement. They work together to move the body in directions otherwise unreachable. For example, the biceps muscle in your upper arm has two heads - the "long head" and the "short head". These heads attach to different parts of your shoulder blade and forearm bone, respectively.-.-Each head of a muscle can work independently or together with the other heads of the same muscle. This means that different heads can produce different movements or help to stabilize joints in different ways.-.-For example, let\'s go back to the biceps muscle. The long head of the biceps attaches to a part of the shoulder blade called the "supraglenoid tubercle". This attachment point allows the long head to help stabilize the shoulder joint when you lift your arm. Meanwhile, the short head of the biceps attaches to the forearm bone called the "radius". This attachment point allows the short head to help flex the elbow joint when you curl your arm.-.-By working together, the different heads of a muscle can produce complex movements that require multiple joints to move. For example, when you lift a heavy object towards your shoulder, you\'re using both the long and short heads of the biceps to stabilize your shoulder joint and flex your elbow joint.'}
                              >
                     </Content>
                     <div className="ml-6">
@@ -64,16 +64,17 @@ export default function MuscleBasics({}) {
                                       d="M19 10.5a8.5 8.5 0 11-17 0 8.5 8.5 0 0117 0zM8.25 9.75A.75.75 0 019 9h.253a1.75 1.75 0 011.709 2.13l-.46 2.066a.25.25 0 00.245.304H11a.75.75 0 010 1.5h-.253a1.75 1.75 0 01-1.709-2.13l.46-2.066a.25.25 0 00-.245-.304H9a.75.75 0 01-.75-.75zM10 7a1 1 0 100-2 1 1 0 000 2z"
                                       clipRule="evenodd"/>
                             </svg>
-                            <div className={"flex flex-col"}>
+                            <div className={"w-full"}>
                                 <h4 className="font-bold">Muscles with multiple "heads" can provide some unique benefits to the body because the different heads can work together or independently to produce different movements and functions. Here are a few examples:</h4>
                                 <div className="mt-1">
-                                    <ul className="list-inside list-disc lg:grid lg:grid-cols-2 gap-x-5vw w-full">
-                                        <li>Reduced performance and endurance</li>
-                                        <li>Muscle cramps and spasms</li>
-                                        <li>Increased risk of heat exhaustion and heatstroke</li>
-                                        <li>Impaired cognitive function and concentration</li>
-                                        <li>Reduced metabolic rate and digestion</li>
-                                        <li>Kidney problems</li>
+                                    <ul className="list-inside list-disc lg:grid w-full"> {/*lg:grid-cols-2*/}
+                                        <li>Allow muscles to attach to different bones and produce complex movements</li>
+                                        <li>Can work together or independently to produce different movements</li>
+                                        <li>Help to stabilize joints in different ways</li>
+                                        <li>Provide a wider range of functional capabilities than a single muscle</li>
+                                        <li>Allow for greater precision in movement and force production</li>
+                                        <li>Can help to distribute force more evenly across a joint, reducing the risk of injury</li>
+                                        <li>Allow for greater muscle mass and strength in certain areas of the body where multiple heads are present.</li>
                                     </ul>
                                 </div>
                             </div>

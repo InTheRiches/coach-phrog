@@ -14,9 +14,9 @@ export default function MuscleFunctions({}) {
                     {/* Page Header */}
                     <div className="flex flex-col mb-12">
                         <span className="ml-6 mb-10 text-6xl font-bold">Muscle Functions - Back</span>
-                        <div className={"border-gray-600 border-l-8 flex flex-col"}>
-                            <span className={"ml-6 text-lg mb-2"}>The back muscles are a group of muscles that are located in the <b>posterior</b> part of the body and are responsible for a wide range of functions, including posture, movement, and stabilization of the spine. These muscles can be divided into two main groups: the superficial and the deep back muscles.</span>
-                            <span className={"ml-6 text-lg"}>Together, the back muscles work to support the spine, maintain proper alignment, and facilitate movements such as bending, twisting, and lifting. Strengthening the back muscles can help improve posture, reduce the risk of back pain and injury, and enhance overall upper body strength and mobility.</span>
+                        <div className={"ml-6 border-slate-50 border-1 flex flex-col p-4 bg-black bg-opacity-20 rounded-md"}>
+                            <span className={"text-lg mb-6"}>The back muscles are a group of muscles that are located in the <b>posterior</b> part of the body and are responsible for a wide range of functions, including posture, movement, and stabilization of the spine. These muscles can be divided into two main groups: the superficial and the deep back muscles.</span>
+                            <span className={"text-lg"}>Together, the back muscles work to support the spine, maintain proper alignment, and facilitate movements such as bending, twisting, and lifting. Strengthening the back muscles can help improve posture, reduce the risk of back pain and injury, and enhance overall upper body strength and mobility.</span>
                         </div>
                     </div>
                     {/* First Topic */}
