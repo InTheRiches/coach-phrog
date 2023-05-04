@@ -15,16 +15,12 @@ function classNames(...classes) {
 
 export default function Navigation() {
   return (
-    <Disclosure as="nav" className="bg-gray-800 h-7v py-1v bg-opacity-50 bg-blur-sm border-b-1 border-gray-500">
+    <Disclosure as="nav" className="sticky py-2 top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white supports-backdrop-blur:bg-white/95 dark:bg-neutral-800/75">
       {({ open }) => (
         <>
           <div className="mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex max-h-6v items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center pr-2">
-
-              </div>
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                {/* Mobile menu button*/}
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -34,7 +30,7 @@ export default function Navigation() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center">
+              <div className="left-0 flex items-center justify-center">
                 <div className="flex flex-shrink-0 items-center hover:cursor-pointer">
                   <img
                     className="block h-5v max-h-16 max-w-16 w-auto lg:hidden"
@@ -47,6 +43,7 @@ export default function Navigation() {
                     alt="Your Company"
                   />
                 </div>
+                <a className="ml-2">surge strength</a>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2">
                 <button

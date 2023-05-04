@@ -6,9 +6,8 @@ const topics = [
         title: 'Muscles',
         subtopics: [
             { id: 1, title: 'Basics', href: '/muscles/basics' },
-            { id: 2, title: 'Exercises', href: '/muscles/exercises' },
             {
-                id: 3,
+                id: 2,
                 title: 'Functions',
                 subtopics: [
                     { id: 1, title: 'Back', href: '/muscles/functions/back' },
@@ -18,12 +17,12 @@ const topics = [
                 ]
             },
             {
-                id: 4,
+                id: 3,
                 title: 'Training',
                 subtopics: [
                     { id: 1, title: 'Strength', href: '/muscles/training/strength'}, // muscle strength growth
                     { id: 2, title: 'Hypertrophy', href: '/muscles/training/hypertrophy'}, // muscle growth
-                    { id: 3, title: 'Endurance', href: '/muscles/training/endurance' }, // isometric training
+                    { id: 3, title: 'Cardio', href: '/muscles/training/cardio' }, // isometric training
                     { id: 4, title: 'Power', href: '/muscles/training/power'} // rapid explosive bursts of force, plyometric training
                 ]
             }
@@ -86,7 +85,7 @@ function Sidebar({ currentTopic }) {
     };
 
     return (
-        <div className="bg-gray-800 text-slate-50 h-full w-1/6 p-4 mt-26">
+        <aside className="bg-gray-800 text-slate-50 p-4 mt-26"> {/* w-1/6 md:w-1/5 */}
             {topics.map((topic) => (
                 <div className="mb-2" key={topic.id}>
                     <div
@@ -96,10 +95,10 @@ function Sidebar({ currentTopic }) {
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={"w-5 h-5 transition-all duration-100 " + (collapsed[topic.title + "-" + topic.id] ? "-scale-y-100" : "scale-y-100")}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
                         </svg>
-                        <h2 className="ml-2 font-bold text-3xl">{topic.title}</h2>
+                        <h2 className="ml-2 font-bold text-xl">{topic.title}</h2>
                     </div>
                     {collapsed[topic.title + "-" + topic.id] && (
-                        <div className="ml-2.5 border-l-1 border-slate-50">
+                        <div className="ml-2.5 border-l-1 border-gray-600">
                             {topic.subtopics.map((subtopic) => (
                                 <div
                                     key={subtopic.id}
@@ -127,7 +126,7 @@ function Sidebar({ currentTopic }) {
                                                 <circle cx="5" cy="5" r="2" fill="#F8FAFC" />
                                             </svg>
                                         )}
-                                        <span className={`${currentTopic === topic.title + "-" + subtopic.title ? "text-2.25xl" : "text-2xl"} ml-2`}>{subtopic.title}</span>
+                                        <span className={`${currentTopic === topic.title + "-" + subtopic.title ? "text-1xl" : "text-xl"} ml-2`}>{subtopic.title}</span>
                                     </div>
                                     <div>
                                         {subtopic.subtopics && collapsed[subtopic.title + "-" + subtopic.id] && (
@@ -136,8 +135,8 @@ function Sidebar({ currentTopic }) {
                                                     <div
                                                         key={subsubtopic.id}
                                                         className={`${
-                                                            currentTopic.split("-")[0] === topic.title && currentTopic.split("-")[1] === subtopic.title && currentTopic.split("-")[2] === subsubtopic.title ? 'text-red-400 text-2.25xl' : 'text-slate-300 text-2xl'
-                                                        } flex items-center transition-all duration-200 hover:cursor-pointer hover:text-slate-50 border-l-1 border-slate-50`}
+                                                            currentTopic.split("-")[0] === topic.title && currentTopic.split("-")[1] === subtopic.title && currentTopic.split("-")[2] === subsubtopic.title ? 'text-red-400 text-1xl' : 'text-slate-300 text-xl'
+                                                        } flex items-center transition-all duration-200 hover:cursor-pointer hover:text-slate-50 border-l-1 border-gray-600`}
                                                         onClick={() => {
                                                             window.location.href = subsubtopic.href;
                                                         }}
@@ -158,7 +157,7 @@ function Sidebar({ currentTopic }) {
                     )}
                 </div>
             ))}
-        </div>
+        </aside>
     );
 }
 

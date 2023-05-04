@@ -126,6 +126,9 @@ module.exports = {
         "95vw": "95vw",
         "100vw": "100vw",
       },
+      gridTemplateColumns: {
+        "270px": "270px minmax(0,1fr)",
+      },
       width: {
         "5v": "5vw",
         "10v": "10vw",
@@ -171,6 +174,25 @@ module.exports = {
 
         "16": "4rem",
         "36": "9rem",
+        // what is 48rem 
+        "48": "12rem",
+        "72": "18rem",
+        "80": "20rem",
+        "88": "22rem",
+        "96": "24rem",
+        "104": "26rem",
+        "112": "28rem",
+        "120": "30rem",
+        "128": "32rem",
+        "136": "34rem",
+        "144": "36rem",
+        "152": "38rem",
+        "160": "40rem",
+        "168": "42rem",
+        "176": "44rem",
+
+
+
       },
     },
   },
