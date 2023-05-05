@@ -14,7 +14,7 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        "blue-accent": "#FF4C30",
+        "cyan-accent": "#0ea5e9",
       },
       borderWidth: {
         1: '1px',

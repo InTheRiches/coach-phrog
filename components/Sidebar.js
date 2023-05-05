@@ -86,20 +86,20 @@ function Sidebar({ currentTopic }) {
     };
 
     return (
-        <div className="bg-neutral-900 text-blue-600 p-4 mt-15"> {/* w-1/6 md:w-1/5 */}
-            <button className={"hidden w-full lg:flex border-1 border-slate-200 hover:border-cyan-400 border-opacity-50 hover:border-opacity-75 items-center text-sm leading-6 text-slate-300 hover:text-slate-50 rounded-md shadow-sm py-1.5 pl-2 pr-3 mb-6 transition-all duration-100 bg-transparent"}>
+        <div className="bg-white dark:bg-neutral-900 p-4 mt-15 text-neutral-900 dark:text-slate-50"> {/* w-1/6 md:w-1/5 */}
+            <button className={"hidden w-full lg:flex border-1 border-slate-200 hover:border-cyan-accent border-opacity-50 hover:border-opacity-75 items-center text-sm leading-6 text-neutral-700 dark:text-slate-300 hover:dark:text-slate-50 hover:text-neutral-900 rounded-md shadow-sm py-1.5 pl-2 pr-3 mb-6 transition-all duration-100 bg-transparent"}>
                 <a>Search...</a>
             </button>
-            <div className="mb-4">
+            <div className="mb-4 text-neutral-900 dark:text-slate-50">
                 <div className="flex items-center mb-2">
                     <h2 className="font-bold text-xl">Getting Started</h2>
                 </div>
                 <div>
                     <div className={`flex flex-col`}>
                         <div className={`${
-                            currentTopic === "Getting Started-Introduction" ? 'text-cyan-400 text-2xl' : 'text-slate-300 text-2xl'
-                        }} flex items-center transition-all duration-200 hover:cursor-pointer hover:text-slate-50 flex-row py-2`}>
-                            <span className={`text-xl`}>Introduction</span>
+                            currentTopic === "Getting Started-Introduction" ? 'text-cyan-accent border-cyan-accent' : 'text-neutral-700 dark:text-slate-300 border-neutral-200 dark:border-neutral-700'
+                        } flex border-l-1 items-center flex-row py-2`}>
+                            <span className={`text-xl ml-6 hover:cursor-pointer hover:text-cyan-accent transition-all duration-200`}>Introduction</span>
                         </div>
                     </div>
                 </div>
@@ -110,21 +110,18 @@ function Sidebar({ currentTopic }) {
                         className="flex items-center mb-2 hover:cursor-pointer"
                         onClick={() => toggleCollapse(topic)}
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={"w-5 h-5 transition-all duration-100 " + (collapsed[topic.title + "-" + topic.id] ? "-scale-y-100" : "scale-y-100")}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-                        </svg>
-                        <h2 className="ml-4 font-bold text-xl">{topic.title}</h2>
+                        <h5 className="font-bold text-xl">{topic.title}</h5>
                     </div>
                     {collapsed[topic.title + "-" + topic.id] && (
-                        <div className="ml-2.5 border-l-1 border-cyan-400">
+                        <div className="">
                             {topic.subtopics.map((subtopic) => (
                                 <div
                                     key={subtopic.id}
-                                    className={`flex flex-col`}
+                                    className={`flex flex-col ${subtopic.subtopics ? 'border-l-1 border-neutral-200 dark:border-neutral-700' : ''}`}
                                 >
                                     <div className={`${
-                                        currentTopic === topic.title + "-" + subtopic.title ? 'text-cyan-400 text-2xl' : 'text-slate-300 text-2xl'
-                                    } flex items-center transition-all duration-200 hover:cursor-pointer hover:text-slate-50 flex-row py-2`}
+                                        currentTopic === topic.title + "-" + subtopic.title ? 'text-cyan-accent border-cyan-accent' : 'text-neutral-700 dark:text-slate-300 border-neutral-200 dark:border-neutral-700'
+                                    } ${subtopic.subtopics ? "" : "border-l-1"} flex items-center text-2xl transition-all duration-200 hover:cursor-pointer hover:text-cyan-accent flex-row py-1 justify-between`}
                                          onClick={() => {
                                              if (subtopic.subtopics) {
                                                  toggleCollapse(subtopic);
@@ -132,19 +129,15 @@ function Sidebar({ currentTopic }) {
                                              else {
                                                  window.location.href = subtopic.href;
                                              }
-                                         }
-                                         }>
-                                        <span className="w-4" />
-                                        {subtopic.subtopics ? (
+                                         }}>
+
+                                        <a className={`text-xl ml-6`}>{subtopic.title}</a>
+
+                                        {subtopic.subtopics && (
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={"w-5 h-5 transition-all duration-100 " + (collapsed[subtopic.title + "-" + subtopic.id] ? "-scale-y-100" : "scale-y-100")}>
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
                                             </svg>
-                                        ) : (
-                                            <svg width="10" height="10">
-                                                <circle cx="5" cy="5" r="2" fill="#F8FAFC" />
-                                            </svg>
                                         )}
-                                        <span className={`${currentTopic === topic.title + "-" + subtopic.title ? "text-1xl" : "text-xl"} ml-4`}>{subtopic.title}</span>
                                     </div>
                                     <div>
                                         {subtopic.subtopics && collapsed[subtopic.title + "-" + subtopic.id] && (
@@ -153,17 +146,14 @@ function Sidebar({ currentTopic }) {
                                                     <div
                                                         key={subsubtopic.id}
                                                         className={`${
-                                                            currentTopic.split("-")[0] === topic.title && currentTopic.split("-")[1] === subtopic.title && currentTopic.split("-")[2] === subsubtopic.title ? 'text-cyan-400 text-1xl' : 'text-slate-300 text-xl'
-                                                        } flex items-center transition-all duration-200 hover:cursor-pointer hover:text-slate-50 border-l-1 border-cyan-400 py-2`}
+                                                            currentTopic.split("-")[0] === topic.title && currentTopic.split("-")[1] === subtopic.title && currentTopic.split("-")[2] === subsubtopic.title ? 'text-cyan-accent border-cyan-accent' : 'text-neutral-700 dark:text-slate-300 border-neutral-200 dark:border-neutral-700'
+                                                        } flex items-center transition-all duration-200 hover:cursor-pointer hover:text-cyan-accent border-l-1  py-1 text-xl`}
                                                         onClick={() => {
                                                             window.location.href = subsubtopic.href;
                                                         }}
                                                     >
                                                         <span className="w-4" />
-                                                        <svg width="10" height="10">
-                                                            <circle cx="5" cy="5" r="2" fill="#F8FAFC" />
-                                                        </svg>
-                                                        <span className={"ml-4"}>{subsubtopic.title}</span>
+                                                        <span className={"ml-2"}>{subsubtopic.title}</span>
                                                     </div>
                                                 ))}
                                             </div>
