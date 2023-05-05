@@ -20,10 +20,11 @@ const topics = [
                 id: 3,
                 title: 'Training',
                 subtopics: [
-                    { id: 1, title: 'Strength', href: '/muscles/training/strength'}, // muscle strength growth
-                    { id: 2, title: 'Hypertrophy', href: '/muscles/training/hypertrophy'}, // muscle growth
-                    { id: 3, title: 'Cardio', href: '/muscles/training/cardio' }, // isometric training
-                    { id: 4, title: 'Power', href: '/muscles/training/power'} // rapid explosive bursts of force, plyometric training
+                    { id: 1, title: "Basics", href: "/muscles/training/basics"},
+                    { id: 2, title: 'Strength', href: '/muscles/training/strength'}, // muscle strength growth
+                    { id: 3, title: 'Hypertrophy', href: '/muscles/training/hypertrophy'}, // muscle growth
+                    { id: 4, title: 'Cardio', href: '/muscles/training/cardio' }, // isometric training
+                    { id: 5, title: 'Power', href: '/muscles/training/power'} // rapid explosive bursts of force, plyometric training
                 ]
             }
         ],
@@ -85,7 +86,24 @@ function Sidebar({ currentTopic }) {
     };
 
     return (
-        <aside className="bg-gray-800 text-slate-50 p-4 mt-26"> {/* w-1/6 md:w-1/5 */}
+        <div className="bg-neutral-900 text-blue-600 p-4 mt-15"> {/* w-1/6 md:w-1/5 */}
+            <button className={"hidden w-full lg:flex border-1 border-slate-200 hover:border-cyan-400 border-opacity-50 hover:border-opacity-75 items-center text-sm leading-6 text-slate-300 hover:text-slate-50 rounded-md shadow-sm py-1.5 pl-2 pr-3 mb-6 transition-all duration-100 bg-transparent"}>
+                <a>Search...</a>
+            </button>
+            <div className="mb-4">
+                <div className="flex items-center mb-2">
+                    <h2 className="font-bold text-xl">Getting Started</h2>
+                </div>
+                <div>
+                    <div className={`flex flex-col`}>
+                        <div className={`${
+                            currentTopic === "Getting Started-Introduction" ? 'text-cyan-400 text-2xl' : 'text-slate-300 text-2xl'
+                        }} flex items-center transition-all duration-200 hover:cursor-pointer hover:text-slate-50 flex-row py-2`}>
+                            <span className={`text-xl`}>Introduction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             {topics.map((topic) => (
                 <div className="mb-2" key={topic.id}>
                     <div
@@ -95,18 +113,18 @@ function Sidebar({ currentTopic }) {
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={"w-5 h-5 transition-all duration-100 " + (collapsed[topic.title + "-" + topic.id] ? "-scale-y-100" : "scale-y-100")}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
                         </svg>
-                        <h2 className="ml-2 font-bold text-xl">{topic.title}</h2>
+                        <h2 className="ml-4 font-bold text-xl">{topic.title}</h2>
                     </div>
                     {collapsed[topic.title + "-" + topic.id] && (
-                        <div className="ml-2.5 border-l-1 border-gray-600">
+                        <div className="ml-2.5 border-l-1 border-cyan-400">
                             {topic.subtopics.map((subtopic) => (
                                 <div
                                     key={subtopic.id}
                                     className={`flex flex-col`}
                                 >
                                     <div className={`${
-                                        currentTopic === topic.title + "-" + subtopic.title ? 'text-red-400 text-2xl' : 'text-slate-300 text-2xl'
-                                    } flex items-center transition-all duration-200 hover:cursor-pointer hover:text-slate-50 flex-row`}
+                                        currentTopic === topic.title + "-" + subtopic.title ? 'text-cyan-400 text-2xl' : 'text-slate-300 text-2xl'
+                                    } flex items-center transition-all duration-200 hover:cursor-pointer hover:text-slate-50 flex-row py-2`}
                                          onClick={() => {
                                              if (subtopic.subtopics) {
                                                  toggleCollapse(subtopic);
@@ -126,7 +144,7 @@ function Sidebar({ currentTopic }) {
                                                 <circle cx="5" cy="5" r="2" fill="#F8FAFC" />
                                             </svg>
                                         )}
-                                        <span className={`${currentTopic === topic.title + "-" + subtopic.title ? "text-1xl" : "text-xl"} ml-2`}>{subtopic.title}</span>
+                                        <span className={`${currentTopic === topic.title + "-" + subtopic.title ? "text-1xl" : "text-xl"} ml-4`}>{subtopic.title}</span>
                                     </div>
                                     <div>
                                         {subtopic.subtopics && collapsed[subtopic.title + "-" + subtopic.id] && (
@@ -135,8 +153,8 @@ function Sidebar({ currentTopic }) {
                                                     <div
                                                         key={subsubtopic.id}
                                                         className={`${
-                                                            currentTopic.split("-")[0] === topic.title && currentTopic.split("-")[1] === subtopic.title && currentTopic.split("-")[2] === subsubtopic.title ? 'text-red-400 text-1xl' : 'text-slate-300 text-xl'
-                                                        } flex items-center transition-all duration-200 hover:cursor-pointer hover:text-slate-50 border-l-1 border-gray-600`}
+                                                            currentTopic.split("-")[0] === topic.title && currentTopic.split("-")[1] === subtopic.title && currentTopic.split("-")[2] === subsubtopic.title ? 'text-cyan-400 text-1xl' : 'text-slate-300 text-xl'
+                                                        } flex items-center transition-all duration-200 hover:cursor-pointer hover:text-slate-50 border-l-1 border-cyan-400 py-2`}
                                                         onClick={() => {
                                                             window.location.href = subsubtopic.href;
                                                         }}
@@ -145,7 +163,7 @@ function Sidebar({ currentTopic }) {
                                                         <svg width="10" height="10">
                                                             <circle cx="5" cy="5" r="2" fill="#F8FAFC" />
                                                         </svg>
-                                                        <span className={"ml-2"}>{subsubtopic.title}</span>
+                                                        <span className={"ml-4"}>{subsubtopic.title}</span>
                                                     </div>
                                                 ))}
                                             </div>
@@ -157,7 +175,7 @@ function Sidebar({ currentTopic }) {
                     )}
                 </div>
             ))}
-        </aside>
+        </div>
     );
 }
 

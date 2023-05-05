@@ -13,6 +13,9 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        "blue-accent": "#FF4C30",
+      },
       borderWidth: {
         1: '1px',
       },
@@ -190,9 +193,6 @@ module.exports = {
         "160": "40rem",
         "168": "42rem",
         "176": "44rem",
-
-
-
       },
     },
   },
