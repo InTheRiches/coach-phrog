@@ -77,6 +77,8 @@ module.exports = {
         "8v": "8vh",
         "9v": "9vh",
         "10v": "10vh",
+
+        "1.25": "0.3125rem",
       },
       height: {
         '1v': '1vh',

@@ -2,8 +2,12 @@ import Navigation from '@/components/Navigation'
 import Content from '@/components/Content'
 import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
+import ContentScroll from "@/components/ContentScroll";
+
 
 export default function BackMuscleFunctions({}) {
+    ContentScroll();
+
     return (
         <div className="flex flex-col min-h-screen bg-white dark:bg-neutral-900 text-slate-900 dark:text-slate-50 justify-center items-center">
             <Navigation></Navigation>

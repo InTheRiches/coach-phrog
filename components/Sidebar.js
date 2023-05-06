@@ -8,16 +8,6 @@ const topics = [
             { id: 1, title: 'Basics', href: '/muscles/basics' },
             {
                 id: 2,
-                title: 'Functions',
-                subtopics: [
-                    { id: 1, title: 'Back', href: '/muscles/functions/back' },
-                    { id: 2, title: 'Chest', href: '/muscles/functions/chest' },
-                    { id: 3, title: 'Core', href: '/muscles/functions/core' },
-                    { id: 4, title: 'Legs', href: '/muscles/functions/legs' },
-                ]
-            },
-            {
-                id: 3,
                 title: 'Training',
                 subtopics: [
                     { id: 1, title: "Basics", href: "/muscles/training/basics"},
@@ -26,7 +16,17 @@ const topics = [
                     { id: 4, title: 'Cardio', href: '/muscles/training/cardio' }, // isometric training
                     { id: 5, title: 'Power', href: '/muscles/training/power'} // rapid explosive bursts of force, plyometric training
                 ]
-            }
+            },
+            {
+                id: 3,
+                title: 'Functions',
+                subtopics: [
+                    { id: 1, title: 'Back', href: '/muscles/functions/back' },
+                    { id: 2, title: 'Chest', href: '/muscles/functions/chest' },
+                    { id: 3, title: 'Core', href: '/muscles/functions/core' },
+                    { id: 4, title: 'Legs', href: '/muscles/functions/legs' },
+                ]
+            },
         ],
     },
     {
@@ -98,7 +98,8 @@ function Sidebar({ currentTopic }) {
                     <div className={`flex flex-col`}>
                         <div className={`${
                             currentTopic === "Getting Started-Introduction" ? 'text-cyan-accent border-cyan-accent' : 'text-neutral-700 dark:text-slate-300 border-neutral-200 dark:border-neutral-700'
-                        } flex border-l-1 items-center flex-row py-2`}>
+                        } flex border-l-1 items-center flex-row py-2`}
+                        onClick={() => window.location.href = "/getting-started/introduction"}>
                             <span className={`text-xl ml-6 hover:cursor-pointer hover:text-cyan-accent transition-all duration-200`}>Introduction</span>
                         </div>
                     </div>

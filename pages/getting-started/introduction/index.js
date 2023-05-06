@@ -12,13 +12,13 @@ export default function TrainingBasics({}) {
             <Navigation></Navigation>
 
             <div className="grid gap-8 grid-cols-270px max-w-screen-4xl md:px-6 my-8 lg:mr-32 xl:mr-56">
-                <Sidebar currentTopic={"Muscles-Training-Basics"}></Sidebar>
+                <Sidebar currentTopic={"Getting Started-Introduction"}></Sidebar>
                 <div className="flex-1 w-full max-w-5xl flex-col">
                     {/* Page Header */}
                     <div className="flex flex-col mb-12">
-                        <span className="ml-6 mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Muscle Training - Basics</span>
+                        <span className="ml-6 mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Getting Started - Introduction</span>
                         <div className={"ml-6 border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
-                            <span className={"text-lg"}>Properly training is important to making progress in the gym. Utilizing all available processes can significantly increase gains, and make the experience overall more enjoyable and rewarding. Training properly can also avoid injuries and make sure that your body is staying healthy.</span>
+                            <span className={"text-lg"}>Weight lifting, also known as resistance training, is a process involving the lifting, pushing, or pulling weights or resistance devices, resulting in an increase in muscle mass and improvements in overall physical fitness.</span>
                         </div>
                     </div>
                     {/* Topics */}
@@ -37,26 +37,6 @@ export default function TrainingBasics({}) {
                         title="Range of Motion"
                         content={'Each muscle group covers a range of motion. When you push that range of motion, your muscles stretch. When you perform an exercise with a full range of motion, you are able to engage and activate more muscle fibers throughout the movement. This means that you can stimulate more muscle growth and development than if you were to perform the exercise with a limited range of motion.-.-Additionally, using a full range of motion during weight lifting can help to increase the time under tension (TUT) for your muscles. TUT refers to the amount of time that your muscles are under load during an exercise. By increasing TUT, you can increase muscle tearing and stimulate greater muscle growth and adaptation.'} // add links to where we go into more detail
                     ></Content>
-                    {/*<div className="ml-6">*/}
-                    {/*    <div className="flex rounded-md border-1 border-yellow-200 bg-black bg-opacity-20 p-4 text-lg text-yellow-200">*/}
-                    {/*        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="mr-3 mt-1.5 h-5 w-5 flex-shrink-0">*/}
-                    {/*            <path fillRule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />*/}
-                    {/*        </svg>*/}
-                    {/*        <div className={"w-full"}>*/}
-                    {/*            <h4 className="font-bold">Make sure to strengthen the rotator cuff as you increase load on shoulder bearing movements, as permanent damage can occur.</h4>*/}
-                    {/*            <div className="mt-1">*/}
-                    {/*                <ul className="list-inside list-disc lg:grid w-full">*/}
-                    {/*                    <li>Shoulder pain</li>*/}
-                    {/*                    <li>Weakness, loss of stability</li>*/}
-                    {/*                    <li>Limited range of motion</li>*/}
-                    {/*                    <li>Tendinitis</li>*/}
-                    {/*                    <li>Bursitis</li>*/}
-                    {/*                    <li>Rotator cuff tear, often permanent, requiring surgical intervention</li>*/}
-                    {/*                </ul>*/}
-                    {/*            </div>*/}
-                    {/*        </div>*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
                     <Content
                         id={"tracking-progression"}
                         title={"Tracking Progression"}
