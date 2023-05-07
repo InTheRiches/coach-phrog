@@ -1,42 +1,65 @@
-import { useState } from 'react'
+import {useEffect, useState} from 'react'
 import { useRouter } from 'next/router'
 import Navigation from '@/components/Navigation'
 import Content from '@/components/Content'
 import Sidebar from "@/components/Sidebar";
+import Footer from "@/components/Footer";
+import {Scramble, ScrambleElement} from "@/components/Scrambler";
 
 export default function Layout({ children }) {
-  return (
-    <div className="flex flex-col min-h-screen bg-gray-800 text-slate-50">
-        <Navigation></Navigation>
+    useEffect(() => {
+        // Select all text elements on the page
+        const textElements = document.querySelectorAll('h1, h2');
 
-        <div className="flex-1 flex-row max-w-screen-xl mx-auto my-8 flex">
-            <Sidebar></Sidebar>
-            <div className="flex-1 flex-col">
-                {/* Page Header */}
-                <div className="flex flex-col mb-12">
-                    <span className="ml-6 mb-14 text-6xl font-bold">Muscle Basics</span>
-                    <div className={"border-gray-600 border-l-8 flex flex-col"}>
-                        <span className={"ml-6 text-lg mb-2"}>Muscles are a type of tissue in our bodies that allow us to move and carry out physical activities. Think of muscles like rubber bands or ropes that are attached to our bones and can contract, or shorten, to pull the bones closer together, allowing us to move our bodies.</span>
-                        <span className={"ml-6 text-lg"}>For example, when you bend your arm, your bicep muscle contracts, pulling your forearm towards your shoulder. When you straighten your arm, your tricep muscle contracts, pulling your forearm away from your shoulder.</span>
+        // Loop through each text element
+        textElements.forEach((element) => {
+            console.log("scrambling");
+            ScrambleElement(element, false, true);
+        });
+    }, []);
+
+    return (
+        <div className="flex flex-col min-h-screen bg-white dark:bg-neutral-900 text-slate-900 dark:text-slate-50 justify-center items-center font-mono">
+            <header className={"flex flex-col items-center w-full h-screen"}>
+                <Navigation></Navigation>
+                <div className="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32">
+                    <h1 className={"text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white"}>Transform your physique with expert guidance without ever paying a dollar.</h1>
+                    <p className="mt-6 text-lg lg:text-2xl text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">A science based approach to <a className={"text-cyan-accent"}>building muscle</a>, <a className={"text-cyan-accent"}>losing fat</a>, and getting <a className={"text-cyan-accent"}>stronger</a>, formatted to be understood and accessible by all.</p>
+
+                    <div className="mt-6 sm:mt-10 flex justify-center space-x-6 text-sm"><a
+                        className="bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto dark:bg-cyan-accent dark:highlight-white/20 dark:hover:bg-cyan-accent-light"
+                        href="/getting-started/introduction">Get started</a>
+                        <button type="button"
+                                className="hidden sm:flex items-center w-72 text-left space-x-3 px-4 h-12 bg-white ring-1 ring-slate-900/10 hover:ring-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 shadow-sm rounded-lg text-slate-400 dark:bg-slate-800 dark:ring-0 dark:text-slate-300 dark:highlight-white/5 dark:hover:bg-slate-700">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2"
+                                 strokeLinecap="round" strokeLinejoin="round"
+                                 className="flex-none text-slate-300 dark:text-slate-400" aria-hidden="true">
+                                <path d="m19 19-3.5-3.5"></path>
+                                <circle cx="11" cy="11" r="6"></circle>
+                            </svg>
+                            <span className="flex-auto">Quick search...</span><kbd
+                            className="font-sans font-semibold dark:text-slate-500"><abbr title="Control" className="no-underline text-slate-300 dark:text-slate-500">Ctrl </abbr> K</kbd>
+                        </button>
                     </div>
                 </div>
-                {/* First Topic */}
-                <Content
-                    title="Muscle Activation"
-                    content="Muscles are activated by signals from our nervous system, which is like the body's electrical wiring. When we want to move, our brain sends a signal through our nervous system to the muscle that needs to contract. When you want to move a muscle, your brain sends a signal to the muscle fibers. The muscle fibers are made up of tiny units called sarcomeres. These sarcomeres contain two types of filaments called actin and myosin.-.-When the muscle fibers receive the signal to contract, the myosin filaments grab onto the actin filaments and pull them towards the center of the sarcomere, which causes the sarcomere to shorten. This shortening of the sarcomere causes the whole muscle fiber to contract.-.-This process requires energy in the form of ATP, and it continues as long as the muscle is receiving the signal to contract. So, when you move a muscle, what's happening is a bunch of tiny filaments inside the muscle fibers are grabbing and pulling on each other to make the whole muscle get shorter and create movement."
-                ></Content>
-                <Content
-                    title={"Muscle Growth"}
-                    content={"When you use your muscles to perform physical activities, such as lifting weights, your muscles can get bigger and stronger. This happens because your muscles are made up of tiny fibers, and when you challenge these fibers by lifting heavy weights, it causes them to tear and break down.-.-This might sound bad, but it's actually a good thing! When these tiny fibers are damaged, it triggers a response from your body to repair and rebuild them stronger and thicker than before. This process is called muscle hypertrophy, and it's how muscles grow.-.-To support muscle growth, you need to give your body the right fuel and rest. Eating a balanced diet that includes plenty of protein is important because protein helps to repair and build new muscle fibers. Getting enough sleep and rest is also crucial because it allows your body to recover and rebuild the muscles that were damaged during exercise."}
-                ></Content>
-            </div>
-        </div>
+            </header>
 
-        <footer className="bg-gray-800 bg-opacity-50 bg-blur-sm text-slate-50 py-4">
-            <div className="container text-center">
-            <p>&copy; 2023 My Workout Database. All rights reserved.</p>
-            </div>
-        </footer>
-    </div>
-  )
+            <section className="text-center max-w-7xl px-8 mt-10 sm:mt-15 md:mt-20 mb-14"><h2
+                className="text-slate-900 text-4xl font-extrabold sm:text-5xl dark:text-white">Understanding the mechanics behind working out significantly increases effectiveness.</h2>
+                <figure>
+                    <blockquote><p className="mt-6 max-w-3xl mx-auto text-lg lg:text-xl text-slate-600 dark:text-slate-400">During my fitness journey, I realized the importance of understanding the human anatomy and the underlying science of muscle <a className={"text-cyan-accent"}>hypertrophy</a>. As my understanding of these concepts grew, so did my <a className={"text-cyan-accent"}>efficiency</a> and <a className={"text-cyan-accent"}>effectiveness</a> in the gym. By comprehending the precise mechanisms behind muscle development and how to optimize them, I found that my workouts became more <a className={"text-cyan-accent"}>gratifying</a> and <a className={"text-cyan-accent"}>productive</a>.</p></blockquote>
+                    <figcaption className="mt-6 flex items-center justify-center space-x-4 text-left"><img
+                        src="/_next/static/media/adam.26d0119c.jpg" alt="" className="w-14 h-14 rounded-full"
+                        loading="lazy" decoding="async"></img>
+                        <div>
+                            <div className="text-slate-900 font-bold dark:text-white text-lg">Hayden Williams</div>
+                            <div className="mt-0.5 text-lg leading-6 text-slate-600 dark:text-slate-400">Founder of Surge Strength</div>
+                        </div>
+                    </figcaption>
+                </figure>
+            </section>
+
+            <Footer></Footer>
+        </div>
+      )
 }

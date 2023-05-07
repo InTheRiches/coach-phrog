@@ -5,8 +5,12 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  plugins: [require("daisyui")],
   theme: {
+    fontFamily: {
+        mono: [
+          'JetBrains Mono', "monospace"
+        ]
+    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -15,6 +19,7 @@ module.exports = {
       },
       colors: {
         "cyan-accent": "#0ea5e9",
+        "cyan-accent-light": "#3fb1e7",
       },
       borderWidth: {
         1: '1px',

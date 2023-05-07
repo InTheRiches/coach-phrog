@@ -62,17 +62,35 @@ const topics = [
 
 ];
 function Sidebar({ currentTopic }) {
+    const [loaded, setLoaded] = useState(false);
+
     const [collapsed, setCollapsed] = useState(() => {
         const initialState = {};
         topics.forEach((topic) => {
             topic.subtopics.forEach((subtopic) => {
-                if (currentTopic === topic.title + "-" + subtopic.title)
-                    initialState[topic.title + "-" + subtopic.id] = true;
+                if (
+                    currentTopic ===
+                    topic.title + "-" + subtopic.title
+                )
+                    initialState[
+                    topic.title + "-" + subtopic.id
+                        ] = true;
                 else if (subtopic.subtopics) {
                     subtopic.subtopics.forEach((subsubtopic) => {
-                        if (currentTopic === topic.title + "-" + subtopic.title + "-" + subsubtopic.title) {
-                            initialState[subtopic.title + "-" + subtopic.id] = true;
-                            initialState[topic.title + "-" + topic.id] = true;
+                        if (
+                            currentTopic ===
+                            topic.title +
+                            "-" +
+                            subtopic.title +
+                            "-" +
+                            subsubtopic.title
+                        ) {
+                            initialState[
+                            subtopic.title + "-" + subtopic.id
+                                ] = true;
+                            initialState[
+                            topic.title + "-" + topic.id
+                                ] = true;
                         }
                     });
                 }
@@ -81,8 +99,27 @@ function Sidebar({ currentTopic }) {
         return initialState;
     });
 
+    useEffect(() => {
+        // retrieve the state of the menus from LocalStorage
+        const storedState = window.localStorage.getItem(
+            "sidebar-collapsed-state"
+        );
+        if (storedState) {
+            setCollapsed(JSON.parse(storedState));
+        }
+        setLoaded(true);
+    }, []);
+
     const toggleCollapse = (topic) => {
-        setCollapsed({ ...collapsed, [topic.title + "-" + topic.id]: !collapsed[topic.title + "-" + topic.id] });
+        const newValue = !collapsed[topic.title + "-" + topic.id];
+
+        setCollapsed({ ...collapsed, [topic.title + "-" + topic.id]: newValue });
+
+        // save the new state to LocalStorage
+        window.localStorage.setItem(
+            "sidebar-collapsed-state",
+            JSON.stringify({ ...collapsed, [topic.title + "-" + topic.id]: newValue })
+        );
     };
 
     return (
@@ -105,13 +142,17 @@ function Sidebar({ currentTopic }) {
                     </div>
                 </div>
             </div>
-            {topics.map((topic) => (
+            {loaded && topics.map((topic) => (
                 <div className="mb-2" key={topic.id}>
                     <div
-                        className="flex items-center mb-2 hover:cursor-pointer"
+                        className="flex items-center mb-2 hover:cursor-pointer justify-between"
                         onClick={() => toggleCollapse(topic)}
                     >
                         <h5 className="font-bold text-xl">{topic.title}</h5>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={"w-5 h-5 transition-all duration-100 " + (collapsed[topic.title + "-" + topic.id] ? "-scale-y-100" : "scale-y-100")}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+                        </svg>
                     </div>
                     {collapsed[topic.title + "-" + topic.id] && (
                         <div className="">

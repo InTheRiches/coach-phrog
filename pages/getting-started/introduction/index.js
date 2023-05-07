@@ -3,6 +3,7 @@ import Content from '@/components/Content'
 import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
 import ContentScroll from "@/components/ContentScroll";
+import Scramble from "@/components/Scrambler";
 
 export default function TrainingBasics({}) {
     ContentScroll();
