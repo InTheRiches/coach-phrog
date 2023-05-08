@@ -21,7 +21,7 @@ export default function Layout({ children }) {
     return (
         <div className="flex flex-col min-h-screen bg-white dark:bg-neutral-900 text-slate-900 dark:text-slate-50 justify-center items-center font-mono">
             <header className={"flex flex-col items-center w-full h-screen"}>
-                <Navigation></Navigation>
+                <Navigation ></Navigation>
                 <div className="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32">
                     <h1 className={"text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white"}>Transform your physique with expert guidance without ever paying a dollar.</h1>
                     <p className="mt-6 text-lg lg:text-2xl text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">A science based approach to <a className={"text-cyan-accent"}>building muscle</a>, <a className={"text-cyan-accent"}>losing fat</a>, and getting <a className={"text-cyan-accent"}>stronger</a>, formatted to be understood and accessible by all.</p>

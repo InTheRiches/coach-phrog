@@ -6,12 +6,18 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    darkMode: 'class',
     fontFamily: {
         mono: [
           'JetBrains Mono', "monospace"
         ]
     },
     extend: {
+      fontFamily: {
+        'spacemono': ['Space Mono', 'monospace'],
+        'jetbrains': ['JetBrains Mono', 'monospace'],
+        'notosans': ['Noto Sans Mono', 'monospace'],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

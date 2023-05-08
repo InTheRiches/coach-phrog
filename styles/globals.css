@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+h1,h2 {
+  font-family: 'Noto Sans Mono', monospace
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;

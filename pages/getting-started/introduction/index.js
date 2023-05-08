@@ -3,21 +3,35 @@ import Content from '@/components/Content'
 import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
 import ContentScroll from "@/components/ContentScroll";
-import Scramble from "@/components/Scrambler";
+import Scramble, {ScrambleElement} from "@/components/Scrambler";
+import {useEffect, useState} from "react";
 
 export default function TrainingBasics({}) {
     ContentScroll();
 
+    const {dark, setDark} = useState(true);
+
+    useEffect(() => {
+        // Select all text elements on the page
+        const textElements = document.querySelectorAll('h1, h2');
+
+        // Loop through each text element
+        textElements.forEach((element) => {
+            console.log("scrambling");
+            ScrambleElement(element, true, false);
+        });
+    }, []);
+
     return (
-        <div className="flex flex-col min-h-screen bg-white dark:bg-neutral-900 text-slate-900 dark:text-slate-50 justify-center items-center">
-            <Navigation></Navigation>
+        <div className={(dark ? "dark" : "") + " flex flex-col min-h-screen bg-white dark:bg-neutral-900 text-slate-900 dark:text-slate-50 justify-center items-center"}>
+            <Navigation dark={dark} setDark={setDark}></Navigation>
 
             <div className="grid gap-8 grid-cols-270px max-w-screen-4xl md:px-6 my-8 lg:mr-32 xl:mr-56">
                 <Sidebar currentTopic={"Getting Started-Introduction"}></Sidebar>
                 <div className="flex-1 w-full max-w-5xl flex-col">
                     {/* Page Header */}
                     <div className="flex flex-col mb-12">
-                        <span className="ml-6 mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Getting Started - Introduction</span>
+                        <h1 className="ml-6 mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Getting Started - Introduction</h1>
                         <div className={"ml-6 border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
                             <span className={"text-lg"}>Weight lifting, also known as resistance training, is a process involving the lifting, pushing, or pulling weights or resistance devices, resulting in an increase in muscle mass and improvements in overall physical fitness.</span>
                         </div>

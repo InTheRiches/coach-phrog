@@ -52,7 +52,7 @@ export default function Content({id, title, content}) {
 
     return (
         <div id={id+"x"} className="mt-12">
-            <span className="ml-6 text-3xl font-bold flex items-center">
+            <h1 className="ml-6 text-3xl font-bold flex items-center">
                 <a onClick={() => {
                     // copy the URL to the clipboard
                     if (window.location.href.includes("#")) {
@@ -80,7 +80,7 @@ export default function Content({id, title, content}) {
                     </div>
                 </a>
                 {title}
-            </span>
+            </h1>
             <div className="flex flex-col mt-8"> {/* border-gray-600 border-l-8 */}
                 {text.map((substring, index) => (
                     <span className="ml-6 text-lg mb-6" key={index}>{substring}</span>
