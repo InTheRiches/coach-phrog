@@ -5,23 +5,34 @@ import Content from '@/components/Content'
 import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
 import {Scramble, ScrambleElement} from "@/components/Scrambler";
+import useDarkMode from 'use-dark-mode';
 
 export default function Layout({ children }) {
+
+    const { value: isDarkMode, toggle: toggleDarkMode } = useDarkMode();
+
+    useEffect(() => {
+        if (isDarkMode) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+    }, [isDarkMode]);
+
     useEffect(() => {
         // Select all text elements on the page
         const textElements = document.querySelectorAll('h1, h2');
 
         // Loop through each text element
         textElements.forEach((element) => {
-            console.log("scrambling");
             ScrambleElement(element, false, true);
         });
     }, []);
 
     return (
-        <div className="flex flex-col min-h-screen bg-white dark:bg-neutral-900 text-slate-900 dark:text-slate-50 justify-center items-center font-mono">
+        <div className={`flex flex-col min-h-screen bg-white dark:bg-neutral-900 text-slate-900 dark:text-slate-50 justify-center items-center font-mono`}>
             <header className={"flex flex-col items-center w-full h-screen"}>
-                <Navigation ></Navigation>
+                <Navigation dark={isDarkMode} setDark={toggleDarkMode}></Navigation>
                 <div className="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32">
                     <h1 className={"text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white"}>Transform your physique with expert guidance without ever paying a dollar.</h1>
                     <p className="mt-6 text-lg lg:text-2xl text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">A science based approach to <a className={"text-cyan-accent"}>building muscle</a>, <a className={"text-cyan-accent"}>losing fat</a>, and getting <a className={"text-cyan-accent"}>stronger</a>, formatted to be understood and accessible by all.</p>

@@ -17,18 +17,16 @@ function classNames(...classes) {
 export default function Navigation({dark, setDark}) {
   useEffect(() => {
     // Select all text elements on the page
-    const textElements = document.querySelectorAll('.font-notosans');
+    const textElements = document.querySelectorAll('.font-roboto');
 
     // Loop through each text element
     textElements.forEach((element) => {
-      console.log("scrambling");
       ScrambleElement(element, true, false);
     });
   }, []);
 
-  console.log(setDark);
   return (
-    <Disclosure as="nav" id="navigation" className="sticky py-3 top-0 z-40 w-full text-neutral-900 dark:text-slate-50 border-b-1 border-neutral-700 backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/75 supports-backdrop-blur:bg-cyan-accent/95 dark:bg-neutral-900/75">
+    <Disclosure as="nav" id="navigation" className="sticky py-3 top-0 z-40 w-full text-neutral-900 dark:text-slate-50 border-b-1 border-neutral-700 backdrop-blur flex-none lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/75 supports-backdrop-blur:bg-cyan-accent/95 dark:bg-neutral-900/75">
       {({ open }) => (
         <>
           <div className="mx-auto px-2 sm:px-6 lg:px-8">
@@ -56,7 +54,7 @@ export default function Navigation({dark, setDark}) {
                     alt="Your Company"
                   />
                 </div>
-                <a className="ml-4 text-2xl sm:text-3xl font-bold text-center font-notosans">SURGE STRENGTH</a>
+                <a className="ml-4 text-2xl sm:text-3xl font-bold text-center font-roboto">SURGE STRENGTH</a>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2">
                 <button
@@ -64,7 +62,7 @@ export default function Navigation({dark, setDark}) {
                   className="rounded-full p-1 text-gray-400 hover:text-cyan-accent focus:outline-none focus:ring-2 focus:ring-cyan-accent focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="sr-only">View notifications</span>
-                  <svg onClick={() => setDark(!dark)} className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="white" stroke="white" d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></svg>
+                  <svg onClick={setDark} className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill={dark ? "white" : "black"} stroke="white" d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></svg>
                 </button>
 
                 {/* Profile dropdown */}

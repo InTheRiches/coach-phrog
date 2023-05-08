@@ -5,20 +5,31 @@ import Footer from "@/components/Footer";
 import {useEffect} from "react";
 import {useRouter} from "next/router";
 import ContentScroll from "@/components/ContentScroll";
+import useDarkMode from 'use-dark-mode';
 
 export default function MuscleBasics({}) {
     ContentScroll();
 
+    const { value: isDarkMode, toggle: toggleDarkMode } = useDarkMode();
+
+    useEffect(() => {
+        if (isDarkMode) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+    }, [isDarkMode]);
+
     return (
-        <div className="flex flex-col min-h-screen bg-white dark:bg-neutral-900 text-slate-900 dark:text-slate-50 justify-center items-center">
-            <Navigation></Navigation>
+        <div className={"flex flex-col min-h-screen bg-white dark:bg-neutral-900 text-slate-900 dark:text-slate-50 justify-center items-center"}>
+            <Navigation dark={isDarkMode} setDark={toggleDarkMode}></Navigation>
 
             <div className="grid gap-8 grid-cols-270px max-w-screen-4xl md:px-6 my-8 lg:mr-32 xl:mr-56">
                 <Sidebar currentTopic={"Muscles-Basics"}></Sidebar>
                 <div className="flex-1 w-full max-w-5xl flex-col">
                     {/* Page Header */}
                     <div className="flex flex-col mb-12">
-                        <span className="ml-6 mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Muscles - Basics</span>
+                        <h1 className="ml-6 mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Muscles - Basics</h1>
                         <div className={"ml-6 border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
                             <span className={"text-lg mb-2"}>Muscles are a type of tissue in our bodies that allow us to <b>move</b> and <b>carry</b> out physical activities. Think of muscles like rubber bands or ropes that are attached to our bones and can <b>contract</b>, or shorten, to pull the bones closer together, allowing us to move our bodies. For example, when you bend your arm, your bicep muscle contracts, <b>pulling</b> your forearm towards your shoulder. When you straighten your arm, your tricep muscle contracts, <b>pushing</b> your forearm away from your shoulder.</span>
                         </div>

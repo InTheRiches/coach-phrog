@@ -1,4 +1,6 @@
 import React, {useEffect, useState} from 'react';
+import {ScrambleElement} from "@/components/Scrambler";
+import {useRouter} from "next/router";
 
 const topics = [
     {
@@ -63,6 +65,7 @@ const topics = [
 ];
 function Sidebar({ currentTopic }) {
     const [loaded, setLoaded] = useState(false);
+    const router = useRouter();
 
     const [collapsed, setCollapsed] = useState(() => {
         const initialState = {};
@@ -110,6 +113,15 @@ function Sidebar({ currentTopic }) {
         setLoaded(true);
     }, []);
 
+    useEffect(() => {
+        const textElements = document.querySelectorAll('.font-bold.text-xl');
+
+        // Loop through each text element
+        textElements.forEach((element) => {
+            ScrambleElement(element, true, false);
+        });
+    }, [loaded]);
+
     const toggleCollapse = (topic) => {
         const newValue = !collapsed[topic.title + "-" + topic.id];
 
@@ -136,7 +148,7 @@ function Sidebar({ currentTopic }) {
                         <div className={`${
                             currentTopic === "Getting Started-Introduction" ? 'text-cyan-accent border-cyan-accent' : 'text-neutral-700 dark:text-slate-300 border-neutral-200 dark:border-neutral-700'
                         } flex border-l-1 items-center flex-row py-2`}
-                        onClick={() => window.location.href = "/getting-started/introduction"}>
+                        onClick={() => router.push("/getting-started/introduction")}>
                             <span className={`text-xl ml-6 hover:cursor-pointer hover:text-cyan-accent transition-all duration-200`}>Introduction</span>
                         </div>
                     </div>
@@ -148,7 +160,7 @@ function Sidebar({ currentTopic }) {
                         className="flex items-center mb-2 hover:cursor-pointer justify-between"
                         onClick={() => toggleCollapse(topic)}
                     >
-                        <h5 className="font-bold text-xl">{topic.title}</h5>
+                        <h2 className="font-bold text-xl">{topic.title}</h2>
 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={"w-5 h-5 transition-all duration-100 " + (collapsed[topic.title + "-" + topic.id] ? "-scale-y-100" : "scale-y-100")}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
@@ -169,14 +181,14 @@ function Sidebar({ currentTopic }) {
                                                  toggleCollapse(subtopic);
                                              }
                                              else {
-                                                 window.location.href = subtopic.href;
+                                                router.push(subtopic.href);
                                              }
                                          }}>
 
                                         <a className={`text-xl ml-6`}>{subtopic.title}</a>
 
                                         {subtopic.subtopics && (
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={"w-5 h-5 transition-all duration-100 " + (collapsed[subtopic.title + "-" + subtopic.id] ? "-scale-y-100" : "scale-y-100")}>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={"w-5 h-5 transition-transform duration-100" + (collapsed[subtopic.title + "-" + subtopic.id] ? "-scale-y-100" : "scale-y-100")}>
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
                                             </svg>
                                         )}
@@ -191,7 +203,7 @@ function Sidebar({ currentTopic }) {
                                                             currentTopic.split("-")[0] === topic.title && currentTopic.split("-")[1] === subtopic.title && currentTopic.split("-")[2] === subsubtopic.title ? 'text-cyan-accent border-cyan-accent' : 'text-neutral-700 dark:text-slate-300 border-neutral-200 dark:border-neutral-700'
                                                         } flex items-center transition-all duration-200 hover:cursor-pointer hover:text-cyan-accent border-l-1  py-1 text-xl`}
                                                         onClick={() => {
-                                                            window.location.href = subsubtopic.href;
+                                                            router.push(subsubtopic.href);
                                                         }}
                                                     >
                                                         <span className="w-4" />

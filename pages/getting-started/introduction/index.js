@@ -3,13 +3,14 @@ import Content from '@/components/Content'
 import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
 import ContentScroll from "@/components/ContentScroll";
-import Scramble, {ScrambleElement} from "@/components/Scrambler";
+import {ScrambleElement} from "@/components/Scrambler";
 import {useEffect, useState} from "react";
+import useDarkMode from 'use-dark-mode';
 
 export default function TrainingBasics({}) {
     ContentScroll();
-
-    const {dark, setDark} = useState(true);
+    
+    const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
         // Select all text elements on the page
@@ -17,14 +18,25 @@ export default function TrainingBasics({}) {
 
         // Loop through each text element
         textElements.forEach((element) => {
-            console.log("scrambling");
             ScrambleElement(element, true, false);
         });
     }, []);
 
-    return (
-        <div className={(dark ? "dark" : "") + " flex flex-col min-h-screen bg-white dark:bg-neutral-900 text-slate-900 dark:text-slate-50 justify-center items-center"}>
-            <Navigation dark={dark} setDark={setDark}></Navigation>
+    const { value: isDarkMode, toggle: toggleDarkMode } = useDarkMode();
+
+    useEffect(() => {
+        if (isDarkMode) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+
+        setLoaded(true);
+    }, [isDarkMode]);
+
+    return loaded ? (
+        <div className={"flex flex-col min-h-screen bg-white dark:bg-neutral-900 text-slate-900 dark:text-slate-50 justify-center items-center"}>
+            <Navigation dark={isDarkMode} setDark={toggleDarkMode}></Navigation>
 
             <div className="grid gap-8 grid-cols-270px max-w-screen-4xl md:px-6 my-8 lg:mr-32 xl:mr-56">
                 <Sidebar currentTopic={"Getting Started-Introduction"}></Sidebar>
@@ -67,5 +79,5 @@ export default function TrainingBasics({}) {
 
             <Footer></Footer>
         </div>
-    )
+    ) : (<></>)
 }

@@ -44,7 +44,6 @@ export function ScrambleElement(element, upperCase = true, lowerCase = true) {
     let interval = null;
 
     const original = element.textContent;
-    console.log(original);
 
     const letterSet = upperCase && lowerCase ? letters : upperCase ? upperletters : lowerletters;
 
@@ -67,7 +66,6 @@ export function ScrambleElement(element, upperCase = true, lowerCase = true) {
                 return letterSet[Math.floor(Math.random() * letterSet.length)]
             })
             .join("");
-        console.log(element.textContent);
 
         if (iteration >= original.length){
             clearInterval(interval);

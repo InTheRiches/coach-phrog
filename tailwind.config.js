@@ -1,15 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    darkMode: 'class',
     fontFamily: {
         mono: [
-          'JetBrains Mono', "monospace"
+          'Roboto Mono', "monospace"
         ]
     },
     extend: {
@@ -17,6 +17,7 @@ module.exports = {
         'spacemono': ['Space Mono', 'monospace'],
         'jetbrains': ['JetBrains Mono', 'monospace'],
         'notosans': ['Noto Sans Mono', 'monospace'],
+        'roboto': ['Roboto Mono', "monospace"]
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
