@@ -19,7 +19,7 @@ export function Scramble(event, upperCase = true, lowerCase = false) {
         event.target.innerText = event.target.innerText
             .split("")
             .map((letter, index) => {
-                if (letter === " ") return letter;
+                if (letter === " " || letter === "-") return letter;
                 if(index < iteration) {
                     return event.target.dataset.value[index];
                 }
@@ -58,7 +58,7 @@ export function ScrambleElement(element, upperCase = true, lowerCase = true) {
         element.textContent = element.textContent
             .split("")
             .map((letter, index) => {
-                if (letter === " ") return letter;
+                if (letter === " " || letter === "-") return letter;
                 if (index < iteration) {
                     return original[index];
                 }
