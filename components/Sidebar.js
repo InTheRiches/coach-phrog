@@ -135,7 +135,7 @@ function Sidebar({ currentTopic }) {
     };
 
     return (
-        <div className="bg-white dark:bg-neutral-900 p-4 mt-15 text-neutral-900 dark:text-slate-50"> {/* w-1/6 md:w-1/5 */}
+        <div className="bg-white dark:bg-neutral-900 p-4 mt-15 mr-4 text-neutral-900 dark:text-slate-50"> {/* w-1/6 md:w-1/5 */}
             <button className={"hidden w-full lg:flex border-1 border-slate-200 hover:border-cyan-accent border-opacity-50 hover:border-opacity-75 items-center text-sm leading-6 text-neutral-700 dark:text-slate-300 hover:dark:text-slate-50 hover:text-neutral-900 rounded-md shadow-sm py-1.5 pl-2 pr-3 mb-6 transition-all duration-100 bg-transparent"}>
                 <a>Search...</a>
             </button>

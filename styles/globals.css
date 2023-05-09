@@ -17,5 +17,11 @@ h1,h2 {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: black;
+  background: white;
+}
+
+.button-container {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
 }
