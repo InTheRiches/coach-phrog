@@ -17,5 +17,9 @@ h1,h2 {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: black;
+  background: white;
+}
+
+body.d {
+  background: rgb(23 23 23);
 }

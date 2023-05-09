@@ -55,10 +55,11 @@ const topics = [
         title: 'Supplements',
         subtopics: [
             { id: 1, title: 'Basics', href: '/supplements/basics' },
-            { id: 2, title: 'Weight Loss', href: '/supplements/weight-loss' },
+            { id: 2, title: 'Performance', href: '/supplements/performance' },
             { id: 3, title: 'Muscle Gain', href: '/supplements/muscle-gain' },
-            { id: 4, title: 'Performance', href: '/supplements/performance' },
-            { id: 5, title: 'Recovery', href: '/supplements/recovery' },
+            { id: 4, title: 'Recovery', href: '/supplements/recovery' },
+            { id: 5, title: 'Weight Loss', href: '/supplements/weight-loss' },
+            
         ],
     }
 

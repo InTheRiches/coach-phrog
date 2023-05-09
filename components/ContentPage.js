@@ -16,8 +16,10 @@ export default function ContentPage({ currentTopic, content }) {
     useEffect(() => {
         if (isDarkMode) {
           document.documentElement.classList.add('dark');
+          document.body.classList.add('d');
         } else {
           document.documentElement.classList.remove('dark');
+          document.body.classList.remove('d');
         }
     }, [isDarkMode]);
 
