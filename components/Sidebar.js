@@ -55,11 +55,26 @@ const topics = [
         title: 'Supplements',
         subtopics: [
             { id: 1, title: 'Basics', href: '/supplements/basics' },
-            { id: 2, title: 'Performance', href: '/supplements/performance' },
-            { id: 3, title: 'Muscle Gain', href: '/supplements/muscle-gain' },
+            {
+                id: 2,
+                title: 'Performance',
+                subtopics: [
+                    { id: 1, title: 'Creatine', href: '/supplements/performance/creatine' },
+                    { id: 2, title: 'Pre Workout', href: '/supplements/performance/pre-workout' },
+                    { id: 3, title: 'Beta Alanine', href: '/supplements/performance/beta-alanine' },
+                    { id: 4, title: 'BCAAs', href: '/supplements/performance/bcaas' },
+                    { id: 5, title: 'Nitric Oxide', href: '/supplements/performance/nitric-oxide' },
+                    { id: 6, title: 'Glutamine', href: '/supplements/performance/glutamine' },
+                ]},
+            {
+                id: 3,
+                title: 'Muscle Gain',
+                subtopics: [
+                    { id: 1, title: 'Loaded Protein', href: '/supplements/muscle-gain/loaded-protein' },
+                ]
+            },
             { id: 4, title: 'Recovery', href: '/supplements/recovery' },
             { id: 5, title: 'Weight Loss', href: '/supplements/weight-loss' },
-            
         ],
     }
 
