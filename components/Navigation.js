@@ -21,7 +21,7 @@ export default function Navigation({dark, setDark}) {
 
     // Loop through each text element
     textElements.forEach((element) => {
-      ScrambleElement(element, true, false);
+      ScrambleElement(element, false, true);
     });
   }, []);
 
@@ -54,7 +54,7 @@ export default function Navigation({dark, setDark}) {
                     alt="Your Company"
                   />
                 </div>
-                <a className="ml-4 text-2xl sm:text-3xl font-bold text-center font-roboto">SURGE STRENGTH</a>
+                <a className="ml-4 text-2xl sm:text-3xl font-bold text-center font-roboto">surge strength</a>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2">
                 <button

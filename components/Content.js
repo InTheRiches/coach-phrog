@@ -2,7 +2,7 @@ import React from "react";
 import {useRouter} from "next/router";
 import {scroll} from "@/components/ContentScroll";
 
-export default function Content({id, title, content}) {
+export default function Content({id, title, content, bulletPoints}) {
     const spans = content.split("-.-");
 
     const router = useRouter();
@@ -10,6 +10,10 @@ export default function Content({id, title, content}) {
     const handleClick = (link) => {
         router.push(link);
     };
+
+    if (!bulletPoints) {
+        bulletPoints = {};
+    }
 
     const text = spans.map((block) => {
         return block
@@ -81,11 +85,16 @@ export default function Content({id, title, content}) {
                 </a>
                 {title}
             </h1>
-            <div className="flex flex-col mt-8"> {/* border-gray-600 border-l-8 */}
+            <div className="flex flex-col mt-8 text-lg"> {/* border-gray-600 border-l-8 */}
                 {text.map((substring, index) => (
-                    <span className="ml-6 text-lg mb-6" key={index}>{substring}</span>
+                    <span className="ml-6 mb-6" key={index}>{substring}</span>
                 ))}
             </div>
+            <ul className="ml-6 text-lg list-inside list-disc lg:grid w-full">
+                {Object.keys(bulletPoints).map((key) => (
+                    <li><b>{key}:</b><span> {bulletPoints[key]}</span></li>
+                ))}
+            </ul>
         </div>
     )
 }
