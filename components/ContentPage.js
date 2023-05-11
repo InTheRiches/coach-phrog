@@ -7,9 +7,27 @@ import {useRouter} from "next/router";
 import ContentScroll from "@/components/ContentScroll";
 import useDarkMode from 'use-dark-mode';
 import {ScrambleElement} from "@/components/Scrambler";
+import topics from '/public/content.json';
 
 export default function ContentPage({ currentTopic, content }) {
     ContentScroll();
+
+    const router = useRouter();
+
+    let keys = [];
+
+    topics.forEach((topic) => {
+        topic.subtopics.forEach((subtopic) => {
+            if (subtopic.subtopics) {
+                subtopic.subtopics.forEach((subsubtopic) => {
+                    keys.push(subsubtopic.href)
+                });
+            }
+            else {
+                keys.push(subtopic.href);
+            }
+        });
+    });
 
     const { value: isDarkMode, toggle: toggleDarkMode } = useDarkMode();
 
@@ -41,11 +59,58 @@ export default function ContentPage({ currentTopic, content }) {
                 <Sidebar currentTopic={currentTopic}></Sidebar>
                 <div className={"flex flex-col w-full h-full"}>
                     {content}
-                    <button className={"rounded-3xl bg-cyan-accent hover:bg-cyan-accent-hover text-white font-bold text-sm px-4 py-2 ml-4 transition-all w-8 h-8 duration-100 flex items-center justify-center"} onClick={() => router.push('/')}>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className={"w-6 h-6"}>
-                            <path fill={"white"} d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160zm352-160l-160 160c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L301.3 256 438.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0z"/>
-                        </svg>
-                    </button>
+                    <div className={"w-full flex justify-around mt-4"}>
+                        <button
+                            onClick={() => {
+                                const url = new URL(window.location.href);
+
+                                const index = keys.indexOf(url.pathname);
+                                if (index > 0)
+                                    router.push(keys[index - 1]);
+                            }}
+                            className="w-12 h-12 rounded-full bg-cyan-accent text-white flex items-center justify-center transition-colors duration-150 hover:bg-cyan-accent-light"
+                        >
+                            <svg
+                                className="w-6 h-6"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M15 19l-7-7 7-7"
+                                />
+                            </svg>
+                        </button>
+                        <button
+                            onClick={() => {
+                                const url = new URL(window.location.href);
+
+                                const index = keys.indexOf(url.pathname);
+                                if (index < keys.length - 1)
+                                    router.push(keys[index + 1]);
+                            }}
+                            className="w-12 h-12 rounded-full bg-cyan-accent text-white flex items-center justify-center transition-colors duration-150 hover:bg-cyan-accent-light focus:outline-none focus:bg-gray-700"
+                        >
+                            <svg
+                                className="w-6 h-6 -scale-x-100"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M15 19l-7-7 7-7"
+                                />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 

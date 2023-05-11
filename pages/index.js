@@ -25,7 +25,7 @@ export default function Layout({ children }) {
 
         // Loop through each text element
         textElements.forEach((element) => {
-            ScrambleElement(element, false, true);
+            ScrambleElement(element, false, true, 750);
         });
     }, []);
 

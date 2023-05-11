@@ -6,9 +6,9 @@ export default function PerformanceBCAAs({}) {
         <div className="w-full max-w-5xl flex-col">
             {/* Page Header */}
             <div className="flex flex-col mb-12">
-                <h1 className="ml-6 mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Creatine</h1>
+                <h1 className="ml-6 mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Nitrate</h1>
                 <div className={"ml-6 border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
-                    <span className={"text-lg mb-2"}>Creatine is one of the most thoroughly studied and potent supplements, which can swiftly generate energy during high-intensity physical activity and enhance exercise performance. While there may be cognitive advantages linked with creatine consumption, additional research is required to confirm these findings.</span>
+                    <span className={"text-lg mb-2"}>Nitrate is a small molecule that appears to have impacts on cardiovascular health and blood pressure. Once consumed, nitrate converts to nitric oxide by various means.</span>
                 </div>
             </div>
             {/* First Topic */}
@@ -21,8 +21,8 @@ export default function PerformanceBCAAs({}) {
                 id={"when-how"}
                 title={"Timing/Dosage of Consumption"}
                 content={'The appropriate time and dosage of creatine consumption depend on a variety of factors, including an individual\'s body weight, physical activity, and overall health. In general, a typical creatine supplementation protocol involves an initial "loading phase" of 20-25 grams per day for 5-7 days, followed by a "maintenance phase" of 3-5 grams per day for several weeks or months. However, some individuals may choose to skip the loading phase and begin with the maintenance dose immediately. The time of consumption doesn\'t matter, but people often take it at night or in the morning.-.-'}
-                ></Content>
-                        <div className="ml-6">
+            ></Content>
+            <div className="ml-6">
                 <div className="flex rounded-md border-1 border-sky-500 p-4 dark:bg-blue-500 dark:bg-opacity-10 text-lg text-sky-600 bg-blue-50">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                          className="mr-3 mt-1 h-5 w-5 flex-shrink-0">
@@ -42,6 +42,6 @@ export default function PerformanceBCAAs({}) {
     );
 
     return (
-        <ContentPage currentTopic={"Supplements-Performance-Creatine"} content={content}></ContentPage>
+        <ContentPage currentTopic={"Supplements-Performance-Nitrate"} content={content}></ContentPage>
     )
 }

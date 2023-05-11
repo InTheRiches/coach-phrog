@@ -2,6 +2,7 @@ import {Fragment, useEffect} from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Scramble, {ScrambleElement} from "@/components/Scrambler";
+import {useRouter} from "next/router";
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
@@ -15,6 +16,8 @@ function classNames(...classes) {
 }
 
 export default function Navigation({dark, setDark}) {
+  const router = useRouter();
+
   useEffect(() => {
     // Select all text elements on the page
     const textElements = document.querySelectorAll('.font-roboto');
@@ -41,8 +44,8 @@ export default function Navigation({dark, setDark}) {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="left-0 flex items-center justify-center">
-                <div className="flex flex-shrink-0 items-center hover:cursor-pointer">
+              <div className="left-0 flex items-center justify-center hover:cursor-pointer" onClick={() => router.push("/")}>
+                <div className="flex flex-shrink-0 items-center">
                   <img
                     className="block h-10 w-10 lg:hidden"
                     src="/logo.png"
