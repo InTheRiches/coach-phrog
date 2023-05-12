@@ -66,14 +66,15 @@
           { "id": 2, "title": "Pre Workout", "href": "/supplements/performance/pre-workout" },
           { "id": 3, "title": "Beta Alanine", "href": "/supplements/performance/beta-alanine" },
           { "id": 4, "title": "BCAAs", "href": "/supplements/performance/bcaas" },
-          { "id": 5, "title": "Nitrate", "href": "/supplements/performance/nitrate" },
-          { "id": 6, "title": "Glutamine", "href": "/supplements/performance/glutamine" }
+          { "id": 5, "title": "Nitrate", "href": "/supplements/performance/nitrate" }
         ]},
       {
         "id": 3,
         "title": "Muscle Gain",
         "subtopics": [
-          { "id": 1, "title": "Loaded Protein", "href": "/supplements/muscle-gain/loaded-protein" }
+          { "id": 1, "title": "Whey Protein", "href": "/supplements/muscle-gain/whey-protein" },
+          { "id": 2, "title": "Loaded Protein", "href": "/supplements/muscle-gain/loaded-protein" },
+          { "id": 3, "title": "Glutamine", "href": "/supplements/muscle-gain/glutamine" }
         ]
       },
       { "id": 4, "title": "Recovery", "href": "/supplements/recovery" },
