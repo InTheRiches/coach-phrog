@@ -39,6 +39,6 @@ export default function PerformanceBCAAs({}) {
     );
 
     return (
-        <ContentPage currentTopic={"Supplements-Performance-Glutamine"} content={content}></ContentPage>
+        <ContentPage currentTopic={"Supplements-Muscle Gain-Glutamine"} content={content}></ContentPage>
     )
 }

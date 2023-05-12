@@ -1,0 +1,85 @@
+[
+  {
+    "id": 0,
+    "title": "Getting Started",
+    "subtopics": [
+      { "id": 0, "title":  "Introduction", "href":  "/getting-started/introduction"}
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Muscles",
+    "subtopics": [
+      { "id": 1, "title": "Basics", "href": "/muscles/basics" },
+      {
+        "id": 2,
+        "title": "Training",
+        "subtopics": [
+          { "id": 1, "title": "Basics", "href": "/muscles/training/basics"},
+          { "id": 2, "title": "Strength", "href": "/muscles/training/strength"},
+          { "id": 3, "title": "Hypertrophy", "href": "/muscles/training/hypertrophy"},
+          { "id": 4, "title": "Cardio", "href": "/muscles/training/cardio" },
+          { "id": 5, "title": "Power", "href": "/muscles/training/power"}
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Functions",
+        "subtopics": [
+          { "id": 1, "title": "Back", "href": "/muscles/functions/back" },
+          { "id": 2, "title": "Chest", "href": "/muscles/functions/chest" },
+          { "id": 3, "title": "Core", "href": "/muscles/functions/core" },
+          { "id": 4, "title": "Legs", "href": "/muscles/functions/legs" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Recovery",
+    "subtopics": [
+      { "id": 1, "title": "Rest Set Periods", "href": "/recovery/rest-set-periods" },
+      { "id": 2, "title": "Rest Days", "href": "/recovery/rest-days" },
+      { "id": 3, "title": "Active Recovery", "href": "/recovery/active-recovery" },
+      { "id": 4, "title": "Sleep", "href": "/recovery/sleep" }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Diet",
+    "subtopics": [
+      { "id": 1, "title": "Basics", "href": "/diet/basics" },
+      { "id": 2, "title": "Cutting", "href": "/diet/cutting" },
+      { "id": 3, "title": "Bulking", "href": "/diet/bulking" }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Supplements",
+    "subtopics": [
+      { "id": 1, "title": "Basics", "href": "/supplements/basics" },
+      {
+        "id": 2,
+        "title": "Performance",
+        "subtopics": [
+          { "id": 1, "title": "Creatine", "href": "/supplements/performance/creatine" },
+          { "id": 2, "title": "Pre Workout", "href": "/supplements/performance/pre-workout" },
+          { "id": 3, "title": "Beta Alanine", "href": "/supplements/performance/beta-alanine" },
+          { "id": 4, "title": "BCAAs", "href": "/supplements/performance/bcaas" },
+          { "id": 5, "title": "Nitrate", "href": "/supplements/performance/nitrate" }
+        ]},
+      {
+        "id": 3,
+        "title": "Muscle Gain",
+        "subtopics": [
+          { "id": 1, "title": "Whey Protein", "href": "/supplements/muscle-gain/whey-protein" },
+          { "id": 2, "title": "Loaded Protein", "href": "/supplements/muscle-gain/loaded-protein" },
+          { "id": 3, "title": "Glutamine", "href": "/supplements/muscle-gain/glutamine" }
+        ]
+      },
+      { "id": 4, "title": "Recovery", "href": "/supplements/recovery" },
+      { "id": 5, "title": "Weight Loss", "href": "/supplements/weight-loss" }
+    ]
+  }
+
+]

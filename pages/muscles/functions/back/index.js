@@ -9,7 +9,7 @@ import ContentPage from '@/components/ContentPage';
 
 export default function BackMuscleFunctions({}) {
     const content = (
-        <div className="flex-1 w-full max-w-5xl flex-col">
+        <div className="w-full max-w-5xl flex-col">
             {/* Page Header */}
             <div className="flex flex-col mb-12">
                 <h1 className="ml-6 mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Muscle Functions - Back</h1>

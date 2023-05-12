@@ -3,12 +3,12 @@ import ContentPage from '@/components/ContentPage';
 
 export default function PerformancePreWorkout({}) {
     const content = (
-        <div className="flex-1 w-full max-w-5xl flex-col">
+        <div className="w-full max-w-5xl flex-col">
             {/* Page Header */}
             <div className="flex flex-col mb-12">
                 <h1 className="ml-6 mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Pre-Workout</h1>
                 <div className="ml-6">
-                    <div className="flex rounded-md border-1 border-sky-500 p-4 dark:bg-black dark:bg-opacity-20 text-lg text-sky-600 bg-blue-50">
+                    <div className="flex rounded-md border-1 border-sky-500 p-4 dark:bg-blue-500 dark:bg-opacity-10 text-lg text-sky-600 bg-blue-50">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                              className="mr-3 mt-1 h-5 w-5 flex-shrink-0">
                             <path fillRule="evenodd"
@@ -33,7 +33,7 @@ export default function PerformancePreWorkout({}) {
             <Content
                 id={"when-how"}
                 title={"Timing/Dosage of Consumption"}
-                content={"First, it is important to note that **pre-workout supplements** should be taken **before exercise, typically 30-60 minutes** before your workout. This allows the ingredients to be absorbed and start working before you begin your exercise routine. Taking the supplement too soon before your workout may result in a **delay** in its effects, while taking it too close to your workout may cause **jitters** or other **negative side effects**.-.-The recommended **dosage of pre-workout supplements** can vary depending on the specific product and your individual tolerance. It is important to carefully read the label and follow the manufacturer's instructions for dosage. In general, starting with a lower dosage and gradually increasing it as your tolerance builds is a good strategy to avoid potential negative side effects.-.-Additionally, it is important to consider your individual **caffeine tolerance** when selecting a pre-workout supplement. Many pre-workout supplements contain high amounts of caffeine, which can cause jitters, anxiety, and other negative side effects if taken in excess. If you are sensitive to caffeine, you may want to consider a caffeine-free pre-workout supplement or one with a lower caffeine content."}
+                content={"First, it is important to note that **pre-workout supplements** should be taken **before exercise, typically 30-60 minutes** before your workout. This allows the ingredients to be absorbed and start working before you begin your exercise routine. Taking the supplement too soon before your workout may result in a **delay** in its effects, while taking it too close to your workout may cause **jitters** or other **negative side effects**.-.-The recommended **dosage of pre-workout supplements** can vary depending on the specific product and your individual tolerance. It is important to carefully read the label and follow the manufacturer's instructions for dosage. In general, starting with a lower dosage and gradually increasing it as your tolerance builds is a good strategy to avoid potential negative side effects."}
                 ></Content>
             <Content
                 id="ingrediants"

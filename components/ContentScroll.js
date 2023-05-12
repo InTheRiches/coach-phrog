@@ -6,7 +6,6 @@ export default function ContentScroll() {
     useEffect(() => {
         const handleHashChange = () => {
             const hash = window.location.hash;
-            console.log(`The hash changed to: ${hash}`);
             // Do something with the new hash, such as scrolling to an element with that ID
         };
 

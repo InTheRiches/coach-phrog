@@ -36,7 +36,7 @@ export function Scramble(event, upperCase = true, lowerCase = false) {
     }, 10);
 }
 
-export function ScrambleElement(element, upperCase = true, lowerCase = true) {
+export function ScrambleElement(element, upperCase = true, lowerCase = true, time=500) {
     if (!upperCase && !lowerCase) {
         return;
     }
@@ -52,7 +52,7 @@ export function ScrambleElement(element, upperCase = true, lowerCase = true) {
     clearInterval(interval);
 
     // calculate timout, so that it only takes 5 seconds to scramble the entire text
-    const timeout = 500 / original.length;
+    const timeout = time / original.length;
 
     interval = setInterval(() => {
         element.textContent = element.textContent

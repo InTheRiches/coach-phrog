@@ -3,7 +3,7 @@ import ContentPage from '@/components/ContentPage';
 
 export default function SupplementPerformance({}) {
     const content = (
-        <div className="flex-1 w-full max-w-5xl flex-col">
+        <div className="w-full max-w-5xl flex-col">
             {/* Page Header */}
             <div className="flex flex-col mb-12">
                 <h1 className="ml-6 mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Supplements - Performance</h1>
@@ -18,7 +18,7 @@ export default function SupplementPerformance({}) {
                 content="Pre-workout supplements are **dietary** supplements that are taken before exercise to help improve athletic **performance**, **endurance**, and **focus**. They typically contain a combination of ingredients such as caffeine, beta-alanine, creatine, and nitric oxide precursors.-.-Caffeine is a common ingredient in pre-workout supplements and can help increase **energy** and **focus** during exercise. Beta-alanine is an amino acid that can help improve muscular **endurance** and delay **fatigue**. [/supplements/performance#creatine,Creatine] is another popular ingredient that can help increase muscle **strength** and **power**. Nitric oxide precursors such as arginine and citrulline can help improve **blood flow** to the muscles, which may increase muscle **pump** and **endurance**.-.-Pre-workout supplements are available in various forms, including powders, capsules, and drinks. They are typically taken 30-60 minutes before exercise and should be used according to the manufacturer's instructions."
             ></Content>
             <div className="ml-6">
-                <div className="flex rounded-md border-1 border-sky-500 p-4 dark:bg-black dark:bg-opacity-20 text-lg text-sky-600 bg-blue-50">
+                <div className="flex rounded-md border-1 border-sky-500 p-4 dark:bg-blue-500 dark:bg-opacity-10 text-lg text-sky-600 bg-blue-50">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                             className="mr-3 mt-1 h-5 w-5 flex-shrink-0">
                         <path fillRule="evenodd"
@@ -44,7 +44,7 @@ export default function SupplementPerformance({}) {
                 content="BCAA (Branched Chain Amino Acids) and EAA (Essential Amino Acids) supplements provide vital amino acids. They are used for improving muscle endurance, recovery, and protein metabolism.-.-One of the primary benefits of BCAA + EAA supplements is promoting muscle growth. Amino acids are the building blocks of protein, which is essential for muscle growth. By providing the body with a source of amino acids, these supplements can help stimulate muscle protein synthesis, leading to increased muscle mass over time.-.-BCAA + EAA supplements can also support muscle recovery by reducing muscle damage and inflammation. Exercise can cause muscle damage, leading to soreness and fatigue. By reducing muscle damage and inflammation, these supplements can help improve overall exercise performance.-.-Another benefit of BCAA + EAA supplements is boosting energy. The amino acids in these supplements can be used by the body as an energy source during exercise, helping to delay fatigue and improve endurance during high-intensity workouts.-.-BCAA + EAA supplements can also reduce muscle breakdown by providing the body with a source of amino acids to use for energy. This can help spare muscle tissue, which is especially important for athletes who engage in intense training and competition.-.-Finally, BCAA + EAA supplements can improve immune function. Amino acids play an important role in immune function, and these supplements can help support a healthy immune system. This is especially important for athletes who may experience a weakened immune system due to intense training and competition."
                 ></Content>
             <div className="ml-6">
-                <div className="flex rounded-md border-1 border-sky-500 p-4 dark:bg-black dark:bg-opacity-20 text-lg text-sky-600 bg-blue-50">
+                <div className="flex rounded-md border-1 border-sky-500 p-4 dark:bg-blue-500 dark:bg-opacity-10 text-lg text-sky-600 bg-blue-50">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                             className="mr-3 mt-1 h-5 w-5 flex-shrink-0">
                         <path fillRule="evenodd"
