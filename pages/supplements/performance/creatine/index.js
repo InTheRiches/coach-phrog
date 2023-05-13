@@ -15,7 +15,7 @@ export default function PerformanceBCAAs({}) {
             <Content
                 id="why"
                 title="What is Creatine?"
-                content="Creatine is produced from amino acids, primarily in the liver, but also in smaller quantities in the kidneys and pancreas. It functions as a reservoir for high-energy phosphate groups in the form of phosphocreatine, which can be contributed to ADP (depleted ATP) converting into ATP, the primary energy carrier in the body. This means that Creatine can convert ADP, into energy full ATP. This function is especially significant in circumstances of high energy demands, such as intense physical or mental exertion. Creatine is abundant in animal-based meals, with meat and fish being the most common sources. It is most commonly supplemented in powder form."
+                content="Creatine is produced from amino acids, primarily in the liver, but also in smaller quantities in the kidneys and pancreas. It functions as a reservoir for high-energy phosphate groups in the form of phosphocreatine, which can be contributed to ADP (depleted ATP) converting into ATP, the primary energy carrier in the body. This means that Creatine can convert energy depleted ADP, into energy full ATP. This function is especially significant in circumstances of high energy demands, such as intense physical or mental exertion. Creatine also improves the function of transport proteins, increasing water reserves in muscles. This leads to fuller, more muscular look while staying lean. Creatine is abundant in animal-based meals, with meat and fish being the most common sources. It is most commonly supplemented in powder form."
             ></Content>
             <Content
                 id={"when-how"}
