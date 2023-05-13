@@ -146,6 +146,10 @@ module.exports = {
       gridTemplateColumns: {
         "270px": "270px minmax(0,1fr)",
       },
+      strokeWidth: {
+        "3": "3",
+
+      },
       width: {
         "5v": "5vw",
         "10v": "10vw",
