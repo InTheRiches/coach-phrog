@@ -22,3 +22,29 @@ body {
 body.d {
   background: rgb(23 23 23);
 }
+
+.muscle-svg {
+  fill: black;
+}
+
+.muscle-svg > g > path:first-child {
+  fill: #d4d4d4;
+}
+
+.muscle-svg:hover > g > path:first-child {
+  fill: #0ea5e9;
+  cursor:pointer;
+}
+
+.dark .muscle-svg {
+  fill: #6c6c6c;
+}
+
+.dark .muscle-svg > g > path:first-child {
+  fill: #1f1f1f;
+}
+
+.dark .muscle-svg:hover > g > path {
+  fill: #0ea5e9;
+  cursor:pointer;
+}
