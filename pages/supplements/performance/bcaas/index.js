@@ -6,8 +6,8 @@ export default function PerformanceBCAAs({}) {
         <div className="w-full max-w-5xl flex-col">
             {/* Page Header */}
             <div className="flex flex-col mb-12">
-                <h1 className="ml-6 mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">BCAAs / EAAs</h1>
-                <div className={"ml-6 border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
+                 <h1 className="mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">BCAAs / EAAs</h1>
+                <div className={"border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
                     <span className={"text-lg mb-2"}>Branched-chain amino acids (BCAAs) are three essential amino acids that are frequently supplemented because of their role in muscle growth and development. These amino acids are naturally found in dietary protein sources. Studies show that supplementation of BCAAs alone does not increase muscle growth, as all essential amino acids must be present for muscle protein synthesis to occur.</span>
                 </div>
             </div>

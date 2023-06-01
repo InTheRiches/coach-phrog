@@ -3,7 +3,7 @@ import {ScrambleElement} from "@/components/Scrambler";
 import {useRouter} from "next/router";
 import topics from '/public/content.json';
 
-function Sidebar({ currentTopic, disable=true }) {
+function Sidebar({ currentTopic }) {
     const [loaded, setLoaded] = useState(false);
     const router = useRouter();
 
@@ -45,7 +45,7 @@ function Sidebar({ currentTopic, disable=true }) {
     useEffect(() => {
         // retrieve the state of the menus from LocalStorage
         const storedState = window.localStorage.getItem(
-            "sidebar-collapsed-state"
+            "mobile-sidebar-collapsed-state"
         );
         if (storedState) {
             setCollapsed(JSON.parse(storedState));
@@ -69,13 +69,13 @@ function Sidebar({ currentTopic, disable=true }) {
 
         // save the new state to LocalStorage
         window.localStorage.setItem(
-            "sidebar-collapsed-state",
+            "mobile-sidebar-collapsed-state",
             JSON.stringify({ ...collapsed, [topic.title + "-" + topic.id]: newValue })
         );
     };
 
     return (
-        <div className={`bg-white dark:bg-neutral-900 p-4 mt-15 mr-4 text-neutral-900 dark:text-slate-50 hidden sm:block`}>
+        <div className={`mt-15 mr-4 text-neutral-900 dark:text-slate-50`}>
             <button className="hidden w-full lg:flex border-1 border-slate-200 hover:border-cyan-accent border-opacity-50 hover:border-opacity-75 items-center text-sm leading-6 text-neutral-700 dark:text-slate-300 hover:dark:text-slate-50 hover:text-neutral-900 rounded-md shadow-sm py-1.5 pl-2 pr-3 mb-6 transition-all duration-100 bg-transparent">
                 <a>Search...</a>
             </button>

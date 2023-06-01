@@ -1,9 +1,4 @@
-import Navigation from '@/components/Navigation'
 import Content from '@/components/Content'
-import Sidebar from "@/components/Sidebar";
-import Footer from "@/components/Footer";
-import ContentScroll from "@/components/ContentScroll";
-import useDarkMode from 'use-dark-mode';
 import ContentPage from "@/components/ContentPage";
 
 export default function TrainingBasics({}) {
@@ -12,7 +7,7 @@ export default function TrainingBasics({}) {
             {/* Page Header */}
             <div className="flex flex-col mb-12">
                 <span className="ml-6 mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Muscle Training - Basics</span>
-                <div className={"ml-6 border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
+                <div className={"border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
                     <span className={"text-lg"}>Properly training is important to making progress in the gym. Utilizing all available processes can significantly increase gains, and make the experience overall more enjoyable and rewarding. Training properly can also avoid injuries and make sure that your body is staying healthy.</span>
                 </div>
             </div>

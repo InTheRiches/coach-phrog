@@ -33,7 +33,7 @@ export default function Layout({ children }) {
         <div className={`flex flex-col min-h-screen bg-white dark:bg-neutral-900 text-slate-900 dark:text-slate-50 justify-center items-center font-mono`}>
             <header className={"flex flex-col items-center w-full h-screen"}>
                 <Navigation dark={isDarkMode} setDark={toggleDarkMode}></Navigation>
-                <div className="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32">
+                <div className="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32 pl-3 pr-3">
                     <h1 className={"text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white"}>Transform your physique with expert guidance without ever paying a dollar.</h1>
                     <p className="mt-6 text-lg lg:text-2xl text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">A science based approach to <a className={"text-cyan-accent"}>building muscle</a>, <a className={"text-cyan-accent"}>losing fat</a>, and getting <a className={"text-cyan-accent"}>stronger</a>, formatted to be understood and accessible by all.</p>
 
@@ -48,8 +48,7 @@ export default function Layout({ children }) {
                                 <path d="m19 19-3.5-3.5"></path>
                                 <circle cx="11" cy="11" r="6"></circle>
                             </svg>
-                            <span className="flex-auto">Quick search...</span><kbd
-                            className="font-sans font-semibold dark:text-slate-500"><abbr title="Control" className="no-underline text-slate-300 dark:text-slate-500">Ctrl </abbr> K</kbd>
+                            <span className="flex-auto">Quick search...</span><kbd className="font-sans font-semibold dark:text-slate-500"><abbr title="Control" className="no-underline text-slate-300 dark:text-slate-500">Ctrl </abbr> K</kbd>
                         </button>
                     </div>
                 </div>
@@ -64,7 +63,7 @@ export default function Layout({ children }) {
                         loading="lazy" decoding="async"></img>
                         <div>
                             <div className="text-slate-900 font-bold dark:text-white text-lg">Hayden Williams</div>
-                            <div className="mt-0.5 text-lg leading-6 text-slate-600 dark:text-slate-400">Founder of Surge Strength</div>
+                            <div className="mt-0.5 text-lg leading-6 text-slate-600 dark:text-slate-400">Co-Founder of Surge Strength</div>
                         </div>
                     </figcaption>
                 </figure>

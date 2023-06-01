@@ -34,16 +34,16 @@ export default function Navigation({dark, setDark}) {
         <>
           <div className="mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex max-h-6v items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-cyan-accent focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-accent">
-                  <span className="sr-only">Open main menu</span>
-                  {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                  ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                  )}
-                </Disclosure.Button>
-              </div>
+              {/*<div className="absolute inset-y-0 left-0 flex items-center sm:hidden">*/}
+              {/*  <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-cyan-accent focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-accent">*/}
+              {/*    <span className="sr-only">Open main menu</span>*/}
+              {/*    {open ? (*/}
+              {/*      <XMarkIcon className="block h-6 w-6" aria-hidden="true" />*/}
+              {/*    ) : (*/}
+              {/*      <Bars3Icon className="block h-6 w-6" aria-hidden="true" />*/}
+              {/*    )}*/}
+              {/*  </Disclosure.Button>*/}
+              {/*</div>*/}
               <div className="left-0 flex items-center justify-center hover:cursor-pointer" onClick={() => router.push("/")}>
                 <div className="flex flex-shrink-0 items-center">
                   <img
@@ -57,7 +57,7 @@ export default function Navigation({dark, setDark}) {
                     alt="Your Company"
                   />
                 </div>
-                <a className="ml-4 text-2xl sm:text-3xl font-bold text-center font-roboto">surge strength</a>
+                <a className="ml-4 text-2xl sm:text-3xl font-bold text-center font-roboto">wavelength</a>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2">
                 <button

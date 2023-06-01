@@ -37,11 +37,11 @@ body.d {
 }
 
 .dark .muscle-svg {
-  fill: #6c6c6c;
+  fill: #7c7c7c;
 }
 
 .dark .muscle-svg > g > path:first-child {
-  fill: #1f1f1f;
+  fill: #2f2f2f;
 }
 
 .dark .muscle-svg:hover > g > path {

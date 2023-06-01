@@ -6,8 +6,8 @@ export default function SupplementPerformance({}) {
         <div className="w-full max-w-5xl flex-col">
             {/* Page Header */}
             <div className="flex flex-col mb-12">
-                <h1 className="ml-6 mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Supplements - Performance</h1>
-                <div className={"ml-6 border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
+                 <h1 className="mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Supplements - Performance</h1>
+                <div className={"border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
                     <span className={"text-lg mb-2"}>Performance supplements are a type of dietary supplement that is designed to help improve athletic performance or enhance physical abilities. These supplements often contain ingredients that are believed to increase <b>energy</b>, improve <b>endurance</b>, and promote faster <b>recovery</b> after exercise.</span>
                 </div>
             </div>

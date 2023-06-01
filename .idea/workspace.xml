@@ -8,6 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be896b55-8482-4c8d-bd71-8dfc312afe18" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/coach-phrog.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/components/MobileSidebar.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/pages/muscles/training/basics/concepts/index.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/pages/muscles/training/basics/repsandsets/index.js" afterDir="false" />
@@ -110,7 +115,7 @@
       <option name="presentableId" value="Default" />
       <updated>1683946992390</updated>
       <workItem from="1683946993812" duration="17499000" />
-      <workItem from="1685401105595" duration="2596000" />
+      <workItem from="1685401105595" duration="3185000" />
     </task>
     <servers />
   </component>

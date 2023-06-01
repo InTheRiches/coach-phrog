@@ -8,6 +8,7 @@ import ContentScroll from "@/components/ContentScroll";
 import useDarkMode from 'use-dark-mode';
 import {ScrambleElement} from "@/components/Scrambler";
 import topics from '/public/content.json';
+import MobileSidebar from "@/components/MobileSidebar";
 
 export default function ContentPage({ currentTopic, content }) {
     ContentScroll();
@@ -20,7 +21,14 @@ export default function ContentPage({ currentTopic, content }) {
         topic.subtopics.forEach((subtopic) => {
             if (subtopic.subtopics) {
                 subtopic.subtopics.forEach((subsubtopic) => {
-                    keys.push(subsubtopic.href)
+                    if (subsubtopic.subtopics) {
+                        subsubtopic.subtopics.forEach((subsubsubtopic) => {
+                            keys.push(subsubsubtopic.href)
+                        });
+                    }
+                    else {
+                        keys.push(subsubtopic.href)
+                    }
                 });
             }
             else {
@@ -55,9 +63,9 @@ export default function ContentPage({ currentTopic, content }) {
         <div className={"flex flex-col min-h-screen bg-white dark:bg-neutral-900 text-slate-900 dark:text-slate-50 justify-center items-center"}>
             <Navigation dark={isDarkMode} setDark={toggleDarkMode}></Navigation>
 
-            <div className="grid gap-8 grid-cols-270px max-w-screen-4xl md:px-6 my-8 lg:mr-32 xl:mr-56">
+            <div className="sm:grid sm:gap-8 sm:grid-cols-270px max-w-screen-4xl md:px-6 my-8 lg:mr-32 xl:mr-56">
                 <Sidebar currentTopic={currentTopic}></Sidebar>
-                <div className={"flex flex-col w-full h-full"}>
+                <div className={"ml-6 flex flex-col w-full h-full pr-6"}>
                     {content}
                     <div className={"w-full flex justify-around mt-4"}>
                         <button
@@ -115,6 +123,12 @@ export default function ContentPage({ currentTopic, content }) {
             </div>
 
             <Footer></Footer>
+
+            <div className={"fixed inset-0 z-50 block sm:hidden"}>
+                <div className={"relative bg-white dark:bg-neutral-900 w-80 max-w-[calc(100%-3rem)] p-6 h-full"}>
+                    <MobileSidebar></MobileSidebar>
+                </div>
+            </div>
         </div>
     )
 }

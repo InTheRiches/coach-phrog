@@ -6,8 +6,8 @@ export default function PerformanceBetaAlanine({}) {
         <div className="w-full max-w-5xl flex-col">
             {/* Page Header */}
             <div className="flex flex-col mb-12">
-                <h1 className="ml-6 mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Beta-Alanine</h1>
-                <div className={"ml-6 border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
+                 <h1 className="mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Beta-Alanine</h1>
+                <div className={"border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
                     <span className={"text-lg mb-2"}>Beta-Alanine is the building block of carnosine, which buffers acid in muscles. Supplementing Beta-Alanine provides improved performance during high intensity training spanning 1-10 minutes.</span>
                 </div>
             </div>
