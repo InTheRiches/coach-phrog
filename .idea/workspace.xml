@@ -69,7 +69,7 @@
       <recent name="D:\Unity\Projects\coach-phrog\pages\muscles\training\basics" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.start">
     <configuration name="build" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />

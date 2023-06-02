@@ -54,5 +54,5 @@ body.d {
 }
 
 .gradient-mask {
-  -webkit-mask-image:  linear-gradient(#bf7a30 25%, 75%, #edd599);
+  -webkit-mask-image:  linear-gradient(#bf7a30 25%, 50%, #edd599);
 }
