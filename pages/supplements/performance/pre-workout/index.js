@@ -28,23 +28,23 @@ export default function PerformancePreWorkout({}) {
             <Content
                 id="why"
                 title="What is Pre-Workout?"
-                content="Pre-workout supplements are **dietary** supplements that are taken before exercise to help improve athletic **performance**, **endurance**, and **focus**. They typically contain a combination of ingredients such as caffeine, beta-alanine, creatine, and nitric oxide precursors. They provide a series of nutrients that improved the pump, overall endurance, crashless caffiene, and sometimes focus (euphoria)."
+                content="Pre-workout supplements are **dietary** supplements that are taken before exercise to help improve athletic **performance**, **endurance**, and **focus**. They typically contain a combination of ingredients such as caffeine, beta-alanine, creatine, and nitric oxide precursors. They provide a series of nutrients that improved the pump, overall endurance, energy, and sometimes focus (euphoria)."
             ></Content>
             <Content
                 id={"when-how"}
                 title={"Timing/Dosage of Consumption"}
-                content={"First, it is important to note that **pre-workout supplements** should be taken **before exercise, typically 30-60 minutes** before your workout. This allows the ingredients to be absorbed and start working before you begin your exercise routine. Taking the supplement too soon before your workout may result in a **delay** in its effects, while taking it too close to your workout may cause **jitters** or other **negative side effects**.-.-The recommended **dosage of pre-workout supplements** can vary depending on the specific product and your individual tolerance. It is important to carefully read the label and follow the manufacturer's instructions for dosage. In general, starting with a lower dosage and gradually increasing it as your tolerance builds is a good strategy to avoid potential negative side effects."}
+                content={"First, it is important to note that **pre-workout supplements** should be taken **before exercise, typically 30-60 minutes** before your workout. This allows the ingredients to be absorbed and start working before you begin your exercise routine. Taking the supplement too soon before your workout may result in a **delay** in its effects and can cause **jitters** or other **negative side effects**.-.-The recommended dosage can vary depending on the specific product and your individual tolerance. It is important to carefully read the label and follow the manufacturer's instructions for dosage. If your pre-workout contains caffeine, you should make sure to introduce it to your body if you haven't already, as the high dosages can result in **jitters** and other unwanted side effects. In general, starting with a lower dosage and gradually increasing it as your tolerance builds (especially if it contains caffeine or something similar) is a good strategy to avoid potential negative side effects."}
                 ></Content>
             <Content
                 id="ingrediants"
                 title="Ingrediants"
-                content={"Pre-Workouts contain various ingrediants, although the most common are:"}
+                content={"Pre-Workouts contain various ingredients, although the most common are:"}
                 bulletPoints={{
-                    "Caffeiene": "A stimulant that can help improve focus, alertness, and energy levels during exercise.",
-                    "Citrulline": "An amino acid that can help improve blood flow and reduce fatigue during exercise.",
-                    "Beta-Alanine": "An amino acid that can help reduce muscle fatigue and improve exercise endurance. Also has anti-aging effects.",
+                    "Caffeine": "A stimulant that can help improve focus, alertness, and energy levels during exercise.",
+                    "Citrulline": "An amino acid that can help improve blood flow and reduce fatigue during exercise. ([/supplements/performance/citrulline,Learn More])",
+                    "Beta-Alanine": "An amino acid that can help reduce muscle fatigue and improve exercise endurance. Also has anti-aging effects. ([/supplements/performance/beta-alanine,Learn More])",
                     "Nitric Oxide Boosters": "Substances such as arginine and citrulline that can help improve blood flow and nutrient delivery to muscles.",
-                    "BCAAs": "Branched-chain amino acids (leucine, isoleucine, and valine) that can help stimulate muscle protein synthesis and reduce muscle breakdown during exercise.",
+                    "BCAAs": "Branched-chain amino acids (leucine, isoleucine, and valine) that can help stimulate muscle protein synthesis and reduce muscle breakdown during exercise. ([/supplements/performance/bcaas,Learn More])",
                     "Tyrosine": "An amino acid that can help improve focus and mental performance during exercise.",
                     "Taurine": "An amino acid that can help reduce muscle damage and improve exercise performance.",
                     "Betaine": "A compound that can help improve muscle power and strength.",

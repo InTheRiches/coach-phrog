@@ -9,21 +9,10 @@
   <component name="ChangeListManager">
     <list default="true" id="be896b55-8482-4c8d-bd71-8dfc312afe18" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_document.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_document.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/muscles/basics/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/basics/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/muscles/functions/back/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/functions/back/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/supplements/muscle-gain/glutamine/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/muscle-gain/glutamine/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/supplements/muscle-gain/loaded-protein/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/muscle-gain/loaded-protein/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/supplements/muscle-gain/whey-protein/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/muscle-gain/whey-protein/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/supplements/performance/bcaas/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/performance/bcaas/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/supplements/performance/beta-alanine/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/performance/beta-alanine/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/supplements/performance/citrulline/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/performance/citrulline/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/supplements/performance/creatine/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/performance/creatine/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/supplements/performance/nitrate/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/performance/nitrate/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/supplements/performance/pre-workout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/performance/pre-workout/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/content.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/content.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +67,7 @@
       <recent name="D:\Unity\Projects\coach-phrog\pages\muscles\training\basics" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.start">
     <configuration name="build" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -124,7 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1683946992390</updated>
       <workItem from="1683946993812" duration="17499000" />
-      <workItem from="1685401105595" duration="5212000" />
+      <workItem from="1685401105595" duration="7382000" />
     </task>
     <servers />
   </component>
