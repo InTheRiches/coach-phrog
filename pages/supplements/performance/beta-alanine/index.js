@@ -22,7 +22,7 @@ export default function PerformanceBetaAlanine({}) {
                 title={"Timing/Dosage of Consumption"}
                 content={'The recommended dosage of beta-alanine supplements is typically between 2-5 grams per day, divided into two or three doses. Make sure to read the nutrition information on your specific supplement, as each brand does it differently. It\'s best to take beta-alanine with a meal or snack to help minimize any gastrointestinal side effects, such as stomach upset or nausea.-.-In terms of timing, there isn\'t necessarily a "best" time of day to take beta-alanine, as long as you are consistent with your dosing schedule. Some people prefer to take beta-alanine before exercise, as it may help improve muscular endurance and delay fatigue. Others prefer to take it throughout the day to maintain higher levels in the body.'}
             ></Content>
-            <div className="ml-6">
+            <div className="">
                 <div className="flex rounded-md border-1 border-sky-500 p-4 dark:bg-blue-500 dark:bg-opacity-10 text-lg text-sky-600 bg-blue-50">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                          className="mr-3 mt-1 h-5 w-5 flex-shrink-0">

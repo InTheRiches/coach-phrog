@@ -73,7 +73,8 @@
           { "id": 2, "title": "Pre Workout", "href": "/supplements/performance/pre-workout" },
           { "id": 3, "title": "Beta Alanine", "href": "/supplements/performance/beta-alanine" },
           { "id": 4, "title": "BCAAs", "href": "/supplements/performance/bcaas" },
-          { "id": 5, "title": "Nitrate", "href": "/supplements/performance/nitrate" }
+          { "id": 5, "title": "Nitrate", "href": "/supplements/performance/nitrate" },
+          { "id": 6, "title": "Citrulline", "href": "/supplements/performance/citrulline" }
         ]},
       {
         "id": 3,

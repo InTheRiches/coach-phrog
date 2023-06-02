@@ -22,7 +22,7 @@ export default function PerformanceBCAAs({}) {
                 title={"Timing/Dosage of Consumption"}
                 content={'The appropriate time and dosage of creatine consumption depend on a variety of factors, including an individual\'s body weight, physical activity, and overall health. In general, a typical creatine supplementation protocol involves an initial "loading phase" of 20-25 grams per day for 5-7 days, followed by a "maintenance phase" of 3-5 grams per day for several weeks or months. However, some individuals may choose to skip the loading phase and begin with the maintenance dose immediately. The time of consumption doesn\'t matter, but people often take it at night or in the morning.'}
                 ></Content>
-                        <div className="ml-6">
+            <div className="">
                 <div className="flex rounded-md border-1 border-sky-500 p-4 dark:bg-blue-500 dark:bg-opacity-10 text-lg text-sky-600 bg-blue-50">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                          className="mr-3 mt-1 h-5 w-5 flex-shrink-0">

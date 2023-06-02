@@ -6,8 +6,8 @@ export default function Glutamine({}) {
         <div className="flex-1 w-full max-w-5xl flex-col">
             {/* Page Header */}
             <div className="flex flex-col mb-12 h-auto">
-                <h1 className="z-10 transform ml-6 mb-5 relative inline-block text-2xl sm:text-4xl font-bold text-slate-900 dark:text-slate-50">Glutamine</h1>
-                <div className={"z-10 transform ml-6 border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
+                <h1 className="z-10 transform mb-5 relative inline-block text-2xl sm:text-4xl font-bold text-slate-900 dark:text-slate-50">Glutamine</h1>
+                <div className={"z-10 transform border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
                     <span className={"text-lg mb-2"}>Glutamine is a type of amino acid that is present in all proteins. It is classified as conditionally essential, which implies that it becomes necessary during certain circumstances such as injury, surgery or illness. Glutamine has the highest concentration among all amino acids in the blood serum. However, its levels tend to decrease relative to the severity of trauma experienced by the body.</span>
                 </div>
             </div>
@@ -22,7 +22,7 @@ export default function Glutamine({}) {
                 title={"Timing/Dosage of Consumption"}
                 content={'The most common dosages of Glutamine are around 5-10g, but it depends on a variety of factors, including weight, age, and activity level.-.-As for timing, there is no specific time of day when glutamine should be taken. It can be consumed at any time, either with or without food. Some studies suggest that consuming glutamine immediately after a workout may help enhance muscle recovery and growth. However, other studies suggest that taking glutamine before bedtime may help improve protein synthesis and reduce muscle breakdown during the overnight fasting period.-.-Overall, the best approach is to follow the manufacturer\'s instructions for dosage and timing or consult with a healthcare professional for personalized recommendations based on individual needs and goals.'}
                 ></Content>
-            <div className="ml-6">
+            <div className="">
                 <div className="flex rounded-md border-1 border-yellow-200 bg-yellow-50 dark:bg-black dark:bg-opacity-20 p-4 text-lg text-yellow-500 dark:text-yellow-200">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="mr-3 mt-1.2 h-5 w-5 flex-shrink-0">
                         <path fillRule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />

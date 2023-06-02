@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import {Scramble, ScrambleElement} from "@/components/Scrambler";
 import useDarkMode from 'use-dark-mode';
 
-export default function Layout({ children }) {
+export default function Layout() {
 
     const { value: isDarkMode, toggle: toggleDarkMode } = useDarkMode();
 
