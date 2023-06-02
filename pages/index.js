@@ -30,9 +30,11 @@ export default function Layout() {
     }, []);
 
     return (
-        <div className={`flex flex-col min-h-screen bg-white dark:bg-neutral-900 text-slate-900 dark:text-slate-50 justify-center items-center font-mono`}>
-            <header className={"flex flex-col items-center w-full h-screen"}>
+        <div className={`flex flex-col min-h-screen text-slate-900 dark:text-slate-50 justify-center items-center font-mono bg-cyan-300 dark:bg-cyan-700`}>
+            <header className={"flex flex-col items-center w-full h-screen bg-white dark:bg-neutral-900 slant"}>
                 <Navigation dark={isDarkMode} setDark={toggleDarkMode}></Navigation>
+                <div className={"absolute inset-0 gradient-mask bg-white dark:bg-neutral-800"}>
+                </div>
                 <div className="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32 pl-3 pr-3">
                     <h1 className={"text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white"}>Transform your physique with expert guidance without ever paying a dollar.</h1>
                     <p className="mt-6 text-lg lg:text-2xl text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">A science based approach to <a className={"text-cyan-accent"}>building muscle</a>, <a className={"text-cyan-accent"}>losing fat</a>, and getting <a className={"text-cyan-accent"}>stronger</a>, formatted to be understood and accessible by all.</p>
@@ -54,7 +56,7 @@ export default function Layout() {
                 </div>
             </header>
 
-            <section className="text-center max-w-7xl px-8 mt-10 sm:mt-15 md:mt-20 mb-14"><h2
+            <section className="text-center max-w-7xl px-8 pt-10 sm:pt-15 md:pt-20 pb-14"><h2
                 className="text-slate-900 text-4xl font-extrabold sm:text-5xl dark:text-white">Understanding the mechanics behind working out significantly increases effectiveness.</h2>
                 <figure>
                     <blockquote><p className="mt-6 max-w-3xl mx-auto text-lg lg:text-xl text-slate-600 dark:text-slate-400">During my fitness journey, I realized the importance of understanding the human anatomy and the underlying science of muscle <a className={"text-cyan-accent"}>hypertrophy</a>. As my understanding of these concepts grew, so did my <a className={"text-cyan-accent"}>efficiency</a> and <a className={"text-cyan-accent"}>effectiveness</a> in the gym. By comprehending the precise mechanisms behind muscle development and how to optimize them, I found that my workouts became more <a className={"text-cyan-accent"}>gratifying</a> and <a className={"text-cyan-accent"}>productive</a>.</p></blockquote>
@@ -69,7 +71,7 @@ export default function Layout() {
                 </figure>
             </section>
 
-            <Footer></Footer>
+            <Footer darkBG={"cyan-700"}></Footer>
         </div>
       )
 }

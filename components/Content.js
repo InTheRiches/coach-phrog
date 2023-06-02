@@ -54,6 +54,46 @@ export default function Content({id, title, content, bulletPoints}) {
             });
     });
 
+    const bullets = Object.values(bulletPoints).map((bullet) => {
+        return bullet
+            .split("**")
+            .map((bullet, index) => {
+                if (index % 2 === 1) {
+                    return <b key={index}>{bullet}</b>;
+                } else {
+                    const regex = /\[(.*?),([a-zA-Z\s]*)\]/g; // regex to match the hyperlink pattern
+
+                    const matches = bullet.match(regex);
+
+                    if (matches) {
+
+                        let match;
+
+                        let lastMatch = 0;
+
+                        const matches = []
+
+                        while ((match = regex.exec(bullet)) !== null) {
+                            const hyperlink = match[0]; // the entire match (e.g. [/google/muscles,Google])
+                            const linkUrl = match[1]; // the URL of the link (e.g. /google/muscles)
+                            const linkText = match[2]; // the name of the link (e.g. Google)
+                            const startIndex = match.index; // the starting index of the hyperlink in the original string
+                            const endIndex = startIndex + hyperlink.length; // the ending index of the hyperlink in the original string
+
+
+                            // do something with the hyperlink, like replace it with an HTML anchor tag
+                            matches.push(<span key={startIndex}>{bullet.substring(lastMatch, startIndex)}<a key={index} onClick={() => handleClick(linkUrl)} className={"text-cyan-accent hover:underline hover:cursor-pointer"}>{linkText}</a></span>);
+                            lastMatch = endIndex;
+                        }
+                        matches.push(bullet.substring(lastMatch, bullet.length));
+                        return <span key={index}>{matches}</span>;
+                    } else {
+                        return <span key={index}>{bullet}</span>;
+                    }
+                }
+            });
+    });
+
     return (
         <div id={id+"x"} className="mt-12">
             <div className={"flex items-center"}>
@@ -83,12 +123,12 @@ export default function Content({id, title, content, bulletPoints}) {
 
             <div className="flex flex-col mt-8 text-lg"> {/* border-gray-600 border-l-8 */}
                 {text.map((substring, index) => (
-                    <span className="mb-6" key={index}>{substring}</span>
+                    <span className="mb-6 indent-4" key={index}>{substring}</span>
                 ))}
             </div>
             <ul className="text-lg list-inside list-disc lg:grid w-full">
-                {Object.keys(bulletPoints).map((key, index) => (
-                    <li key={index}><b>{key}:</b><span> {bulletPoints[key]}</span></li>
+                {bullets.map((key, index) => (
+                    <li key={index}><b>{Object.keys(bulletPoints)[index]}:</b><span> {key}</span></li>
                 ))}
             </ul>
         </div>
