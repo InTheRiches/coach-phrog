@@ -48,3 +48,11 @@ body.d {
   fill: #0ea5e9;
   cursor:pointer;
 }
+
+.slant {
+  clip-path: polygon(0 0,100% 0,100% 100%,0 90%);
+}
+
+.gradient-mask {
+  -webkit-mask-image:  linear-gradient(#bf7a30 25%, 50%, #edd599);
+}
