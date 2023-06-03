@@ -33,11 +33,11 @@ export default function Layout() {
         <div className={`flex flex-col min-h-screen text-slate-900 dark:text-slate-50 justify-center items-center font-mono bg-cyan-300 dark:bg-cyan-accent`}>
             <header className={"flex flex-col items-center w-full h-screen bg-white dark:bg-neutral-900 slant"}>
                 <Navigation dark={isDarkMode} setDark={toggleDarkMode}></Navigation>
-                <div className={"absolute inset-0 gradient-mask bg-white dark:bg-neutral-800"}>
+                <div className={"absolute inset-0 gradient-mask bg-white dark:bg-black"}>
                 </div>
                 <div className="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32 pl-3 pr-3">
                     <h1 className={"text-slate-900 font-extrabold text-2xl sm:text-5xl xl:text-6xl tracking-tight text-center dark:text-white"}>Transform your physique with expert guidance without ever paying a dollar.</h1>
-                    <p className="mt-6 text-lg lg:text-2xl text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">A science based approach to <a className={"text-cyan-accent"}>building muscle</a>, <a className={"text-cyan-accent"}>losing fat</a>, and getting <a className={"text-cyan-accent"}>stronger</a>, formatted to be understood and accessible by all.</p>
+                    <p className="mt-6 text-lg lg:text-2xl text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">A science based approach to <a className={"text-cyan-accent"}>building muscle</a>, <a className={"text-cyan-accent"}>losing fat</a>, and getting <a className={"text-cyan-accent"}>stronger</a>, arranged to be understood and accessible by all.</p>
 
                     <div className="mt-6 sm:mt-10 flex justify-center space-x-6 text-sm"><a
                         className="bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto dark:bg-cyan-accent dark:highlight-white/20 dark:hover:bg-cyan-accent-light"

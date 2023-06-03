@@ -54,5 +54,15 @@ body.d {
 }
 
 .gradient-mask {
-  -webkit-mask-image:  linear-gradient(#bf7a30 25%, 50%, #edd599);
+  -webkit-mask-image: linear-gradient(transparent, black);
+  mask-image: linear-gradient(transparent, black);
+}
+
+.sidebar-taper {
+  -webkit-mask-image: linear-gradient(to top, transparent, black 5%, black 90%);
+  mask-image: linear-gradient(to top, transparent, black 5%, black 90%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: bottom;
+  mask-position: bottom;
 }
