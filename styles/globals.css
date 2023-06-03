@@ -31,6 +31,10 @@ body.d {
   fill: #d4d4d4;
 }
 
+.muscle-highlighted > g > path:first-child {
+  fill: #e97c0e;
+}
+
 .muscle-svg:hover > g > path:first-child {
   fill: #0ea5e9;
   cursor:pointer;
@@ -42,6 +46,14 @@ body.d {
 
 .dark .muscle-svg > g > path:first-child {
   fill: #2f2f2f;
+}
+
+.dark .muscle-highlighted > g > path:first-child {
+  fill: #0ea5e9;
+}
+
+.dark .muscle-highlighted > g > path {
+  fill: #0ea5e9;
 }
 
 .dark .muscle-svg:hover > g > path {
@@ -59,8 +71,8 @@ body.d {
 }
 
 .sidebar-taper {
-  -webkit-mask-image: linear-gradient(to top, transparent, black 5%, black 90%);
-  mask-image: linear-gradient(to top, transparent, black 5%, black 90%);
+  -webkit-mask-image: linear-gradient(to top, transparent, black 2%, black 90%);
+  mask-image: linear-gradient(to top, transparent, black 2%, black 90%);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: bottom;
