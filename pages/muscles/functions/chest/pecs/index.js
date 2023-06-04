@@ -1,9 +1,4 @@
-import Navigation from '@/components/Navigation'
 import Content from '@/components/Content'
-import Sidebar from "@/components/Sidebar";
-import Footer from "@/components/Footer";
-import ContentScroll from "@/components/ContentScroll";
-import useDarkMode from 'use-dark-mode';
 import ContentPage from '@/components/ContentPage';
 import {UpperBodySVG} from '@/components/BodySVG';
 
@@ -53,6 +48,6 @@ export default function PecsFunction({}) {
     )
 
     return (
-        <ContentPage content={content} currentTopic={"Muscles-Functions-Back-Traps"}></ContentPage>
+        <ContentPage content={content} currentTopic={"Muscles-Functions-Chest-Pecs"}></ContentPage>
     )
 }

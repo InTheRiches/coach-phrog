@@ -49,11 +49,11 @@ body.d {
 }
 
 .dark .muscle-highlighted > g > path:first-child {
-  fill: rgba(233, 215, 14, 0.7)
+  fill: rgba(14, 165, 233, .7);
 }
 
 .dark .muscle-highlighted > g > path {
-  fill: rgba(233, 215, 14, 1)
+  fill: rgba(14, 165, 233, 1);
   /* fill: rgba(14, 233, 72, 1) */
 }
 

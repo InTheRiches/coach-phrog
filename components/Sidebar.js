@@ -136,7 +136,7 @@ function Sidebar({ currentTopic, disable=true }) {
                                                     currentTopic === topic.title + "-" + subtopic.title
                                                         ? 'text-cyan-accent border-cyan-accent'
                                                         : 'text-neutral-700 dark:text-slate-300 border-neutral-200 dark:border-neutral-700'
-                                                } ${subtopic.subtopics ? "" : "border-l-1"} flex items-center text-2xl transition-all duration-200 hover:cursor-pointer hover:text-cyan-accent flex-row py-1 justify-between`}
+                                                } ${subtopic.subtopics ? "" : "border-l-1"} flex items-center text-2xl transition-all duration-200 hover:cursor-pointer hover:text-cyan-accent dark:hover:text-cyan-accent flex-row py-1 justify-between`}
                                                 onClick={() => {
                                                     if (subtopic.subtopics) {
                                                         toggleCollapse(subtopic);
