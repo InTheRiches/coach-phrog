@@ -9,12 +9,11 @@
   <component name="ChangeListManager">
     <list default="true" id="be896b55-8482-4c8d-bd71-8dfc312afe18" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Content.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/supplements/performance/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/BodySVG.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/BodySVG.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/muscles/basics/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/basics/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/muscles/functions/back/traps/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/functions/back/traps/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/muscles/functions/chest/pecs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/functions/chest/pecs/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/content.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/content.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +68,7 @@
       <recent name="D:\Unity\Projects\coach-phrog\pages\muscles\training\basics" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="build" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -115,7 +114,7 @@
       <option name="presentableId" value="Default" />
       <updated>1683946992390</updated>
       <workItem from="1683946993812" duration="17499000" />
-      <workItem from="1685401105595" duration="9699000" />
+      <workItem from="1685401105595" duration="15879000" />
     </task>
     <servers />
   </component>

@@ -39,7 +39,8 @@
             { "id": 2, "title": "Traps", "href": "/muscles/functions/back/traps" },
             { "id": 3, "title": "Rotator Cuff", "href": "/muscles/functions/back/rotator-cuff" },
             { "id": 4, "title": "Lats", "href": "/muscles/functions/back/lats" },
-            { "id": 5, "title": "Rear Delt", "href": "/muscles/functions/back/rear-delt" }
+            { "id": 5, "title": "Rear Delt", "href": "/muscles/functions/back/rear-delt" },
+            { "id":  6, "title": "Infraspinatus", "href": "/muscles/functions/back/infraspinatus" }
           ] },
           { "id": 1, "title": "Chest", "subtopics": [
             { "id": 0, "title": "Pecs", "href": "/muscles/functions/chest/pecs" },

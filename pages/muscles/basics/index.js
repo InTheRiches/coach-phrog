@@ -1,7 +1,7 @@
 import Content from '@/components/Content'
 import {scroll} from "@/components/ContentScroll";
 import ContentPage from '@/components/ContentPage';
-import {FrontFullBodySVG} from "@/components/BodySVG";
+import {BackFullBodySVG, FrontFullBodySVG} from "@/components/BodySVG";
 import {useRouter} from "next/router";
 
 
@@ -44,7 +44,10 @@ export default function MuscleBasics({}) {
                     </h1>
                 </div>
             </div>
-            <FrontFullBodySVG/>
+            <div className={"p-8 flex justify-around items-center"}>
+                <FrontFullBodySVG/>
+                <BackFullBodySVG/>
+            </div>
             <Content
                 id="muscle-activation"
                 title="Muscle Activation"
