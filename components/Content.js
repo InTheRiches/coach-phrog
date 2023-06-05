@@ -20,7 +20,7 @@ export default function Content({id, title, content, bulletPoints}) {
             .split("**")
             .map((block, index) => {
                 if (index % 2 === 1) {
-                    return <b key={index}>{block}</b>;
+                    return <b className="uline" key={index}>{block}</b>;
                 } else {
                     const regex = /\[(.*?),([a-zA-Z]*)\]/g; // regex to match the hyperlink pattern
 
