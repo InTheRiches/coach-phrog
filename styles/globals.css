@@ -86,7 +86,11 @@ body.d {
 }
 
 .uline {
-  background: linear-gradient(to right, #F16A70, #F16A70) no-repeat;
-  background-size: 80% 3px;
+  background: linear-gradient(to right, #0ea5e9, #56caff) no-repeat;
+  background-size: 100% 3px;
   background-position: left bottom;
+}
+
+.main-grid {
+  grid-template-columns: 1fr 2.25fr .9fr !important;
 }

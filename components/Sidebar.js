@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useCallback} from 'react';
 import {ScrambleElement} from "@/components/Scrambler";
 import {useRouter} from "next/router";
 import topics from '/public/content.json';
@@ -43,6 +43,12 @@ function Sidebar({ currentTopic, disable=true }) {
     });
 
     const [remainingHeight, setRemainingHeight] = useState(0);
+    let key = 0;
+
+    const getNextKey = () => {
+        key = key + 1;
+        return key
+    };
 
     useEffect(() => {
         // retrieve the state of the menus from LocalStorage
@@ -93,7 +99,7 @@ function Sidebar({ currentTopic, disable=true }) {
     return (
         <div className="flex flex-col h-full w-full">
             <div style={{ maxHeight: remainingHeight + "px" }} className={`sidebar-taper sticky top-20 overflow-y-auto z-10 bg-white dark:bg-neutral-900 px-4 mt-15 pr-4 text-neutral-900 dark:text-slate-50 hidden sm:flex flex-col`}>
-                <div className="w-full bg-white/75 supports-backdrop-blur:bg-cyan-accent/95 backdrop-blur dark:bg-neutral-900/75 sticky top-0 z-10 ">
+                <div className="w-full bg-white/50 supports-backdrop-blur:bg-cyan-accent/95 backdrop-blur dark:bg-neutral-900/50 sticky top-0 z-10 ">
                     <button className="w-full lg:flex border-1 border-slate-200 hover:border-cyan-accent border-opacity-50 hover:border-opacity-75 items-center text-sm leading-6 text-neutral-700 dark:text-slate-300 hover:dark:text-slate-50 hover:text-neutral-900 rounded-md shadow-sm py-1.5 pl-2 pr-3 mb-6 transition-all duration-100 bg-transparent">
                         <a>Search...</a>
                     </button>
@@ -101,7 +107,7 @@ function Sidebar({ currentTopic, disable=true }) {
 
                 {loaded &&
                     topics.map((topic) => (
-                        <div className="mb-2 mr-2" key={topic.id}>
+                        <div className="mb-2 mr-2" key={getNextKey()}>
                             <div
                                 className="flex items-center mb-2 hover:cursor-pointer justify-between"
                                 onClick={() => toggleCollapse(topic)}
@@ -126,7 +132,7 @@ function Sidebar({ currentTopic, disable=true }) {
                                 <div className="">
                                     {topic.subtopics.map((subtopic) => (
                                         <div
-                                            key={subtopic.id}
+                                            key={getNextKey()}
                                             className={`flex flex-col ${
                                                 subtopic.subtopics ? 'border-l-1 border-neutral-200 dark:border-neutral-700' : ''
                                             }`}
@@ -168,13 +174,13 @@ function Sidebar({ currentTopic, disable=true }) {
                                                     <div className="ml-6.5">
                                                         {subtopic.subtopics.map((subsubtopic) => (
                                                             <div
-                                                                key={subtopic.id}
+                                                                key={getNextKey()}
                                                                 className={`flex flex-col ${
                                                                     subtopic.subtopics ? '' : ''
                                                                 }`}
                                                             >
                                                                 <div
-                                                                    key={subsubtopic.id}
+                                                                    key={getNextKey()}
                                                                     className={`${
                                                                         currentTopic === topic.title + "-" + subtopic.title + "-" + subsubtopic.title
                                                                             ? 'text-cyan-accent border-cyan-accent'
@@ -211,7 +217,7 @@ function Sidebar({ currentTopic, disable=true }) {
                                                                         <div className="ml-6.5">
                                                                             {subsubtopic.subtopics.map((subsubsubtopic) => (
                                                                                     <div
-                                                                                        key={subsubsubtopic.id}
+                                                                                        key={getNextKey()}
                                                                                         className={`${
                                                                                             currentTopic.split("-")[0] === topic.title &&
                                                                                             currentTopic.split("-")[1] === subtopic.title &&
@@ -244,6 +250,42 @@ function Sidebar({ currentTopic, disable=true }) {
             </div>
         </div>
     );
+}
+
+export function HeaderListSidebar() {
+    const [loaded, setLoaded] = useState(false);
+
+    const [h1List, setH1List] = useState([]);
+
+    useEffect(() => {
+        const h1Elements = document.querySelectorAll('.text-3xl.font-bold.flex.items-center');
+        const h1List = [];
+      
+        h1Elements.forEach((element) => {
+          const text = element.textContent;
+          const id = element.id;
+          h1List.push(text + ":" + id);
+        });
+
+        setH1List(h1List);
+
+        setLoaded(true);
+    }, []);
+
+    return loaded ? (
+        <div className='ml-4'>
+            <div className="text-lg font-bold mb-6">On this page</div>
+            <div>
+                {h1List.map((h1, index) => {
+                    return (
+                        <div key={index+150} className="text-lg mb-3">
+                            <a className="hover:text-cyan-accent dark:hover:text-cyan-accent dark:text-slate-300 transition-colors duration-100" href={`#${h1.split(":")[1]}`}>{h1.split(":")[0]}</a>
+                        </div>
+                    );
+                })}
+            </div>
+        </div>
+    ) : (<></>);
 }
 
 export default Sidebar;

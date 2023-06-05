@@ -26,6 +26,7 @@ module.exports = {
       },
       colors: {
         "cyan-accent": "#0ea5e9",
+        "link-text": "#56caff",
         "cyan-accent-light": "#3fb1e7",
       },
       borderWidth: {

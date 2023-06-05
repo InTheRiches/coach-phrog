@@ -8,7 +8,13 @@ export default function Content({id, title, content, bulletPoints}) {
     const router = useRouter();
 
     const handleClick = (link) => {
-        router.push(link);
+        // console.log(link.replace(/#.*$/, ''));
+        // console.log(link.replace(/#.*$/, '') === (new URL(window.location.href).pathname.replace(/#.*$/, '')));
+        // if (link.replace(/#.*$/, '') === (new URL(window.location.href).pathname.replace(/#.*$/, ''))) {
+        //     router.push(link).then(() => scroll());
+        //     return;
+        // }
+        router.push(link).then(() => scroll());
     };
 
     if (!bulletPoints) {
@@ -20,6 +26,32 @@ export default function Content({id, title, content, bulletPoints}) {
             .split("**")
             .map((block, index) => {
                 if (index % 2 === 1) {
+                    const regex = /\[(.*?),([a-zA-Z]*)\]/g; // regex to match the hyperlink pattern
+
+                    const matches = block.match(regex);
+
+                    if (matches) {
+                        let match;
+
+                        let lastMatch = 0;
+
+                        const matches = []
+
+                        while ((match = regex.exec(block)) !== null) {
+                            const hyperlink = match[0]; // the entire match (e.g. [/google/muscles,Google])
+                            const linkUrl = match[1]; // the URL of the link (e.g. /google/muscles)
+                            const linkText = match[2]; // the name of the link (e.g. Google)
+                            const startIndex = match.index; // the starting index of the hyperlink in the original string
+                            const endIndex = startIndex + hyperlink.length; // the ending index of the hyperlink in the original string
+
+
+                            // do something with the hyperlink, like replace it with an HTML anchor tag
+                            matches.push(<span key={startIndex}>{block.substring(lastMatch, startIndex)}<a key={index} onClick={() => handleClick(linkUrl)} className={"text-link-text hover:cursor-pointer"}>{linkText}</a></span>);
+                            lastMatch = endIndex;
+                        }
+                        matches.push(block.substring(lastMatch, block.length));
+                        return <b className="uline" key={index}>{matches}</b>;
+                    }
                     return <b className="uline" key={index}>{block}</b>;
                 } else {
                     const regex = /\[(.*?),([a-zA-Z]*)\]/g; // regex to match the hyperlink pattern
@@ -42,7 +74,7 @@ export default function Content({id, title, content, bulletPoints}) {
 
 
                             // do something with the hyperlink, like replace it with an HTML anchor tag
-                            matches.push(<span key={startIndex}>{block.substring(lastMatch, startIndex)}<a key={index} onClick={() => handleClick(linkUrl)} className={"text-cyan-accent hover:underline hover:cursor-pointer"}>{linkText}</a></span>);
+                            matches.push(<span key={startIndex}>{block.substring(lastMatch, startIndex)}<a key={index} onClick={() => handleClick(linkUrl)} className={"text-link-text hover:underline hover:cursor-pointer"}>{linkText}</a></span>);
                             lastMatch = endIndex;
                         }
                         matches.push(block.substring(lastMatch, block.length));
@@ -116,7 +148,7 @@ export default function Content({id, title, content, bulletPoints}) {
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448 384H256c-35.3 0-64-28.7-64-64V64c0-35.3 28.7-64 64-64H396.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V320c0 35.3-28.7 64-64 64zM64 128h96v48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H256c8.8 0 16-7.2 16-16V416h48v32c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V192c0-35.3 28.7-64 64-64z" fill={"white"}></path></svg>
                     </div>
                 </a>
-                <h1 className="text-3xl font-bold flex items-center">
+                <h1 id={id+"x"} className="text-3xl font-bold flex items-center">
                     {title}
                 </h1>
             </div>
