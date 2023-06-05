@@ -123,7 +123,7 @@ export default function Content({id, title, content, bulletPoints}) {
 
             <div className="flex flex-col mt-8 text-lg"> {/* border-gray-600 border-l-8 */}
                 {text.map((substring, index) => (
-                    <span className="mb-6 indent-4" key={index}>{substring}</span>
+                    <span className={`mb-6 indent-4`} key={index}>{substring}</span>
                 ))}
             </div>
             <ul className="text-lg list-inside list-disc lg:grid w-full">
