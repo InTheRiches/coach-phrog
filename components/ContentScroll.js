@@ -29,14 +29,14 @@ export default function ContentScroll() {
 
         const element = document.getElementById("sidebar");
         if (element) {
-            const scrollPosition = Number(localStorage.getItem('sidebarScrollPosition')) || 0;
+            const scrollPosition = parseInt(localStorage.getItem('sidebarScrollPosition')) || 0;
             console.log(scrollPosition)
 
             // Scroll to the stored position
-/*            element.scrollTo({
+            element.scrollTo({
                 top: scrollPosition,
                 behavior: "smooth"
-            });*/
+            });
         }
 
         // Save the current scroll position to localStorage on unload
