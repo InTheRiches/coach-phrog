@@ -25,6 +25,34 @@ export default function RepsAndSets({}) {
                 title="Rest Times"
                 content={"Rest times are an important part of weight lifting. During rest times, your body has the opportunity to **recover** and **restore** its energy levels so that you can perform your next set with the appropriate level of **intensity**. The length of the rest time can vary based on the specific exercise being performed, your level of fitness, your goals, and the intensity of your workout.-.-During rest time, you can use techniques such as **deep breathing**, **stretching**, and **hydration** to help your body recover more quickly. It's important to use your rest time effectively to ensure that you're able to perform each set with proper **form** and **intensity**, without risking injury or **overtraining**.-.-Rest time can be a critical component of your workout, as it can impact your performance and overall results. Proper rest time can help you avoid injury and achieve your desired fitness goals more efficiently. Remember to listen to your body and adjust your rest time as necessary to optimize your workouts."}
             ></Content>
+            <div className={"w-full px-4 border-1 border-neutral-700 rounded-md"}>
+                <table className="table-auto w-full">
+                    <thead>
+                        <tr className={"border-b-1 border-neutral-700"}>
+                            <th className={"py-2 text-left"}>Training Type</th>
+                            <th className={"py-2 text-left"}>Reps / Sets</th>
+                            <th className={"py-2 text-left"}>Rest Times</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td className={"border-b-1 border-neutral-700 py-2"}>Strength</td>
+                            <td className={"border-b-1 border-neutral-700 py-2"}>3-8 / 3-5</td>
+                            <td className={"border-b-1 border-neutral-700 py-2"}>3-5m</td>
+                        </tr>
+                        <tr>
+                            <td className={"border-b-1 border-neutral-700 py-2"}>Hypertrophy</td>
+                            <td className={"border-b-1 border-neutral-700 py-2"}>8-15 / 3-5</td>
+                            <td className={"border-b-1 border-neutral-700 py-2"}>1-3m</td>
+                        </tr>
+                        <tr>
+                            <td className={"py-2"}>Power</td>
+                            <td className={"py-2"}>3-6 / 3-6</td>
+                            <td className={"py-2"}>2-3m</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     )
 
