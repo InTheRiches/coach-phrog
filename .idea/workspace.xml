@@ -9,10 +9,27 @@
   <component name="ChangeListManager">
     <list default="true" id="be896b55-8482-4c8d-bd71-8dfc312afe18" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/BodySVG.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/BodySVG.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Content.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ContentPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContentPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ContentScroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContentScroll.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/getting-started/introduction/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/getting-started/introduction/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/muscles/basics/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/basics/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/muscles/functions/back/traps/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/functions/back/traps/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/muscles/functions/chest/pecs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/functions/chest/pecs/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/muscles/training/basics/concepts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/training/basics/concepts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/muscles/training/basics/repsandsets/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/training/basics/repsandsets/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/supplements/basics/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/basics/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/supplements/muscle-gain/glutamine/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/muscle-gain/glutamine/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/supplements/muscle-gain/loaded-protein/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/muscle-gain/loaded-protein/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/supplements/muscle-gain/whey-protein/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/muscle-gain/whey-protein/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/supplements/performance/bcaas/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/performance/bcaas/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/supplements/performance/beta-alanine/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/performance/beta-alanine/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/supplements/performance/citrulline/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/performance/citrulline/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/supplements/performance/creatine/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/performance/creatine/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/supplements/performance/nitrate/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/performance/nitrate/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/supplements/performance/pre-workout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/performance/pre-workout/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +130,7 @@
       <option name="presentableId" value="Default" />
       <updated>1683946992390</updated>
       <workItem from="1683946993812" duration="17499000" />
-      <workItem from="1685401105595" duration="17178000" />
+      <workItem from="1685401105595" duration="21506000" />
     </task>
     <servers />
   </component>

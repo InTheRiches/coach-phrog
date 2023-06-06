@@ -7,7 +7,7 @@ export default function Concepts({}) {
         <div className="w-full max-w-5xl flex-col">
             {/* Page Header */}
             <div className="flex flex-col mb-12">
-                <span className="text-cyan-accent mb-1">Muscles • Training • Basics</span>
+                <span className="text-cyan-accent mb-1 text-lg">Muscles • Training • Basics</span>
                 <span className="mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Concepts</span>
                 <div className={"border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
                     <span className={"text-lg"}>Weight lifting may seem complicated at first, especially with all the various terminology and concepts thrown around. Despite the initial reaction, these ideas are actually very simple. By breaking them down into their basics, you can fully grasp the concepts and utilize what they have to offer.</span>

@@ -6,7 +6,8 @@ export default function PerformancePreWorkout({}) {
         <div className="w-full max-w-5xl flex-col">
             {/* Page Header */}
             <div className="flex flex-col mb-12">
-                 <h1 className="mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Pre-Workout</h1>
+                <span className="text-cyan-accent mb-1 text-lg">Supplements • Performance</span>
+                <span className="mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Pre-Workout</span>
                 <div className="">
                     <div className="flex rounded-md border-1 border-sky-500 p-4 dark:bg-blue-500 dark:bg-opacity-10 text-lg text-sky-600 bg-blue-50">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"

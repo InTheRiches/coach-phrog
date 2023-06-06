@@ -7,9 +7,9 @@
 @tailwind components;
 @tailwind utilities;
 
-h1,h2 {
-  font-family: 'Roboto Mono', monospace
-}
+/*h1,h2 {*/
+/*  font-family: 'Roboto Mono', monospace*/
+/*}*/
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -86,11 +86,11 @@ body.d {
 }
 
 .uline {
-  background: linear-gradient(to right, #0ea5e9, #56caff) no-repeat;
+  background: linear-gradient(to right, #0ea5e9, #0ea5e9) no-repeat;
   background-size: 100% 3px;
   background-position: left bottom;
 }
 
 .main-grid {
-  grid-template-columns: 1fr 2.25fr .9fr !important;
+  grid-template-columns: .75fr 2.25fr .9fr !important;
 }

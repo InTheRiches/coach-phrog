@@ -7,7 +7,7 @@ export default function RepsAndSets({}) {
         <div className="w-full max-w-5xl flex-col">
             {/* Page Header */}
             <div className="flex flex-col mb-12">
-                <span className="text-cyan-accent mb-1">Muscles • Training • Basics</span>
+                 <span className="text-cyan-accent mb-1 text-lg">Muscles • Training • Basics</span>
                 <span className="mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Reps and Sets</span>
                 <div className={"border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
                     <span className={"text-lg"}>The basics of weight training are simple and crucial to building muscle. Understanding the basics of tracking movements and learning how to consistently perform the exercise in a repeatable manner is extremely important.</span>

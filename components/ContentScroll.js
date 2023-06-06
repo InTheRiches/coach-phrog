@@ -20,16 +20,26 @@ export default function ContentScroll() {
     useEffect(() => {
         // Get the scroll position from localStorage, or default to 0
         const scrollHREF = localStorage.getItem('lastHREF') || "";
-        if (window.location.href == scrollHREF) {
+        if (window.location.href === scrollHREF) {
             const scrollPosition = Number(localStorage.getItem('scrollPosition')) || 0;
 
             // Scroll to the stored position
             window.scrollTo(0, scrollPosition);
         }
 
+        const element = document.getElementById("sidebar");
+        if (element) {
+            const scrollPosition = Number(localStorage.getItem('sidebarScrollPosition')) || 0;
+            console.log(scrollPosition)
+
+            // Scroll to the stored position
+            element.scrollTo(0, scrollPosition);
+        }
+
         // Save the current scroll position to localStorage on unload
         const handleUnload = () => {
             localStorage.setItem('scrollPosition', window.scrollY.toString());
+            localStorage.setItem("sidebarScrollPosition", element.scrollY.toString());
             localStorage.setItem('lastHREF', window.location.href);
         };
 

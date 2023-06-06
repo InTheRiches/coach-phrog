@@ -13,6 +13,7 @@ import MobileSidebar from "@/components/MobileSidebar";
 export default function ContentPage({ currentTopic, content }) {
     ContentScroll();
 
+
     const router = useRouter();
 
     let keys = [];
@@ -49,15 +50,15 @@ export default function ContentPage({ currentTopic, content }) {
         }
     }, [isDarkMode]);
 
-    useEffect(() => {
-        // Select all text elements on the page
-        const textElements = document.querySelectorAll('h1, h2');
-
-        // Loop through each text element
-        textElements.forEach((element) => {
-            ScrambleElement(element, true, false);
-        });
-    }, []);
+    // useEffect(() => {
+    //     // Select all text elements on the page
+    //     const textElements = document.querySelectorAll('h1, h2');
+    //
+    //     // Loop through each text element
+    //     textElements.forEach((element) => {
+    //         ScrambleElement(element, true, false);
+    //     });
+    // }, []);
 
     return (
         <div className={"flex flex-col min-h-screen bg-white dark:bg-neutral-900 text-slate-900 dark:text-slate-50 justify-center items-center"}>

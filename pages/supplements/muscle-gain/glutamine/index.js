@@ -6,7 +6,8 @@ export default function Glutamine({}) {
         <div className="flex-1 w-full max-w-5xl flex-col">
             {/* Page Header */}
             <div className="flex flex-col mb-12 h-auto">
-                <h1 className="z-10 transform mb-5 relative inline-block text-2xl sm:text-4xl font-bold text-slate-900 dark:text-slate-50">Glutamine</h1>
+                <span className="text-cyan-accent mb-1 text-lg">Supplements • Muscle Gain</span>
+                <span className="z-10 transform mb-5 relative inline-block text-2xl sm:text-4xl font-bold text-slate-900 dark:text-slate-50">Glutamine</span>
                 <div className={"z-10 transform border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
                     <span className={"text-lg mb-2"}>Glutamine is a type of amino acid that is present in all proteins. It is classified as conditionally essential, which implies that it becomes necessary during certain circumstances such as injury, surgery or illness. Glutamine has the highest concentration among all amino acids in the blood serum. However, its levels tend to decrease relative to the severity of trauma experienced by the body.</span>
                 </div>

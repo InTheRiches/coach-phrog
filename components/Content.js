@@ -153,7 +153,7 @@ export default function Content({id, title, content, bulletPoints}) {
                 </h1>
             </div>
 
-            <div className="flex flex-col mt-8 text-lg"> {/* border-gray-600 border-l-8 */}
+            <div className="flex flex-col mt-6 text-lg"> {/* border-gray-600 border-l-8 */}
                 {text.map((substring, index) => (
                     <span className={`mb-6 indent-4`} key={index}>{substring}</span>
                 ))}
