@@ -33,13 +33,16 @@ export default function ContentScroll() {
             console.log(scrollPosition)
 
             // Scroll to the stored position
-            element.scrollTo(0, scrollPosition);
+/*            element.scrollTo({
+                top: scrollPosition,
+                behavior: "smooth"
+            });*/
         }
 
         // Save the current scroll position to localStorage on unload
         const handleUnload = () => {
             localStorage.setItem('scrollPosition', window.scrollY.toString());
-            localStorage.setItem("sidebarScrollPosition", element.scrollY.toString());
+            localStorage.setItem("sidebarScrollPosition", element.scrollTop.toString());
             localStorage.setItem('lastHREF', window.location.href);
         };
 

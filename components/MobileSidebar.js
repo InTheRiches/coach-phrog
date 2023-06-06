@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import {ScrambleElement} from "@/components/Scrambler";
 import {useRouter} from "next/router";
 import topics from '/public/content.json';
 
@@ -53,14 +52,14 @@ function Sidebar({ currentTopic }) {
         setLoaded(true);
     }, []);
 
-    useEffect(() => {
-        const textElements = document.querySelectorAll('.font-bold.text-xl');
-
-        // Loop through each text element
-        textElements.forEach((element) => {
-            ScrambleElement(element, true, false);
-        });
-    }, [loaded]);
+    // useEffect(() => {
+    //     const textElements = document.querySelectorAll('.font-bold.text-xl');
+    //
+    //     // Loop through each text element
+    //     textElements.forEach((element) => {
+    //         ScrambleElement(element, true, false);
+    //     });
+    // }, [loaded]);
 
     const toggleCollapse = (topic) => {
         const newValue = !collapsed[topic.title + "-" + topic.id];

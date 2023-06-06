@@ -4,7 +4,6 @@ import Navigation from '@/components/Navigation'
 import Content from '@/components/Content'
 import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
-import {Scramble, ScrambleElement} from "@/components/Scrambler";
 import useDarkMode from 'use-dark-mode';
 
 export default function Layout() {
@@ -19,15 +18,15 @@ export default function Layout() {
         }
     }, [isDarkMode]);
 
-    useEffect(() => {
-        // Select all text elements on the page
-        const textElements = document.querySelectorAll('h1, h2');
-
-        // Loop through each text element
-        textElements.forEach((element) => {
-            ScrambleElement(element, false, true, 750);
-        });
-    }, []);
+    // useEffect(() => {
+    //     // Select all text elements on the page
+    //     const textElements = document.querySelectorAll('h1, h2');
+    //
+    //     // Loop through each text element
+    //     textElements.forEach((element) => {
+    //         ScrambleElement(element, false, true, 750);
+    //     });
+    // }, []);
 
     return (
         <div className={`flex flex-col min-h-screen text-slate-900 dark:text-slate-50 justify-center items-center font-mono bg-cyan-300 dark:bg-cyan-accent`}>

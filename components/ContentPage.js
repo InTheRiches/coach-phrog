@@ -6,13 +6,11 @@ import React, {useEffect} from "react";
 import {useRouter} from "next/router";
 import ContentScroll from "@/components/ContentScroll";
 import useDarkMode from 'use-dark-mode';
-import {ScrambleElement} from "@/components/Scrambler";
 import topics from '/public/content.json';
 import MobileSidebar from "@/components/MobileSidebar";
 
 export default function ContentPage({ currentTopic, content }) {
     ContentScroll();
-
 
     const router = useRouter();
 

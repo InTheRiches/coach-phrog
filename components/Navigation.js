@@ -1,7 +1,5 @@
 import {Fragment, useEffect} from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import Scramble, {ScrambleElement} from "@/components/Scrambler";
 import {useRouter} from "next/router";
 
 const navigation = [
@@ -18,15 +16,15 @@ function classNames(...classes) {
 export default function Navigation({dark, setDark}) {
   const router = useRouter();
 
-  useEffect(() => {
-    // Select all text elements on the page
-    const textElements = document.querySelectorAll('.font-roboto');
-
-    // Loop through each text element
-    textElements.forEach((element) => {
-      ScrambleElement(element, false, true);
-    });
-  }, []);
+  // useEffect(() => {
+  //   // Select all text elements on the page
+  //   const textElements = document.querySelectorAll('.font-roboto');
+  //
+  //   // Loop through each text element
+  //   textElements.forEach((element) => {
+  //     ScrambleElement(element, false, true);
+  //   });
+  // }, []);
 
   return (
     <Disclosure as="nav" id="navigation" className="sticky py-3 top-0 z-40 w-full text-neutral-900 dark:text-slate-50 border-b-1 border-neutral-700 backdrop-blur flex-none lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/50 supports-backdrop-blur:bg-cyan-accent/95 dark:bg-neutral-900/50">

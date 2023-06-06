@@ -1,7 +1,7 @@
 import React, {useEffect, useState, useCallback} from 'react';
-import {ScrambleElement} from "@/components/Scrambler";
 import {useRouter} from "next/router";
 import topics from '/public/content.json';
+import {scroll} from "@/components/ContentScroll";
 
 function Sidebar({ currentTopic, disable=true }) {
     const [loaded, setLoaded] = useState(false);
@@ -74,15 +74,15 @@ function Sidebar({ currentTopic, disable=true }) {
             window.removeEventListener('resize', calculateRemainingHeight);
           };
     }, []);
-
-    useEffect(() => {
-        const textElements = document.querySelectorAll('.font-bold.text-xl');
-
-        // Loop through each text element
-        textElements.forEach((element) => {
-            ScrambleElement(element, true, false);
-        });
-    }, [loaded]);
+    //
+    // useEffect(() => {
+    //     const textElements = document.querySelectorAll('.font-bold.text-xl');
+    //
+    //     // Loop through each text element
+    //     textElements.forEach((element) => {
+    //         ScrambleElement(element, true, false);
+    //     });
+    // }, [loaded]);
 
     const toggleCollapse = (topic) => {
         const newValue = !collapsed[topic.title + "-" + topic.id];
@@ -253,6 +253,8 @@ function Sidebar({ currentTopic, disable=true }) {
 }
 
 export function HeaderListSidebar() {
+    const router = useRouter();
+
     const [loaded, setLoaded] = useState(false);
 
     const [h1List, setH1List] = useState([]);
@@ -273,18 +275,21 @@ export function HeaderListSidebar() {
     }, []);
 
     return loaded ? (
-        <div className='ml-4'>
-            <div className="text-lg font-bold mb-6">On this page</div>
-            <div>
-                {h1List.map((h1, index) => {
-                    return (
-                        <div key={index+150} className="text-lg mb-3">
-                            <a className="hover:text-cyan-accent dark:hover:text-cyan-accent dark:text-slate-300 transition-colors duration-100" href={`#${h1.split(":")[1]}`}>{h1.split(":")[0]}</a>
-                        </div>
-                    );
-                })}
+        <div className={"h-full w-full"}>
+            <div className='ml-4 sticky top-20 overflow-y-auto'>
+                <div className="text-lg font-bold mb-6">On this page</div>
+                <div>
+                    {h1List.map((h1, index) => {
+                        return (
+                            <div key={index+150} className="text-lg mb-3">
+                                <a className="hover:text-cyan-accent dark:hover:text-cyan-accent dark:text-slate-300 transition-colors duration-75 hover:cursor-pointer" onClick={() => router.push(`#${h1.split(":")[1]}`).then(() => scroll())}>{h1.split(":")[0]}</a>
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
         </div>
+
     ) : (<></>);
 }
 

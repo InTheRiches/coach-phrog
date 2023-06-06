@@ -3,7 +3,7 @@ import {useRouter} from "next/router";
 import {scroll} from "@/components/ContentScroll";
 
 export default function Content({id, title, content, bulletPoints}) {
-    const spans = content.split("-.-");
+    const spans = content ? content.split("-.-") : [];
 
     const router = useRouter();
 
@@ -54,7 +54,7 @@ export default function Content({id, title, content, bulletPoints}) {
                     }
                     return <b className="uline" key={index}>{block}</b>;
                 } else {
-                    const regex = /\[(.*?),([a-zA-Z]*)\]/g; // regex to match the hyperlink pattern
+                    const regex = /\[(.*?),([a-zA-Z\s]*)\]/g; // regex to match the hyperlink pattern
 
                     const matches = block.match(regex);
 
@@ -152,12 +152,11 @@ export default function Content({id, title, content, bulletPoints}) {
                     {title}
                 </h1>
             </div>
-
-            <div className="flex flex-col mt-6 text-lg"> {/* border-gray-600 border-l-8 */}
+            {text.length > 0 && <div className="flex flex-col mt-6 text-lg">
                 {text.map((substring, index) => (
                     <span className={`mb-6 indent-4`} key={index}>{substring}</span>
                 ))}
-            </div>
+            </div>}
             <ul className="text-lg list-inside list-disc lg:grid w-full">
                 {bullets.map((key, index) => (
                     <li key={index}><b>{Object.keys(bulletPoints)[index]}:</b><span> {key}</span></li>
