@@ -8,8 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be896b55-8482-4c8d-bd71-8dfc312afe18" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/pages/muscles/functions/back/rotator-cuff/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ContentScroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContentScroll.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/BodySVG.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/BodySVG.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/muscles/functions/back/rhomboids/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/functions/back/rhomboids/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +112,7 @@
       <option name="presentableId" value="Default" />
       <updated>1683946992390</updated>
       <workItem from="1683946993812" duration="17499000" />
-      <workItem from="1685401105595" duration="33349000" />
+      <workItem from="1685401105595" duration="34801000" />
     </task>
     <servers />
   </component>
