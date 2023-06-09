@@ -36,7 +36,7 @@
           { "id": 0, "title": "Back", "subtopics": [
             { "id": 0, "title": "Teres", "href": "/muscles/functions/back/teres" },
             { "id": 1, "title": "Rhomboids", "href": "/muscles/functions/back/rhomboids" },
-            { "id": 2, "title": "Traps", "href": "/muscles/functions/back/traps" },
+            { "id": 2, "title": "Trapezius", "href": "/muscles/functions/back/traps" },
             { "id": 3, "title": "Rotator Cuff", "href": "/muscles/functions/back/rotator-cuff" },
             { "id": 4, "title": "Lats", "href": "/muscles/functions/back/lats" },
             { "id": 5, "title": "Rear Delt", "href": "/muscles/functions/back/rear-delt" },

@@ -92,5 +92,5 @@ body.d {
 }
 
 .main-grid {
-  grid-template-columns: .75fr 2.25fr .9fr !important;
+  grid-template-columns: .75fr 2.25fr .75fr !important;
 }

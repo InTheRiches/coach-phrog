@@ -36,6 +36,6 @@ export default function TrapsFunction({}) {
     )
 
     return (
-        <ContentPage content={content} currentTopic={"Muscles-Functions-Back-Traps"}></ContentPage>
+        <ContentPage content={content} currentTopic={"Muscles-Functions-Back-Trapezius"}></ContentPage>
     )
 }

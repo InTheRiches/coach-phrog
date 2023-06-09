@@ -21,7 +21,7 @@ export default function PerformanceBCAAs({}) {
             <Content
                 id={"when-how"}
                 title={"Timing/Dosage of Consumption"}
-                content={'The amount of whey protein an individual should take per day can vary depending on factors such as age, weight, gender, activity level, and overall health status. It is important to speak with a healthcare provider or a registered dietitian to determine the optimal amount of whey protein for your individual needs.-.-As a general guideline, research suggests that most adults can benefit from consuming 20-30 grams of whey protein per serving, with up to three servings per day. This amount of protein can help to support muscle growth and recovery, as well as promote feelings of fullness and reduce appetite.-.-It is important to remember that whey protein is a supplement. If you eat a well balanced diet full of high-quality lean meats, the additional protein is not necessary.-.-The timing of when to consume whey protein can also be important. Many people choose to consume whey protein either before or after exercise, as this is when the body is most primed to absorb and utilize the protein. However, consuming whey protein at other times throughout the day can also be beneficial, such as in between meals or as a snack.'}
+                content={'The amount of whey protein an individual should take per day can vary depending on factors such as age, weight, gender, activity level, and overall health status. It is important to speak with a healthcare provider or a registered dietitian to determine the optimal amount of whey protein for your individual needs.-.-As a general guideline, research suggests that most adults can benefit from consuming 20-30 grams of whey protein per serving, with up to three servings per day. This amount of protein can help to support muscle growth and recovery, as well as promote feelings of fullness and reduce appetite.-.-The timing of when to consume whey protein can also be important. Many people choose to consume whey protein either before or after exercise, as this is when the body is most primed to absorb and utilize the protein. However, consuming whey protein at other times throughout the day can also be beneficial, such as in between meals or as a snack.'}
             ></Content>
             <div className="">
                 <div className="flex rounded-md border-1 border-sky-500 p-4 dark:bg-blue-500 dark:bg-opacity-10 text-lg text-sky-600 bg-blue-50">
@@ -34,7 +34,7 @@ export default function PerformanceBCAAs({}) {
                     <div className={"w-full"}>
                         <h4 className="font-bold">Note</h4>
                         <div className="mt-1">
-                            Creatine intake should always be accompanied by adequate hydration, as it can cause an increase in water retention. Additionally, consulting with a healthcare professional or a sports nutritionist is recommended to determine the most appropriate creatine supplementation plan for an individual's needs and goals.
+                            It is important to remember that whey protein is a supplement. If you eat a well balanced diet full of high-quality lean meats, the additional protein is not necessary.
                         </div>
                     </div>
                 </div>

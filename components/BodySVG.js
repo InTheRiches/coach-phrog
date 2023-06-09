@@ -161,8 +161,8 @@ export function BackFullBodySVG({highlighted = ""}) {
                 </g>
             </g>
             <g id="svg-rear-delts" data-name="Rear Delts"
-               onClick={() => router.push("/muscles/functions/back/rear-delts")}
-               className={`muscle-svg ${highlighted.split(",").includes("rear-delts") ? "muscle-highlighted" : ""}`}>
+               onClick={() => router.push("/muscles/functions/back/rear-delt")}
+               className={`muscle-svg ${highlighted.split(",").includes("rear-delt") ? "muscle-highlighted" : ""}`}>
                 <g>
                     <path
                         d="m293.62,155.31l-11.4-4.92c-3.59-1.55-7.22-3.12-10.34-5.48-3.25-2.46-5.83-5.68-8.26-8.95-7.22-9.71-13.44-20.16-18.53-31.13-1.26-2.72-2.47-5.51-3.02-8.46-.14-.77-.24-1.6.1-2.3.28-.58.8-.99,1.32-1.37,6.16-4.5,13.73-7.04,21.36-7.15,2.06-.03,4.17.12,6.07.91,3.24,1.34,5.47,4.31,7.54,7.15,7.64,10.5,15.52,21.56,17.35,34.42.77,5.43.42,10.96-.26,16.4-.37,2.93-.82,5.86-1.38,8.76l-.56,2.11Z"/>
@@ -295,8 +295,8 @@ export function BackUpperBodySVG({highlighted = ""}) {
                 </g>
             </g>
             <g id="svg-rear-delts" data-name="Rear Delts"
-               onClick={() => router.push("/muscles/functions/back/rear-delts")}
-               className={`muscle-svg ${highlighted.split(",").includes("rear-delts") ? "muscle-highlighted" : ""}`}>
+               onClick={() => router.push("/muscles/functions/back/rear-delt")}
+               className={`muscle-svg ${highlighted.split(",").includes("rear-delt") ? "muscle-highlighted" : ""}`}>
                 <g>
                     <path
                         d="m293.62,155.31l-11.4-4.92c-3.59-1.55-7.22-3.12-10.34-5.48-3.25-2.46-5.83-5.68-8.26-8.95-7.22-9.71-13.44-20.16-18.53-31.13-1.26-2.72-2.47-5.51-3.02-8.46-.14-.77-.24-1.6.1-2.3.28-.58.8-.99,1.32-1.37,6.16-4.5,13.73-7.04,21.36-7.15,2.06-.03,4.17.12,6.07.91,3.24,1.34,5.47,4.31,7.54,7.15,7.64,10.5,15.52,21.56,17.35,34.42.77,5.43.42,10.96-.26,16.4-.37,2.93-.82,5.86-1.38,8.76l-.56,2.11Z"/>

@@ -1,10 +1,11 @@
 import React from "react";
 import {useRouter} from "next/router";
 import {scroll} from "@/components/ContentScroll";
+import {Alert, Toast} from "flowbite-react";
 
 export default function Content({id, title, content, bulletPoints}) {
     const spans = content ? content.split("-.-") : [];
-
+    const regex = /\[(.*?),([a-zA-Z\d\s]*)\]/g; // regex to match the hyperlink pattern
     const router = useRouter();
 
     const handleClick = (link) => {
@@ -26,8 +27,6 @@ export default function Content({id, title, content, bulletPoints}) {
             .split("**")
             .map((block, index) => {
                 if (index % 2 === 1) {
-                    const regex = /\[(.*?),([a-zA-Z]*)\]/g; // regex to match the hyperlink pattern
-
                     const matches = block.match(regex);
 
                     if (matches) {
@@ -46,7 +45,7 @@ export default function Content({id, title, content, bulletPoints}) {
 
 
                             // do something with the hyperlink, like replace it with an HTML anchor tag
-                            matches.push(<span key={startIndex}>{block.substring(lastMatch, startIndex)}<a key={index} onClick={() => handleClick(linkUrl)} className={"text-link-text hover:cursor-pointer"}>{linkText}</a></span>);
+                            matches.push(<span key={startIndex}>{block.substring(lastMatch, startIndex)}<a key={index} onClick={() => handleClick(linkUrl)} className={"text-cyan-accent dark:text-link-text hover:cursor-pointer"}>{linkText}</a></span>);
                             lastMatch = endIndex;
                         }
                         matches.push(block.substring(lastMatch, block.length));
@@ -54,8 +53,6 @@ export default function Content({id, title, content, bulletPoints}) {
                     }
                     return <b className="uline" key={index}>{block}</b>;
                 } else {
-                    const regex = /\[(.*?),([a-zA-Z\s]*)\]/g; // regex to match the hyperlink pattern
-
                     const matches = block.match(regex);
 
                     if (matches) {
@@ -74,13 +71,13 @@ export default function Content({id, title, content, bulletPoints}) {
 
 
                             // do something with the hyperlink, like replace it with an HTML anchor tag
-                            matches.push(<span key={startIndex}>{block.substring(lastMatch, startIndex)}<a key={index} onClick={() => handleClick(linkUrl)} className={"text-link-text hover:underline hover:cursor-pointer"}>{linkText}</a></span>);
+                            matches.push(<span key={startIndex}>{block.substring(lastMatch, startIndex)}<a key={index} onClick={() => handleClick(linkUrl)} className={"text-cyan-accent dark:text-link-text hover:underline hover:cursor-pointer"}>{linkText}</a></span>);
                             lastMatch = endIndex;
                         }
                         matches.push(block.substring(lastMatch, block.length));
                         return <span key={index}>{matches}</span>;
                     } else {
-                        return <span key={index}>{block}</span>;
+                        return <span key={index}>{block}</span>; /* className={`${/\+=\+/.test(block) ? "indent-0" : ""}`} */
                     }
                 }
             });
@@ -93,8 +90,6 @@ export default function Content({id, title, content, bulletPoints}) {
                 if (index % 2 === 1) {
                     return <b key={index}>{bullet}</b>;
                 } else {
-                    const regex = /\[(.*?),([a-zA-Z\s]*)\]/g; // regex to match the hyperlink pattern
-
                     const matches = bullet.match(regex);
 
                     if (matches) {
@@ -114,7 +109,7 @@ export default function Content({id, title, content, bulletPoints}) {
 
 
                             // do something with the hyperlink, like replace it with an HTML anchor tag
-                            matches.push(<span key={startIndex}>{bullet.substring(lastMatch, startIndex)}<a key={index} onClick={() => handleClick(linkUrl)} className={"text-cyan-accent hover:underline hover:cursor-pointer"}>{linkText}</a></span>);
+                            matches.push(<span key={startIndex}>{bullet.substring(lastMatch, startIndex)}<a key={index} onClick={() => handleClick(linkUrl)} className={"text-cyan-accent dark:text-link-text hover:underline hover:cursor-pointer"}>{linkText}</a></span>);
                             lastMatch = endIndex;
                         }
                         matches.push(bullet.substring(lastMatch, bullet.length));
@@ -143,7 +138,9 @@ export default function Content({id, title, content, bulletPoints}) {
                         <svg width="12" height="12" fill="none" aria-hidden="true"><path d="M3.75 1v10M8.25 1v10M1 3.75h10M1 8.25h10" strokeWidth="1.5" strokeLinecap="round"></path></svg>
                     </div>
                 </a>
-                <a className={"absolute -ml-14 flex items-center opacity-0 border-0 hover:opacity-100 hover:cursor-pointer transition-opacity duration-100 bg-neutral-700 rounded-md"}>
+                <a onClick={() => {
+                    navigator.clipboard.writeText(window.location.href + "#" + id);
+                }} className={"absolute -ml-14 flex items-center opacity-0 border-0 hover:opacity-100 hover:cursor-pointer transition-opacity duration-100 bg-neutral-700 rounded-md"}>
                     <div className={"w-6 h-6 p-1.25 flex items-center justify-center"}>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448 384H256c-35.3 0-64-28.7-64-64V64c0-35.3 28.7-64 64-64H396.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V320c0 35.3-28.7 64-64 64zM64 128h96v48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H256c8.8 0 16-7.2 16-16V416h48v32c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V192c0-35.3 28.7-64 64-64z" fill={"white"}></path></svg>
                     </div>
@@ -154,14 +151,14 @@ export default function Content({id, title, content, bulletPoints}) {
             </div>
             {text.length > 0 && <div className="flex flex-col mt-6 text-lg">
                 {text.map((substring, index) => (
-                    <span className={`mb-6 indent-4`} key={index}>{substring}</span>
+                    <div className={`mb-6 indent-4`} key={index}>{substring}</div>
                 ))}
             </div>}
-            <ul className="text-lg list-inside list-disc lg:grid w-full">
+            {bullets.length > 0 && <ul className={`text-lg list-inside ${text.length > 0 ? "" : "mt-6"} list-disc lg:grid w-full`}>
                 {bullets.map((key, index) => (
                     <li key={index}><b>{Object.keys(bulletPoints)[index]}:</b><span> {key}</span></li>
                 ))}
-            </ul>
+            </ul>}
         </div>
     )
 }

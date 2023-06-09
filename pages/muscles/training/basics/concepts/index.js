@@ -34,6 +34,17 @@ export default function Concepts({}) {
                 title={"Shocking the Muscle"}
                 content={"Shocking the muscle, also known as muscle confusion or muscle variation, is a technique used in weightlifting to prevent the body from adapting to a particular exercise routine. The idea behind shocking the muscle is that by performing different exercises at different rep and weight counts, you can **stimulate** muscle growth and avoid hitting a plateau in your progress.-.-The principle behind muscle shocking is rooted in the concept of the **General Adaptation Syndrome (GAS)**, which states that the body will **adapt** to a specific stressor over time, leading to a **plateau** in progress. Because survival is driven by energy expenditure, your body is designed to adapt and decrease energy usage. It tries to be as efficient as possible, and by repeating an exercise over time (since it consumes a lot of energy), the muscles adapt and stop growing. By continually changing the exercises, sets, reps, and weight used in your workouts, you can prevent the body from fully adapting to the stressor, leading to continued muscle growth.-.-When you notice a plateau in muscle growth, you can implement these ideas. For example, if you start with a bench press warm up at 215 pounds, then a set at 275, then 3 sets at 315, you can instead perform a **drop set**, starting at 275, and going downward. This shocks the muscle by first skipping the **expected** warm up, but also performing a series of unexpected sets with no breaks. By changing the regular routine the muscle fibers scramble to adapt to the new stressor, leading to continued muscle growth."}
             ></Content>
+            <Content
+                id={"terminology"}
+                title={"Terminology"}
+                bulletPoints={{
+                    "Repetition": "A repetition, or rep, is a single movement of an exercise. For example, a single push up is one repetition.",
+                    "Set": "A set is a group of repetitions. For example, 3 sets of 10 push ups is 30 total repetitions.",
+                    "Weight": "Weight refers to the amount of resistance used in an exercise. This can be in the form of dumbbells, barbells, or even body weight.",
+                    "Volume": "Volume refers to the total amount of work performed during a workout. It is a combination of the number of sets, repetitions, and weight or resistance used in an exercise.",
+                    "1RM": "1RM, or one rep max, is the maximum amount of weight you can lift for a single repetition of an exercise. It is used to determine the amount of weight you should use for a given exercise."
+                }}
+            ></Content>
         </div>
     )
 

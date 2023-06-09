@@ -64,7 +64,7 @@ export default function ContentPage({ currentTopic, content }) {
 
             <div className="main-grid sm:grid sm:gap-8 sm:grid-cols-3 max-w-screen-4xl md:px-6 my-8">
                 <Sidebar currentTopic={currentTopic}></Sidebar>
-                <div className={"ml-6 flex flex-col w-full h-full pr-6"}>
+                <div className={"ml-12 flex flex-col w-full h-full pr-6"}>
                     {content}
                     <div className={"w-full flex justify-around mt-4"}>
                         <button

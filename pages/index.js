@@ -60,7 +60,7 @@ export default function Layout() {
                 <figure>
                     <blockquote><p className="mt-6 max-w-3xl mx-auto text-lg lg:text-xl text-slate-600 dark:text-slate-900">During my fitness journey, I realized the importance of understanding the human anatomy and the underlying science of muscle <a className={"text-slate-50"}>hypertrophy</a>. As my understanding of these concepts grew, so did my <a className={"text-slate-50"}>efficiency</a> and <a className={"text-slate-50"}>effectiveness</a> in the gym. By comprehending the precise mechanisms behind muscle development and how to optimize them, I found that my workouts became more <a className={"text-slate-50"}>gratifying</a> and <a className={"text-cyan-accent"}>productive</a>.</p></blockquote>
                     <figcaption className="mt-6 flex items-center justify-center space-x-4 text-left"><img
-                        src="/_next/static/media/adam.26d0119c.jpg" alt="" className="w-14 h-14 rounded-full"
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" className="w-14 h-14 rounded-full"
                         loading="lazy" decoding="async"></img>
                         <div>
                             <div className="text-slate-900 font-bold dark:text-white text-lg">Hayden Williams</div>
