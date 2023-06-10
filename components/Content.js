@@ -1,7 +1,6 @@
 import React from "react";
 import {useRouter} from "next/router";
 import {scroll} from "@/components/ContentScroll";
-import {Alert, Toast} from "flowbite-react";
 
 export default function Content({id, title, content, bulletPoints}) {
     const spans = content ? content.split("-.-") : [];
