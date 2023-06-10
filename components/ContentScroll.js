@@ -27,22 +27,22 @@ export default function ContentScroll() {
             window.scrollTo(0, scrollPosition);
         }
 
-        const element = document.getElementById("sidebar");
-        if (element) {
-            const scrollPosition = parseInt(localStorage.getItem('sidebarScrollPosition')) || 0;
-            console.log(scrollPosition)
-
-            // Scroll to the stored position
-            element.scrollTo({
-                top: scrollPosition,
-                behavior: "smooth"
-            });
-        }
+        // const element = document.getElementById("sidebar");
+        // if (element) {
+        //     const scrollPosition = parseInt(localStorage.getItem('sidebarScrollPosition')) || 0;
+        //     console.log(scrollPosition)
+        //
+        //     // Scroll to the stored position
+        //     element.scrollTo({
+        //         top: scrollPosition,
+        //         behavior: "smooth"
+        //     });
+        // }
 
         // Save the current scroll position to localStorage on unload
         const handleUnload = () => {
             localStorage.setItem('scrollPosition', window.scrollY.toString());
-            localStorage.setItem("sidebarScrollPosition", element.scrollTop.toString());
+            // localStorage.setItem("sidebarScrollPosition", element.scrollTop.toString());
             localStorage.setItem('lastHREF', window.location.href);
         };
 
@@ -58,6 +58,7 @@ export default function ContentScroll() {
 }
 
 export function scroll() {
+    console.log("scroll");
     const hash = window.location.hash.substr(1);
     if (!hash) {
         return;
@@ -69,6 +70,7 @@ export function scroll() {
         const nav = document.getElementById('navigation');
         const navHeight = nav.getBoundingClientRect().height;
         const sectionTop = section.getBoundingClientRect().top + window.scrollY - navHeight;
+        console.log(sectionTop);
         window.scrollTo({
             top: sectionTop,
             behavior: 'smooth',

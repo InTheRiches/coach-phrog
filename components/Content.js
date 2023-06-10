@@ -53,32 +53,40 @@ export default function Content({id, title, content, bulletPoints}) {
                     }
                     return <b className="uline" key={index}>{block}</b>;
                 } else {
-                    const matches = block.match(regex);
-
-                    if (matches) {
-                        let match;
-
-                        let lastMatch = 0;
-
-                        const matches = []
-
-                        while ((match = regex.exec(block)) !== null) {
-                            const hyperlink = match[0]; // the entire match (e.g. [/google/muscles,Google])
-                            const linkUrl = match[1]; // the URL of the link (e.g. /google/muscles)
-                            const linkText = match[2]; // the name of the link (e.g. Google)
-                            const startIndex = match.index; // the starting index of the hyperlink in the original string
-                            const endIndex = startIndex + hyperlink.length; // the ending index of the hyperlink in the original string
-
-
-                            // do something with the hyperlink, like replace it with an HTML anchor tag
-                            matches.push(<span key={startIndex}>{block.substring(lastMatch, startIndex)}<a key={index} onClick={() => handleClick(linkUrl)} className={"text-cyan-accent dark:text-link-text hover:underline hover:cursor-pointer"}>{linkText}</a></span>);
-                            lastMatch = endIndex;
+                    return block.split("`").map((block1, index) => {
+                        console.log(block1);
+                        if (index % 2 === 1) {
+                            return <code className={"border-1 border-neutral-700 flex flex-col p-2 bg-neutral-500 bg-opacity-5 rounded-md indent-1"} key={index}>{block1}</code>;
                         }
-                        matches.push(block.substring(lastMatch, block.length));
-                        return <span key={index}>{matches}</span>;
-                    } else {
-                        return <span key={index}>{block}</span>; /* className={`${/\+=\+/.test(block) ? "indent-0" : ""}`} */
-                    }
+                        else {
+                            const matches = block1.match(regex);
+
+                            if (matches) {
+                                let match;
+
+                                let lastMatch = 0;
+
+                                const matches = []
+
+                                while ((match = regex.exec(block1)) !== null) {
+                                    const hyperlink = match[0]; // the entire match (e.g. [/google/muscles,Google])
+                                    const linkUrl = match[1]; // the URL of the link (e.g. /google/muscles)
+                                    const linkText = match[2]; // the name of the link (e.g. Google)
+                                    const startIndex = match.index; // the starting index of the hyperlink in the original string
+                                    const endIndex = startIndex + hyperlink.length; // the ending index of the hyperlink in the original string
+
+
+                                    // do something with the hyperlink, like replace it with an HTML anchor tag
+                                    matches.push(<span key={startIndex}>{block1.substring(lastMatch, startIndex)}<a key={index} onClick={() => handleClick(linkUrl)} className={"text-cyan-accent dark:text-link-text hover:underline hover:cursor-pointer"}>{linkText}</a></span>);
+                                    lastMatch = endIndex;
+                                }
+                                matches.push(block1.substring(lastMatch, block1.length));
+                                return <span key={index}>{matches}</span>;
+                            } else {
+                                return <span key={index}>{block1}</span>; /* className={`${/\+=\+/.test(block) ? "indent-0" : ""}`} */
+                            }
+                        }
+                    });
                 }
             });
     });
@@ -139,7 +147,7 @@ export default function Content({id, title, content, bulletPoints}) {
                     </div>
                 </a>
                 <a onClick={() => {
-                    navigator.clipboard.writeText(window.location.href + "#" + id);
+                    navigator.clipboard.writeText(window.location.href.split('#')[0] + "#" + id);
                 }} className={"absolute -ml-14 flex items-center opacity-0 border-0 hover:opacity-100 hover:cursor-pointer transition-opacity duration-100 bg-neutral-700 rounded-md"}>
                     <div className={"w-6 h-6 p-1.25 flex items-center justify-center"}>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448 384H256c-35.3 0-64-28.7-64-64V64c0-35.3 28.7-64 64-64H396.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V320c0 35.3-28.7 64-64 64zM64 128h96v48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H256c8.8 0 16-7.2 16-16V416h48v32c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V192c0-35.3 28.7-64 64-64z" fill={"white"}></path></svg>

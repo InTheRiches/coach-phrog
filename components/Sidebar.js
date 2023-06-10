@@ -55,6 +55,7 @@ function Sidebar({ currentTopic, disable=true }) {
         const storedState = window.localStorage.getItem(
             "sidebar-collapsed-state"
         );
+
         if (storedState) {
             setCollapsed(JSON.parse(storedState));
         }
@@ -95,6 +96,17 @@ function Sidebar({ currentTopic, disable=true }) {
             JSON.stringify({ ...collapsed, [topic.title + "-" + topic.id]: newValue })
         );
     };
+
+    const setCollapse = (topic, value) => {
+        console.log("collapse");
+        setCollapsed({ ...collapsed, [topic.title + "-" + topic.id]: value });
+
+        // save the new state to LocalStorage
+        window.localStorage.setItem(
+            "sidebar-collapsed-state",
+            JSON.stringify({ ...collapsed, [topic.title + "-" + topic.id]: value })
+        );
+    }
 
     return (
         <div className="flex flex-col h-full w-full max-w-1/5">
@@ -144,7 +156,9 @@ function Sidebar({ currentTopic, disable=true }) {
                                                         : 'text-neutral-700 dark:text-slate-300 border-neutral-200 dark:border-neutral-700'
                                                 } ${subtopic.subtopics ? "" : "border-l-1"} flex items-center text-2xl transition-all duration-200 hover:cursor-pointer hover:text-cyan-accent dark:hover:text-cyan-accent flex-row py-1 justify-between`}
                                                 onClick={() => {
+                                                    console.log(currentTopic);
                                                     if (subtopic.subtopics) {
+                                                        // if (currentTopic.includes( topic.title + "-" + subtopic.title)) return;
                                                         toggleCollapse(subtopic);
                                                     } else {
                                                         router.push(subtopic.href);

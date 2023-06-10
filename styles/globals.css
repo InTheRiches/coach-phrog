@@ -44,6 +44,10 @@ body.d {
   fill: #7c7c7c;
 }
 
+.muscle-highlighted {
+  z-index: 10;
+}
+
 .dark .muscle-svg > g > path:first-child {
   fill: #2f2f2f;
 }
