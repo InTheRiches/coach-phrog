@@ -28,6 +28,7 @@ module.exports = {
         "cyan-accent": "#0ea5e9",
         "link-text": "#56caff",
         "cyan-accent-light": "#3fb1e7",
+        "red-accent": "#c62368",
       },
       borderWidth: {
         1: '1px',

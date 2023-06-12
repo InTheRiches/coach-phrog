@@ -71,13 +71,13 @@ body.d {
   cursor:pointer;
 }
 
-.slant {
+/* .slant {
   clip-path: polygon(0 0,100% 0,100% 100%,0 90%);
-}
+  background-image: url(/public/layered-waves-haikei.svg);
+} */
 
-.gradient-mask {
-  -webkit-mask-image: linear-gradient(transparent, black);
-  mask-image: linear-gradient(transparent, black);
+.dark .bg-gradient {
+  background: linear-gradient(black, #c62368);
 }
 
 .sidebar-taper {
