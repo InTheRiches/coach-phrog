@@ -37,6 +37,6 @@ export default function TricepsFunction({}) {
     )
 
     return (
-        <ContentPage content={content} currentTopic={"Muscles-Functions-Back-Rotator Cuff"}></ContentPage>
+        <ContentPage content={content} currentTopic={"Muscles-Functions-Arms-Biceps"}></ContentPage>
     )
 }

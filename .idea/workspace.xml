@@ -8,14 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be896b55-8482-4c8d-bd71-8dfc312afe18" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/pages/muscles/functions/arms/triceps/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/BodySVG.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/BodySVG.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Content.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ContentScroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContentScroll.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/muscles/training/basics/concepts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/training/basics/concepts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/muscles/functions/arms/biceps/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/functions/arms/biceps/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/muscles/functions/chest/delts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/functions/chest/delts/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +46,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/Unity/Projects/coach-phrog/components",
+    "last_opened_file_path": "D:/Unity/Projects/coach-phrog/pages/muscles/functions/arms",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -67,6 +63,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Unity\Projects\coach-phrog\pages\muscles\functions\arms" />
       <recent name="D:\Unity\Projects\coach-phrog\components" />
       <recent name="D:\Unity\Projects\coach-phrog\public" />
       <recent name="D:\Unity\Projects\coach-phrog\pages\muscles\training\basics" />
@@ -75,7 +72,7 @@
       <recent name="D:\Unity\Projects\coach-phrog\pages\muscles\training\basics" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="build" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -126,7 +123,7 @@
       <workItem from="1686242469229" duration="8427000" />
       <workItem from="1686264358720" duration="206000" />
       <workItem from="1686264574271" duration="568000" />
-      <workItem from="1686265157386" duration="10164000" />
+      <workItem from="1686265157386" duration="12688000" />
     </task>
     <servers />
   </component>
