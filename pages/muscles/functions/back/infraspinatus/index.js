@@ -9,14 +9,6 @@ export default function TrapsFunction({}) {
 
     const content = (
         <div className="w-full max-w-5xl flex-col">
-            {/* Page Header */}
-            <div className="flex flex-col mb-12">
-                <span className="text-cyan-accent mb-1 text-lg">Muscles • Functions • Back</span>
-                <span className="mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Infraspinatus</span>
-                <div className={"border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
-                    <span className={"text-lg"}>The infraspinatus is one of the four muscles that make up the [/muscles/functions/back/rotator-cuff,rotator cuff] in the shoulder. It is located on the **posterior** (back) aspect of the shoulder blade (scapula) and attaches to the greater tubercle of the humerus (upper arm bone). The infraspinatus works together with the other [/muscles/functions/back/rotator-cuff,rotator cuff] muscles to stabilize and control the movement of the shoulder joint.</span>
-                </div>
-            </div>
             <Content
                 id={"location"}
                 title="Location"
@@ -36,6 +28,6 @@ export default function TrapsFunction({}) {
     )
 
     return (
-        <ContentPage content={content} currentTopic={"Muscles-Functions-Back-Infraspinatus"}></ContentPage>
+        <ContentPage location={"Muscles • Functions • Back"} title={"Infraspinatus"} description={<span className={"text-lg"}>The infraspinatus is one of the four muscles that make up the [/muscles/functions/back/rotator-cuff,rotator cuff] in the shoulder. It is located on the **posterior** (back) aspect of the shoulder blade (scapula) and attaches to the greater tubercle of the humerus (upper arm bone). The infraspinatus works together with the other [/muscles/functions/back/rotator-cuff,rotator cuff] muscles to stabilize and control the movement of the shoulder joint.</span>} content={content} currentTopic={"Muscles-Functions-Back-Infraspinatus"}></ContentPage>
     )
 }

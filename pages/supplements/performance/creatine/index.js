@@ -4,14 +4,6 @@ import ContentPage from '@/components/ContentPage';
 export default function PerformanceBCAAs({}) {
     const content = (
         <div className="w-full max-w-5xl flex-col">
-            {/* Page Header */}
-            <div className="flex flex-col mb-12">
-                <span className="text-cyan-accent mb-1 text-lg">Supplements • Performance</span>
-                <span className="mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Creatine</span>
-                <div className={"border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
-                    <span className={"text-lg mb-2"}>Creatine is one of the most thoroughly studied and potent supplements, which can swiftly generate energy during high-intensity physical activity and enhance exercise performance. While there may be cognitive advantages linked with creatine consumption, additional research is required to confirm these findings.</span>
-                </div>
-            </div>
             {/* First Topic */}
             <Content
                 id="what-is"
@@ -22,12 +14,12 @@ export default function PerformanceBCAAs({}) {
                 id="why"
                 content={"Creatine is a supplement built for athletes. It extends exertion periods and delays fatigue, and enhances high-intensity, short-duration activities like weightlifting, sprinting, and jumping. It can improve muscle strength and power output, allowing you to lift heavier weights or perform more explosive movements. It also stores water in the muscle tissue, causing the muscles to appear fuller and bigger than they would otherwise. This can make your physique look more impressive and aesthetic.-.-Remember, creatine is a non-essential supplement. You can achieve your fitness goals without, and only assists you along the way. Creatine does not instantly make you stronger, you still have to put in the work to see results. Creatine is a great option for athletes and bodybuilders, and is one of the most effective supplements on the market."}
                 title={"Why should you take it?"}
-                ></Content>
+            ></Content>
             <Content
                 id={"when-how"}
                 title={"Timing/Dosage of Consumption"}
                 content={'The appropriate time and dosage of creatine consumption depends on a variety of factors, including an individual\'s body weight, physical activity, and overall health. In general, a typical creatine supplementation protocol involves an initial "loading phase" of 20-25 grams per day for 5-7 days, followed by a "maintenance phase" of 3-5 grams per day for several weeks or months. The loading phase is not necessary, and only hastens the saturation of creatine. In most cases, just starting with the maintenance dose will suffice, and after around a month, you will be fully saturated. The time of consumption doesn\'t matter, but people often take it at night or in the morning.'}
-                ></Content>
+            ></Content>
             <div className="">
                 <div className="flex rounded-md border-1 border-sky-500 p-4 dark:bg-blue-500 dark:bg-opacity-10 text-lg text-sky-600 bg-blue-50">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
@@ -48,6 +40,6 @@ export default function PerformanceBCAAs({}) {
     );
 
     return (
-        <ContentPage currentTopic={"Supplements-Performance-Creatine"} content={content}></ContentPage>
+        <ContentPage location={"Supplements • Performance"} title={"Creatine"} description={<span className={"text-lg mb-2"}>Creatine is one of the most thoroughly studied and potent supplements, which can swiftly generate energy during high-intensity physical activity and enhance exercise performance. While there may be cognitive advantages linked with creatine consumption, additional research is required to confirm these findings.</span>} currentTopic={"Supplements-Performance-Creatine"} content={content}></ContentPage>
     )
 }

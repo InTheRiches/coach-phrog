@@ -8,15 +8,6 @@ export default function RepsAndSets({}) {
 
     const content = (
         <div className="w-full max-w-5xl flex-col">
-            {/* Page Header */}
-            <div className="flex flex-col mb-12">
-                 <span className="text-cyan-accent mb-1 text-lg">Muscles • Training • Basics</span>
-                <span className="mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Reps and Sets</span>
-                <div className={"border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
-                    <span className={"text-lg"}>The basics of weight training are simple and crucial to building muscle. Understanding the basics of tracking movements and learning how to consistently perform the exercise in a repeatable manner is extremely important.</span>
-                    {/*<span className={"text-lg"}>Properly training is important to making progress in the gym. Utilizing all available processes can significantly increase gains, and make the experience overall more enjoyable and rewarding. Training properly can also avoid injuries and make sure that your body is staying healthy.</span>*/}
-                </div>
-            </div>
             <div className={"w-full px-4 border-1 border-neutral-700 rounded-md"}>
                 <table className="table-auto w-full">
                     <thead>
@@ -60,6 +51,6 @@ export default function RepsAndSets({}) {
     )
 
     return (
-        <ContentPage content={content} currentTopic={"Muscles-Training-Basics-Reps / Sets"}></ContentPage>
+        <ContentPage location={"Muscles • Training • Basics"} title={"Reps and Sets"} description={<span className={"text-lg"}>The basics of weight training are simple and crucial to building muscle. Understanding the basics of tracking movements and learning how to consistently perform the exercise in a repeatable manner is extremely important.</span>} content={content} currentTopic={"Muscles-Training-Basics-Reps / Sets"}></ContentPage>
     )
 }

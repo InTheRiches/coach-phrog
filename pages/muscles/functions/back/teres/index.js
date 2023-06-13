@@ -9,21 +9,11 @@ export default function TrapsFunction({}) {
 
     const content = (
         <div className="w-full max-w-5xl flex-col">
-            {/* Page Header */}
-            <div className="flex flex-col mb-12">
-                <span className="text-cyan-accent mb-1 text-lg">Muscles • Functions • Back</span>
-                <span className="mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Teres Major/Minor</span>
-                <div className={"border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
-                    <span className={"text-lg mb-6"}>The teres major and teres minor are two separate muscles located in the back of the upper body, specifically in the shoulder region. The teres major muscle is a thick, triangular muscle that originates on the lower part of the scapula (shoulder blade) and inserts into the upper part of the humerus (upper arm bone). It assists in the rotation and movement of the scapula.</span>
-                    <span className={"text-lg"}>The teres minor muscle is a small, elongated muscle located just below the teres major. It originates on the lateral border of the scapula and inserts into the greater tubercle of the humerus. Its primary function is rotation of the scapula, but also helps stabilize.</span>
-                </div>
-            </div>
             <Content
                 id={"location"}
                 title="Location"
                 content={"The teres major/minor are located in the upper back, specifically in the shoulder region. The teres major is a thick, triangular muscle that originates on the lower part of the scapula (shoulder blade) and inserts into the upper part of the humerus (upper arm bone). The teres minor is a small, elongated muscle located just below the teres major. It originates on the lateral border of the scapula and inserts into the greater tubercle of the humerus."}
             ></Content>
-
             <div className={"p-8 flex justify-around items-center"}>
                 <FrontUpperBodySVG highlighted="teres"/>
                 <BackUpperBodySVG highlighted="teres"/>
@@ -37,6 +27,6 @@ export default function TrapsFunction({}) {
     )
 
     return (
-        <ContentPage content={content} currentTopic={"Muscles-Functions-Back-Teres"}></ContentPage>
+        <ContentPage location={"Muscles • Functions • Back"} title={"Teres Major/Minor"} description={<div><span className={"text-lg mb-6"}>The teres major and teres minor are two separate muscles located in the back of the upper body, specifically in the shoulder region. The teres major muscle is a thick, triangular muscle that originates on the lower part of the scapula (shoulder blade) and inserts into the upper part of the humerus (upper arm bone). It assists in the rotation and movement of the scapula.</span><span className={"text-lg"}>The teres minor muscle is a small, elongated muscle located just below the teres major. It originates on the lateral border of the scapula and inserts into the greater tubercle of the humerus. Its primary function is rotation of the scapula, but also helps stabilize.</span></div>} content={content} currentTopic={"Muscles-Functions-Back-Teres"}></ContentPage>
     )
 }

@@ -9,14 +9,6 @@ export default function PecsFunction({}) {
 
     const content = (
         <div className="w-full max-w-5xl flex-col">
-            {/* Page Header */}
-            <div className="flex flex-col mb-12">
-                <span className="text-cyan-accent mb-1 text-lg">Muscles • Functions • Back</span>
-                <span className="mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Latissimus Dorsi (Lats)</span>
-                <div className={"border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
-                    <span className={"text-lg"}>The latissimus dorsi, commonly referred to as the lats, is a large muscle located on the back. Its primary function is to perform shoulder extension, which involves pulling the upper arm downward and backward. The lats also assist in movements such as shoulder adduction, internal rotation, and contribute to overall back strength and stability.</span>
-                </div>
-            </div>
             <Content
                 id={"location"}
                 title="Location"
@@ -35,6 +27,6 @@ export default function PecsFunction({}) {
     )
 
     return (
-        <ContentPage content={content} currentTopic={"Muscles-Functions-Back-Lats"}></ContentPage>
+        <ContentPage location={"Muscles • Functions • Back"} title={"Latissimus Dorsi (Lats)"} description={<span className={"text-lg"}>The latissimus dorsi, commonly referred to as the lats, is a large muscle located on the back. Its primary function is to perform shoulder extension, which involves pulling the upper arm downward and backward. The lats also assist in movements such as shoulder adduction, internal rotation, and contribute to overall back strength and stability.</span>} content={content} currentTopic={"Muscles-Functions-Back-Lats"}></ContentPage>
     )
 }

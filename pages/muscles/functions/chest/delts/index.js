@@ -7,15 +7,7 @@ import React from "react";
 // TODO MAKE A PAGE FOR THE BACK, THEN MAKE A FOLDER WITH SUBCATEGORIES THAT GOES INTO MORE DETAIL ON EACH OF THE MUSCLES/MUSCLE GROUPS.
 export default function PecsFunction({}) {
     const content = (
-        <div className="w-full max-w-5xl flex-col">
-            {/* Page Header */}
-            <div className="flex flex-col mb-12">
-                <span className="text-cyan-accent mb-1 text-lg">Muscles • Functions • Chest</span>
-                <span className="mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Anterior & Medial Deltoid (Front/Middle Delt)</span>
-                <div className={"border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
-                    <span className={"text-lg"}>The anterior and medial deltoids are muscle heads part of the deltoid, located at the front of the shoulder, the other being the <a onClick={() => router.push("/muscles/functions/back/rear-delt").then(() => scroll())} className={"text-link-text hover:underline hover:cursor-pointer"}>rear delt</a>. Its main function is to flex and internally rotate the arm at the shoulder joint, allowing for movements such as raising the arm forward and inward.</span>
-                </div>
-            </div>
+        <div className="flex-col">
             <Content
                 id={"location"}
                 title="Location"
@@ -39,6 +31,6 @@ export default function PecsFunction({}) {
     )
 
     return (
-        <ContentPage content={content} currentTopic={"Muscles-Functions-Chest-Delts"}></ContentPage>
+        <ContentPage location="Muscles • Functions • Chest" title="Anterior & Medial Deltoid (Front/Middle Delt)" description={<span className={"text-lg"}>The anterior and medial deltoids are muscle heads part of the deltoid, located at the front of the shoulder, the other being the <a onClick={() => router.push("/muscles/functions/back/rear-delt").then(() => scroll())} className={"text-link-text hover:underline hover:cursor-pointer"}>rear delt</a>. Its main function is to flex and internally rotate the arm at the shoulder joint, allowing for movements such as raising the arm forward and inward.</span>} content={content} currentTopic={"Muscles-Functions-Chest-Delts"}></ContentPage>
     )
 }

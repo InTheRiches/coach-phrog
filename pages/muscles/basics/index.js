@@ -3,6 +3,7 @@ import {scroll} from "@/components/ContentScroll";
 import ContentPage from '@/components/ContentPage';
 import {BackFullBodySVG, FrontFullBodySVG} from "@/components/BodySVG";
 import {useRouter} from "next/router";
+import React from "react";
 
 
 export default function MuscleBasics({}) {
@@ -10,41 +11,10 @@ export default function MuscleBasics({}) {
 
     const content = (
         <div className="w-full max-w-5xl flex-col">
-            {/* Page Header */}
-            <div className="flex flex-col mb-12">
-                <span className="text-cyan-accent mb-1 text-lg">Muscles</span>
-                <span className="mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Basics</span>
-                <div className={"border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
-                    <span className={"text-lg mb-2"}>Muscles are a type of tissue in our bodies that allow us to <b>move</b> and <b>carry</b> out physical activities. Think of muscles like rubber bands or ropes that are attached to our bones and can <b>contract</b>, or shorten, to pull the bones closer together, allowing us to move our bodies. For example, when you bend your arm, your bicep muscle contracts, <b>pulling</b> your forearm towards your shoulder. When you straighten your arm, your tricep muscle contracts, <b>pushing</b> your forearm away from your shoulder.</span>
-                </div>
-            </div>
-            {/* First Topic */}
-            <div id={"muscle-locationsx"} className="mt-12">
-                <div className={"flex items-center"}>
-                    <a onClick={() => {
-                        // copy the URL to the clipboard
-                        if (window.location.href.includes("#")) {
-                            router.push(window.location.href.split("#")[0] + "#muscle-locations").then(r => scroll());
-                        }
-                        else {
-                            router.push(window.location.href + "#muscle-locations").then(r => scroll());
-                        }
-
-                    }} className={"absolute -ml-8 flex items-center opacity-0 border-0 hover:opacity-100 hover:cursor-pointer transition-opacity duration-100 bg-neutral-700 rounded-md"}>
-                        <div className={"w-6 h-6 flex items-center justify-center stroke-white"}>
-                            <svg width="12" height="12" fill="none" aria-hidden="true"><path d="M3.75 1v10M8.25 1v10M1 3.75h10M1 8.25h10" strokeWidth="1.5" strokeLinecap="round"></path></svg>
-                        </div>
-                    </a>
-                    <a className={"absolute -ml-14 flex items-center opacity-0 border-0 hover:opacity-100 hover:cursor-pointer transition-opacity duration-100 bg-neutral-700 rounded-md"}>
-                        <div className={"w-6 h-6 p-1.25 flex items-center justify-center"}>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M448 384H256c-35.3 0-64-28.7-64-64V64c0-35.3 28.7-64 64-64H396.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V320c0 35.3-28.7 64-64 64zM64 128h96v48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H256c8.8 0 16-7.2 16-16V416h48v32c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V192c0-35.3 28.7-64 64-64z" fill={"white"}></path></svg>
-                        </div>
-                    </a>
-                    <h1 className="text-3xl font-bold flex items-center">
-                        Muscle Locations Map
-                    </h1>
-                </div>
-            </div>
+            <Content
+                id={"muscle-locations"}
+                title="Muscle Locations Map"
+            ></Content>
             <div className={"p-8 flex justify-around items-center"}>
                 <FrontFullBodySVG/>
                 <BackFullBodySVG/>
@@ -97,6 +67,6 @@ export default function MuscleBasics({}) {
     );
 
     return (
-        <ContentPage currentTopic={"Muscles-Basics"} content={content}></ContentPage>
+        <ContentPage location={"Muscles"} title={"Basics"} description={<span className={"text-lg mb-2"}>Muscles are a type of tissue in our bodies that allow us to <b>move</b> and <b>carry</b> out physical activities. Think of muscles like rubber bands or ropes that are attached to our bones and can <b>contract</b>, or shorten, to pull the bones closer together, allowing us to move our bodies. For example, when you bend your arm, your bicep muscle contracts, <b>pulling</b> your forearm towards your shoulder. When you straighten your arm, your tricep muscle contracts, <b>pushing</b> your forearm away from your shoulder.</span>} currentTopic={"Muscles-Basics"} content={content}></ContentPage>
     )
 }

@@ -4,14 +4,6 @@ import ContentPage from '@/components/ContentPage';
 export default function PerformanceBCAAs({}) {
     const content = (
         <div className="w-full max-w-5xl flex-col">
-            {/* Page Header */}
-            <div className="flex flex-col mb-12">
-                <span className="text-cyan-accent mb-1 text-lg">Supplements • Muscle Gain</span>
-                <span className="mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Whey Protein</span>
-                <div className={"border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
-                    <span className={"text-lg mb-2"}>Whey protein is a type of protein derived from milk, which is commonly used as a dietary supplement to support muscle growth and recovery. It contains all of the essential amino acids, which are the building blocks of protein that cannot be produced by the body and must be obtained through food or supplements.</span>
-                </div>
-            </div>
             {/* First Topic */}
             <Content
                 id="why"
@@ -43,6 +35,6 @@ export default function PerformanceBCAAs({}) {
     );
 
     return (
-        <ContentPage currentTopic={"Supplements-Muscle Gain-Whey Protein"} content={content}></ContentPage>
+        <ContentPage location={"Supplements • Muscle Gain"} title={"Whey Protein"} description={<span className={"text-lg mb-2"}>Whey protein is a type of protein derived from milk, which is commonly used as a dietary supplement to support muscle growth and recovery. It contains all of the essential amino acids, which are the building blocks of protein that cannot be produced by the body and must be obtained through food or supplements.</span>} currentTopic={"Supplements-Muscle Gain-Whey Protein"} content={content}></ContentPage>
     )
 }

@@ -4,14 +4,6 @@ import ContentPage from '@/components/ContentPage';
 export default function Glutamine({}) {
     const content = (
         <div className="flex-1 w-full max-w-5xl flex-col">
-            {/* Page Header */}
-            <div className="flex flex-col mb-12 h-auto">
-                <span className="text-cyan-accent mb-1 text-lg">Supplements • Muscle Gain</span>
-                <span className="z-10 transform mb-5 relative inline-block text-2xl sm:text-4xl font-bold text-slate-900 dark:text-slate-50">Glutamine</span>
-                <div className={"z-10 transform border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
-                    <span className={"text-lg mb-2"}>Glutamine is a type of amino acid that is present in all proteins. It is classified as conditionally essential, which implies that it becomes necessary during certain circumstances such as injury, surgery or illness. Glutamine has the highest concentration among all amino acids in the blood serum. However, its levels tend to decrease relative to the severity of trauma experienced by the body.</span>
-                </div>
-            </div>
             {/* First Topic */}
             <Content
                 id="why"
@@ -22,7 +14,7 @@ export default function Glutamine({}) {
                 id={"when-how"}
                 title={"Timing/Dosage of Consumption"}
                 content={'The most common dosages of Glutamine are around 5-10g, but it depends on a variety of factors, including weight, age, and activity level.-.-As for timing, there is no specific time of day when glutamine should be taken. It can be consumed at any time, either with or without food. Some studies suggest that consuming glutamine immediately after a workout may help enhance muscle recovery and growth. However, other studies suggest that taking glutamine before bedtime may help improve protein synthesis and reduce muscle breakdown during the overnight fasting period.-.-Overall, the best approach is to follow the manufacturer\'s instructions for dosage and timing or consult with a healthcare professional for personalized recommendations based on individual needs and goals.'}
-                ></Content>
+            ></Content>
             <div className="">
                 <div className="flex rounded-md border-1 border-yellow-200 bg-yellow-50 dark:bg-black dark:bg-opacity-20 p-4 text-lg text-yellow-500 dark:text-yellow-200">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="mr-3 mt-1.2 h-5 w-5 flex-shrink-0">
@@ -40,6 +32,6 @@ export default function Glutamine({}) {
     );
 
     return (
-        <ContentPage currentTopic={"Supplements-Muscle Gain-Glutamine"} content={content}></ContentPage>
+        <ContentPage location={"Supplements • Muscle Gain"} title={"Glutamine"} description={<span className={"text-lg mb-2"}>Glutamine is a type of amino acid that is present in all proteins. It is classified as conditionally essential, which implies that it becomes necessary during certain circumstances such as injury, surgery or illness. Glutamine has the highest concentration among all amino acids in the blood serum. However, its levels tend to decrease relative to the severity of trauma experienced by the body.</span>} currentTopic={"Supplements-Muscle Gain-Glutamine"} content={content}></ContentPage>
     )
 }

@@ -6,14 +6,6 @@ import {BackUpperBodySVG, FrontUpperBodySVG} from '@/components/BodySVG';
 export default function PecsFunction({}) {
     const content = (
         <div className="w-full max-w-5xl flex-col">
-            {/* Page Header */}
-            <div className="flex flex-col mb-12">
-                <span className="text-cyan-accent mb-1 text-lg">Muscles • Functions • Back</span>
-                <span className="mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Rhomboids</span>
-                <div className={"border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
-                    <span className={"text-lg"}>The Rhomboids are a pair of muscles located in the upper back, between the shoulder blades, underneath the middle trapezius. They are triangular in shape and help to move the shoulder blades and arms.</span>
-                </div>
-            </div>
             <Content
                 id={"location"}
                 title="Location"
@@ -32,6 +24,6 @@ export default function PecsFunction({}) {
     )
 
     return (
-        <ContentPage content={content} currentTopic={"Muscles-Functions-Back-Rhomboids"}></ContentPage>
+        <ContentPage location={"Muscles • Functions • Back"} title={"Rhomboids"} description={<span className={"text-lg"}>The Rhomboids are a pair of muscles located in the upper back, between the shoulder blades, underneath the middle trapezius. They are triangular in shape and help to move the shoulder blades and arms.</span>} content={content} currentTopic={"Muscles-Functions-Back-Rhomboids"}></ContentPage>
     )
 }

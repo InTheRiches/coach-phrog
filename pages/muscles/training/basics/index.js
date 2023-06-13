@@ -4,13 +4,6 @@ import ContentPage from "@/components/ContentPage";
 export default function TrainingBasics({}) {
     const content = (
         <div className="w-full max-w-5xl flex-col">
-            {/* Page Header */}
-            <div className="flex flex-col mb-12">
-                <span className="ml-6 mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Muscle Training - Basics</span>
-                <div className={"border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
-                    <span className={"text-lg"}>Properly training is important to making progress in the gym. Utilizing all available processes can significantly increase gains, and make the experience overall more enjoyable and rewarding. Training properly can also avoid injuries and make sure that your body is staying healthy.</span>
-                </div>
-            </div>
             <Content
                 id={"range-of-motion"}
                 title="Range of Motion"
@@ -20,6 +13,6 @@ export default function TrainingBasics({}) {
     )
 
     return (
-        <ContentPage content={content} currentTopic={"Muscles-Training-Basics"}></ContentPage>
+        <ContentPage location={"Muscles • Training"} title={"Basics"} description={<span className={"text-lg"}>Properly training is important to making progress in the gym. Utilizing all available processes can significantly increase gains, and make the experience overall more enjoyable and rewarding. Training properly can also avoid injuries and make sure that your body is staying healthy.</span>} content={content} currentTopic={"Muscles-Training-Basics"}></ContentPage>
     )
 }

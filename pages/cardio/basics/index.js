@@ -10,13 +10,6 @@ export default function MuscleBasics({}) {
 
     const content = (
         <div className="w-full max-w-5xl flex-col">
-            {/* Page Header */}
-            <div className="flex flex-col mb-12">
-                 <h1 className="mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Cardio - Basics</h1>
-                <div className={"border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
-                    <span className={"text-lg mb-2"}>Cardio, short for cardiovascular exercise, refers to any exercise that increases your heart rate, breathing rate, and strengthens your heart and lungs. ​​Cardio exercises are an important part of a healthy lifestyle and can provide numerous health benefits, including improved cardiovascular health, weight loss, improved mood, and reduced risk of chronic diseases.</span>
-                </div>
-            </div>
             <Content
                 id="why-cardio"
                 title="Why Cardio?"
@@ -27,6 +20,6 @@ export default function MuscleBasics({}) {
     );
 
     return (
-        <ContentPage currentTopic={"Cardio-Basics"} content={content}></ContentPage>
+        <ContentPage location={"Cardio"} title={"Basics"} description={<span className={"text-lg mb-2"}>Cardio, short for cardiovascular exercise, refers to any exercise that increases your heart rate, breathing rate, and strengthens your heart and lungs. ​​Cardio exercises are an important part of a healthy lifestyle and can provide numerous health benefits, including improved cardiovascular health, weight loss, improved mood, and reduced risk of chronic diseases.</span>} currentTopic={"Cardio-Basics"} content={content}></ContentPage>
     )
 }

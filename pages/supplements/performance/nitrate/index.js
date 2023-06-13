@@ -4,14 +4,6 @@ import ContentPage from '@/components/ContentPage';
 export default function PerformanceBCAAs({}) {
     const content = (
         <div className="w-full max-w-5xl flex-col">
-            {/* Page Header */}
-            <div className="flex flex-col mb-12">
-                <span className="text-cyan-accent mb-1 text-lg">Supplements • Performance</span>
-                <span className="mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Nitrate</span>
-                <div className={"border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
-                    <span className={"text-lg mb-2"}>Nitrate is a small molecule that appears to have impacts on cardiovascular health and blood pressure. Once consumed, nitrate converts to nitric oxide by various means.</span>
-                </div>
-            </div>
             {/* First Topic */}
             <Content
                 id="why"
@@ -43,6 +35,6 @@ export default function PerformanceBCAAs({}) {
     );
 
     return (
-        <ContentPage currentTopic={"Supplements-Performance-Nitrate"} content={content}></ContentPage>
+        <ContentPage location={"Supplements • Performance"} title={"Nitrate"} description={<span className={"text-lg mb-2"}>Nitrate is a small molecule that appears to have impacts on cardiovascular health and blood pressure. Once consumed, nitrate converts to nitric oxide by various means.</span>} currentTopic={"Supplements-Performance-Nitrate"} content={content}></ContentPage>
     )
 }

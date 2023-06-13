@@ -11,14 +11,6 @@ export default function TricepsFunction({}) {
 
     const content = (
         <div className="w-full max-w-5xl flex-col">
-            {/* Page Header */}
-            <div className="flex flex-col mb-12">
-                <span className="text-cyan-accent mb-1 text-lg">Muscles • Functions • Arms</span>
-                <span className="mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Triceps Brachii (Triceps)</span>
-                <div className={"border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
-                    <span className={"text-lg"}>The triceps, short for triceps brachii, is a large muscle located at the back of the upper arm. It consists of three heads—long head, lateral head, and medial head—and is responsible for extending the elbow joint, straightening the arm, and assisting in shoulder stability during certain movements.</span>
-                </div>
-            </div>
             <Content
                 id={"location"}
                 title="Location"
@@ -37,6 +29,6 @@ export default function TricepsFunction({}) {
     )
 
     return (
-        <ContentPage content={content} currentTopic={"Muscles-Functions-Arms-Triceps"}></ContentPage>
+        <ContentPage location={"Muscles • Functions • Arms"} title={"Triceps Brachii (Triceps)"} description={<span className={"text-lg"}>The triceps, short for triceps brachii, is a large muscle located at the back of the upper arm. It consists of three heads—long head, lateral head, and medial head—and is responsible for extending the elbow joint, straightening the arm, and assisting in shoulder stability during certain movements.</span>} content={content} currentTopic={"Muscles-Functions-Arms-Triceps"}></ContentPage>
     )
 }

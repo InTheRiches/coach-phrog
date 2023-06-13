@@ -6,14 +6,6 @@ export default function TrainingBasics({}) {
 
     const content = (
         <div className="w-full max-w-5xl flex-col">
-            {/* Page Header */}
-            <div className="flex flex-col mb-12">
-                <span className="text-cyan-accent mb-1 text-lg">Muscles • Training</span>
-                <span className="mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Power</span>
-                <div className={"border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
-                    <span className={"text-lg"}>Weight lifting, also known as resistance training, is a process involving the lifting, pushing, or pulling weights or resistance devices, resulting in an increase in muscle mass and improvements in overall physical fitness.</span>
-                </div>
-            </div>
             {/* Topics */}
             <Content
                 id={"basics"}
@@ -29,6 +21,6 @@ export default function TrainingBasics({}) {
     );
 
     return (
-        <ContentPage currentTopic={"Muscles-Training-Power"} content={content}></ContentPage>
+        <ContentPage location={"Muscles • Training"} title={"Power"} description={<span className={"text-lg"}>Weight lifting, also known as resistance training, is a process involving the lifting, pushing, or pulling weights or resistance devices, resulting in an increase in muscle mass and improvements in overall physical fitness.</span>} currentTopic={"Muscles-Training-Power"} content={content}></ContentPage>
     )
 }

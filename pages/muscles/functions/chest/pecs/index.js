@@ -6,14 +6,6 @@ import {BackUpperBodySVG, FrontUpperBodySVG} from '@/components/BodySVG';
 export default function PecsFunction({}) {
     const content = (
         <div className="w-full max-w-5xl flex-col">
-            {/* Page Header */}
-            <div className="flex flex-col mb-12">
-                 <span className="text-cyan-accent mb-1 text-lg">Muscles • Functions • Chest</span>
-                <span className="mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Pectoralis Major (Pectorals/Pecs)</span>
-                <div className={"border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
-                    <span className={"text-lg"}>The pectoral muscles are large, fan shaped muscles that reside on either side of the upper chest. Both muscles have two heads, the clavicular, and the sternocostal.</span>
-                </div>
-            </div>
             <Content
                 id={"location"}
                 title="Location"
@@ -32,6 +24,6 @@ export default function PecsFunction({}) {
     )
 
     return (
-        <ContentPage content={content} currentTopic={"Muscles-Functions-Chest-Pecs"}></ContentPage>
+        <ContentPage location={"Muscles • Functions • Chest"} title={"Pectoralis Major (Pectorals/Pecs)"} description={<span className={"text-lg"}>The pectoral muscles are large, fan shaped muscles that reside on either side of the upper chest. Both muscles have two heads, the clavicular, and the sternocostal.</span>} content={content} currentTopic={"Muscles-Functions-Chest-Pecs"}></ContentPage>
     )
 }

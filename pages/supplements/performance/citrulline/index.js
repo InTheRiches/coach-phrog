@@ -4,14 +4,6 @@ import ContentPage from '@/components/ContentPage';
 export default function PerformanceCitrulline({}) {
     const content = (
         <div className="w-full max-w-5xl flex-col">
-            {/* Page Header */}
-            <div className="flex flex-col mb-12">
-                <span className="text-cyan-accent mb-1 text-lg">Supplements • Performance</span>
-                <span className="mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Citrulline</span>
-                <div className={"border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
-                    <span className={"text-lg mb-2"}>L-Citrulline, or Citrulline, is an amino acid used in your body. It is non-essential, and is converted to L-argenine in the liver once supplemented. It increases nitric oxide production and matabolism in the body.</span>
-                </div>
-            </div>
             {/* First Topic */}
             <Content
                 id="why"
@@ -22,7 +14,7 @@ export default function PerformanceCitrulline({}) {
                 id={"when-how"}
                 title={"Timing/Dosage of Consumption"}
                 content={'When supplementing citrulline, take 6,000 – 8,000 mg of citrulline about an hour before exercise. On days that you don\'t exercise, it can be broken up into smaller doses. Citrulline is often included in preworkouts, and is not necessary to supplement on top of your current preworkout. You can take citrulline at any time throughout the day, although as mentioned earlier, taking it around an hour before a workout provides the best results.'}
-                ></Content>
+            ></Content>
             <div className="">
                 <div className="flex rounded-md border-1 border-sky-500 p-4 dark:bg-blue-500 dark:bg-opacity-10 text-lg text-sky-600 bg-blue-50">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
@@ -43,6 +35,6 @@ export default function PerformanceCitrulline({}) {
     );
 
     return (
-        <ContentPage currentTopic={"Supplements-Performance-Citrulline"} content={content}></ContentPage>
+        <ContentPage location={"Supplements • Performance"} title={"Citrulline"} description={<span className={"text-lg mb-2"}>L-Citrulline, or Citrulline, is an amino acid used in your body. It is non-essential, and is converted to L-argenine in the liver once supplemented. It increases nitric oxide production and matabolism in the body.</span>} currentTopic={"Supplements-Performance-Citrulline"} content={content}></ContentPage>
     )
 }

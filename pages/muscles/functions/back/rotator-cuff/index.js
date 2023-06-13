@@ -11,14 +11,6 @@ export default function PecsFunction({}) {
 
     const content = (
         <div className="w-full max-w-5xl flex-col">
-            {/* Page Header */}
-            <div className="flex flex-col mb-12">
-                <span className="text-cyan-accent mb-1 text-lg">Muscles • Functions • Back</span>
-                <span className="mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Rotator Cuff</span>
-                <div className={"border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
-                    <span className={"text-lg"}>The rotator cuff is a group of four muscles and their tendons that surround the shoulder joint. It includes the supraspinatus, <a onClick={() => router.push("/muscles/functions/back/infraspinatus").then(() => scroll())} className={"text-link-text hover:underline hover:cursor-pointer"}>infraspinatus</a>, <a onClick={() => router.push("/muscles/functions/back/teres").then(() => scroll())} className={"text-link-text hover:underline hover:cursor-pointer"}>teres minor</a>, and subscapularis. The primary function of the rotator cuff is to provide stability to the shoulder, facilitate smooth and controlled movements, and help maintain proper alignment of the humeral head within the shoulder socket. The rotator cuff plays a crucial role in preventing dislocations.</span>
-                </div>
-            </div>
             <Content
                 id={"location"}
                 title="Location"
@@ -57,6 +49,6 @@ export default function PecsFunction({}) {
     )
 
     return (
-        <ContentPage content={content} currentTopic={"Muscles-Functions-Back-Rotator Cuff"}></ContentPage>
+        <ContentPage location={"Muscles • Functions • Back"} title={"Rotator Cuff"} description={<span className={"text-lg"}>The rotator cuff is a group of four muscles and their tendons that surround the shoulder joint. It includes the supraspinatus, <a onClick={() => router.push("/muscles/functions/back/infraspinatus").then(() => scroll())} className={"text-link-text hover:underline hover:cursor-pointer"}>infraspinatus</a>, <a onClick={() => router.push("/muscles/functions/back/teres").then(() => scroll())} className={"text-link-text hover:underline hover:cursor-pointer"}>teres minor</a>, and subscapularis. The primary function of the rotator cuff is to provide stability to the shoulder, facilitate smooth and controlled movements, and help maintain proper alignment of the humeral head within the shoulder socket. The rotator cuff plays a crucial role in preventing dislocations.</span>} content={content} currentTopic={"Muscles-Functions-Back-Rotator Cuff"}></ContentPage>
     )
 }

@@ -9,14 +9,6 @@ export default function PecsFunction({}) {
 
     const content = (
         <div className="w-full max-w-5xl flex-col">
-            {/* Page Header */}
-            <div className="flex flex-col mb-12">
-                <span className="text-cyan-accent mb-1 text-lg">Muscles • Functions • Back</span>
-                <span className="mb-10 inline-block text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight dark:text-slate-50">Posterior Deltoid (Rear Delt)</span>
-                <div className={"border-cyan-accent border-1 flex flex-col p-4 bg-neutral-500 bg-opacity-5 rounded-md"}>
-                    <span className={"text-lg"}>The rear deltoid, also known as the posterior deltoid, is a muscle located at the back of the shoulder. It plays a crucial role in various upper body movements and contributes to overall shoulder strength and stability.</span>
-                </div>
-            </div>
             <Content
                 id={"location"}
                 title="Location"
@@ -35,6 +27,6 @@ export default function PecsFunction({}) {
     )
 
     return (
-        <ContentPage content={content} currentTopic={"Muscles-Functions-Back-Rear Delt"}></ContentPage>
+        <ContentPage location={"Muscles • Functions • Back"} title={"Posterior Deltoid (Rear Delt)"} description={<span className={"text-lg"}>The rear deltoid, also known as the posterior deltoid, is a muscle located at the back of the shoulder. It plays a crucial role in various upper body movements and contributes to overall shoulder strength and stability.</span>} content={content} currentTopic={"Muscles-Functions-Back-Rear Delt"}></ContentPage>
     )
 }
