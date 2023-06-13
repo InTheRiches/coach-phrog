@@ -7,42 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be896b55-8482-4c8d-bd71-8dfc312afe18" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/muscles/functions/arms/forearms/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ContentPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContentPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MobileSidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MobileSidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/cardio/basics/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cardio/basics/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/getting-started/introduction/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/getting-started/introduction/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/muscles/basics/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/basics/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/muscles/functions/arms/biceps/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/functions/arms/biceps/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/muscles/functions/arms/triceps/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/functions/arms/triceps/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/muscles/functions/back/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/functions/back/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/muscles/functions/back/infraspinatus/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/functions/back/infraspinatus/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/muscles/functions/back/lats/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/functions/back/lats/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/muscles/functions/back/rear-delt/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/functions/back/rear-delt/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/muscles/functions/back/rhomboids/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/functions/back/rhomboids/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/muscles/functions/back/rotator-cuff/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/functions/back/rotator-cuff/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/muscles/functions/back/teres/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/functions/back/teres/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/muscles/functions/back/traps/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/functions/back/traps/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/muscles/functions/chest/delts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/functions/chest/delts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/muscles/functions/chest/pecs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/functions/chest/pecs/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/muscles/training/basics/concepts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/training/basics/concepts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/muscles/training/basics/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/training/basics/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/muscles/training/basics/repsandsets/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/training/basics/repsandsets/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/muscles/training/power/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/training/power/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/muscles/training/strength/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/muscles/training/strength/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/supplements/basics/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/basics/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/supplements/muscle-gain/glutamine/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/muscle-gain/glutamine/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/supplements/muscle-gain/loaded-protein/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/muscle-gain/loaded-protein/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/supplements/muscle-gain/whey-protein/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/muscle-gain/whey-protein/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/supplements/performance/bcaas/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/performance/bcaas/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/supplements/performance/beta-alanine/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/performance/beta-alanine/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/supplements/performance/citrulline/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/performance/citrulline/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/supplements/performance/creatine/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/performance/creatine/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/supplements/performance/nitrate/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/performance/nitrate/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/supplements/performance/pre-workout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/supplements/performance/pre-workout/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="be896b55-8482-4c8d-bd71-8dfc312afe18" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,7 +67,7 @@
       <recent name="D:\Unity\Projects\coach-phrog\pages\muscles\training\basics" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.start">
     <configuration name="build" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -153,7 +118,7 @@
       <workItem from="1686242469229" duration="8427000" />
       <workItem from="1686264358720" duration="206000" />
       <workItem from="1686264574271" duration="568000" />
-      <workItem from="1686265157386" duration="18713000" />
+      <workItem from="1686265157386" duration="19191000" />
     </task>
     <servers />
   </component>
