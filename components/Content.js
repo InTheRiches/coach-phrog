@@ -53,7 +53,6 @@ export default function Content({id, title, content, bulletPoints}) {
                     return <b className="uline" key={index}>{block}</b>;
                 } else {
                     return block.split("`").map((block1, index) => {
-                        console.log(block1);
                         if (index % 2 === 1) {
                             return <code className={"border-1 border-neutral-700 flex flex-col p-2 bg-neutral-500 bg-opacity-5 rounded-md indent-1"} key={index}>{block1}</code>;
                         }

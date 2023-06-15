@@ -5,7 +5,7 @@ import React from "react";
 import {scroll} from "@/components/ContentScroll";
 import {useRouter} from "next/router";
 
-// TODO MAKE A PAGE FOR THE BACK, THEN MAKE A FOLDER WITH SUBCATEGORIES THAT GOES INTO MORE DETAIL ON EACH OF THE MUSCLES/MUSCLE GROUPS.
+
 export default function PecsFunction({}) {
     const router = useRouter();
 

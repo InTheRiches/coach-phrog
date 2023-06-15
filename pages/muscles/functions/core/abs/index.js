@@ -4,8 +4,7 @@ import {BackUpperBodySVG, FrontUpperBodySVG} from '@/components/BodySVG';
 import {scroll} from "@/components/ContentScroll";
 import React from "react";
 
-// TODO MAKE A PAGE FOR THE BACK, THEN MAKE A FOLDER WITH SUBCATEGORIES THAT GOES INTO MORE DETAIL ON EACH OF THE MUSCLES/MUSCLE GROUPS.
-export default function PecsFunction({}) {
+export default function AbsFunction({}) {
     const content = (
         <div className="flex-col">
             <Content

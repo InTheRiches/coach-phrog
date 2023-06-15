@@ -2,7 +2,7 @@ import Content from '@/components/Content'
 import ContentPage from '@/components/ContentPage';
 import {BackUpperBodySVG, FrontUpperBodySVG} from '@/components/BodySVG';
 
-// TODO MAKE A PAGE FOR THE BACK, THEN MAKE A FOLDER WITH SUBCATEGORIES THAT GOES INTO MORE DETAIL ON EACH OF THE MUSCLES/MUSCLE GROUPS.
+
 export default function PecsFunction({}) {
     const content = (
         <div className="w-full max-w-5xl flex-col">

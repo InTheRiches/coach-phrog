@@ -3,7 +3,7 @@ import Content from "@/components/Content";
 import {BackUpperBodySVG, FrontUpperBodySVG} from "@/components/BodySVG";
 import ContentPage from "@/components/ContentPage";
 
-// TODO MAKE A PAGE FOR THE BACK, THEN MAKE A FOLDER WITH SUBCATEGORIES THAT GOES INTO MORE DETAIL ON EACH OF THE MUSCLES/MUSCLE GROUPS.
+
 export default function PecsFunction({}) {
     const router = useRouter();
 

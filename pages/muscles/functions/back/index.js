@@ -6,7 +6,7 @@ import ContentScroll from "@/components/ContentScroll";
 import useDarkMode from 'use-dark-mode';
 import ContentPage from '@/components/ContentPage';
 
-// TODO MAKE A PAGE FOR THE BACK, THEN MAKE A FOLDER WITH SUBCATEGORIES THAT GOES INTO MORE DETAIL ON EACH OF THE MUSCLES/MUSCLE GROUPS.
+
 export default function BackMuscleFunctions({}) {
     const content = (
         <div className="w-full max-w-5xl flex-col">

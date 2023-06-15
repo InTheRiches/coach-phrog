@@ -60,8 +60,9 @@
             { "id": 0, "title": "Quads", "href": "/muscles/functions/legs/quads" },
             { "id": 1, "title": "Hamstrings", "href": "/muscles/functions/legs/hamstrings" },
             { "id": 2, "title": "Glutes", "href": "/muscles/functions/legs/glutes" },
-            { "id": 3, "title": "Adductor", "href": "/muscles/functions/legs/adductor" },
-            { "id": 4, "title": "Calves", "href": "/muscles/functions/legs/calves" }
+            { "id": 3, "title": "Adductors", "href": "/muscles/functions/legs/adductors" },
+            { "id": 4, "title": "Abductors", "href": "/muscles/functions/legs/abductors" },
+            { "id": 5, "title": "Calves", "href": "/muscles/functions/legs/calves" }
           ] }
         ]
       }
