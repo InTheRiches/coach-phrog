@@ -71,10 +71,9 @@ body.d {
   cursor:pointer;
 }
 
-/* .slant {
-  clip-path: polygon(0 0,100% 0,100% 100%,0 90%);
-  background-image: url(/public/layered-waves-haikei.svg);
-} */
+.slant {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+}
 
 .dark .bg-gradient {
   background: linear-gradient(black, #c62368);
